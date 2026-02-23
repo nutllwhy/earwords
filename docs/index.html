@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarWords 听词 - 雅思词汇学习App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">👂</span>
+                <h1>EarWords <span class="subtitle">听词</span></h1>
+            </div>
+            <p class="tagline">雅思词汇真经 · 间隔重复 · 磨耳朵</p>
+            <div class="meta">
+                <span class="badge">iOS App</span>
+                <span class="badge">SwiftUI</span>
+                <span class="badge">Core Data</span>
+            </div>
+        </header>
+
+        <!-- 总体进度 -->
+        <section class="section">
+            <h2>📊 项目总进度</h2>
+            <div class="progress-overview">
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-title">音标数据获取</span>
+                        <span class="progress-percent" id="phonetic-percent">8%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="phonetic-bar" style="width: 8%"></div>
+                    </div>
+                    <div class="progress-detail">
+                        <span id="phonetic-count">291 / 3,674</span>
+                        <span class="status-badge pending">⏸️ 待恢复</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-title">例句音频生成</span>
+                        <span class="progress-percent" id="audio-percent">23%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill success" id="audio-bar" style="width: 23%"></div>
+                    </div>
+                    <div class="progress-detail">
+                        <span id="audio-count">~850 / 3,674</span>
+                        <span class="status-badge running">▶️ 运行中</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-title">iOS 代码开发</span>
+                        <span class="progress-percent">15%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill info" style="width: 15%"></div>
+                    </div>
+                    <div class="progress-detail">
+                        <span>5 个视图组件</span>
+                        <span class="status-badge done">✅ 完成</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据统计 -->
+        <section class="section">
+            <h2>📈 数据资产</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">3,674</div>
+                    <div class="stat-label">单词总数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">22</div>
+                    <div class="stat-label">章节数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1.6MB</div>
+                    <div class="stat-label">词库文件</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">~600</div>
+                    <div class="stat-label">已生成音频</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI预览 -->
+        <section class="section">
+            <h2>🎨 UI 设计预览</h2>
+            <div class="ui-showcase">
+                <div class="ui-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="app-header">
+                                <span class="back-btn">‹</span>
+                                <span class="header-title">今日学习</span>
+                                <span class="menu-btn">⋯</span>
+                            </div>
+                            <div class="progress-indicator">
+                                <div class="progress-dots">
+                                    <span class="dot active"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <span class="progress-text">1/20</span>
+                            </div>
+                            <div class="word-card">
+                                <div class="chapter-tag">01_自然地理</div>
+                                <div class="word-main">atmosphere</div>
+                                <div class="phonetic">/ˈætməsˌfɪr/</div>
+                                <div class="pos-badge">n.</div>
+                                <div class="divider"></div>
+                                <div class="meaning">大气层；氛围</div>
+                                <div class="example">The approaching examination created a tense atmosphere...</div>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="action-btn">显示释义</button>
+                                <button class="action-btn primary">显示例句</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-label">单词卡片</div>
+                </div>
+
+                <div class="ui-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen dark">
+                            <div class="audio-player">
+                                <div class="album-art">
+                                    <div class="wave-animation">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                                <div class="track-info">
+                                    <div class="track-word">atmosphere</div>
+                                    <div class="track-example">The approaching examination...</div>
+                                </div>
+                                <div class="progress-slider">
+                                    <div class="slider-bar">
+                                        <div class="slider-fill" style="width: 35%"></div>
+                                    </div>
+                                    <div class="time-labels">
+                                        <span>0:12</span>
+                                        <span>0:35</span>
+                                    </div>
+                                </div>
+                                <div class="playback-controls">
+                                    <button class="control-btn">‹‹</button>
+                                    <button class="control-btn play">▶</button>
+                                    <button class="control-btn">››</button>
+                                </div>
+                            </div>
+                            <div class="playlist-preview">
+                                <div class="playlist-item active">
+                                    <span class="item-num">1</span>
+                                    <span class="item-word">atmosphere</span>
+                                    <span class="playing-indicator">▸</span>
+                                </div>
+                                <div class="playlist-item">
+                                    <span class="item-num">2</span>
+                                    <span class="item-word">hydrosphere</span>
+                                </div>
+                                <div class="playlist-item">
+                                    <span class="item-num">3</span>
+                                    <span class="item-word">lithosphere</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-label">磨耳朵模式</div>
+                </div>
+
+                <div class="ui-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="stats-header">
+                                <h3>学习统计</h3>
+                                <span class="date">2026年2月</span>
+                            </div>
+                            <div class="streak-card">
+                                <div class="flame-icon">🔥</div>
+                                <div class="streak-info">
+                                    <div class="streak-number">7</div>
+                                    <div class="streak-label">连续学习天数</div>
+                                </div>
+                            </div>
+                            <div class="chart-placeholder">
+                                <div class="chart-bar" style="height: 40%"></div>
+                                <div class="chart-bar" style="height: 65%"></div>
+                                <div class="chart-bar" style="height: 50%"></div>
+                                <div class="chart-bar" style="height: 80%"></div>
+                                <div class="chart-bar active" style="height: 70%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 60%"></div>
+                            </div>
+                            <div class="stats-summary">
+                                <div class="summary-item">
+                                    <span class="summary-value">20</span>
+                                    <span class="summary-label">今日新词</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-value">35</span>
+                                    <span class="summary-label">今日复习</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-value">85%</span>
+                                    <span class="summary-label">正确率</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-label">统计界面</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能列表 -->
+        <section class="section">
+            <h2>✨ 核心功能</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">📚</div>
+                    <div class="feature-content">
+                        <h4>每日词汇</h4>
+                        <p>基于SM-2间隔重复算法，科学安排复习计划</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎧</div>
+                    <div class="feature-content">
+                        <h4>磨耳朵</h4>
+                        <p>将单词和例句合成为音频，通勤时也能学习</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">☁️</div>
+                    <div class="feature-content">
+                        <h4>iCloud同步</h4>
+                        <p>学习进度自动同步，多设备无缝切换</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-content">
+                        <h4>学习统计</h4>
+                        <p>可视化学习数据，追踪进步轨迹</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文件结构 -->
+        <section class="section">
+            <h2>📁 项目结构</h2>
+            <div class="code-block">
+<pre>EarWords/
+├── 📂 Data/                    # 数据处理
+│   ├── vocabulary_raw.js       # 原始词库
+│   ├── ielts-vocabulary.json   # 转换后词库 (1.6MB)
+│   ├── fetch-phonetics.mjs     # 音标获取脚本
+│   ├── generate-audio.mjs      # 音频生成脚本
+│   └── audio-examples/         # 例句音频 (~600个)
+│
+├── 📂 iOS/EarWords/           # iOS项目
+│   ├── Models/
+│   │   ├── WordEntity.swift    # 单词实体
+│   │   ├── ReviewLogEntity.swift
+│   │   └── UserSettingsEntity.swift
+│   ├── Algorithms/
+│   │   └── SM2Algorithm.swift  # SM-2算法
+│   ├── Managers/
+│   │   └── DataManager.swift   # Core Data管理
+│   └── Views/
+│       ├── WordCardView.swift  # 单词卡片
+│       ├── StudyView.swift     # 学习界面
+│       ├── AudioReviewView.swift
+│       ├── StatisticsView.swift
+│       └── MainTabView.swift   # 主框架
+│
+└── 📂 docs/                    # 本文档
+    └── index.html</pre>
+            </div>
+        </section>
+
+        <!-- 时间线 -->
+        <section class="section">
+            <h2>🗓️ 开发时间线</h2>
+            <div class="timeline">
+                <div class="timeline-item done">
+                    <div class="timeline-date">2026-02-24</div>
+                    <div class="timeline-content">
+                        <h4>数据处理启动</h4>
+                        <p>词库转换完成 (3,674词) · Core Data模型 · SM-2算法 · UI组件设计</p>
+                    </div>
+                </div>
+                <div class="timeline-item active">
+                    <div class="timeline-date">进行中</div>
+                    <div class="timeline-content">
+                        <h4>数据完善</h4>
+                        <p>音标获取 (8%) · 音频生成 (23%)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">待开始</div>
+                    <div class="timeline-content">
+                        <h4>iOS开发</h4>
+                        <p>Xcode项目初始化 · 视图实现 · 测试</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 底部 -->
+        <footer class="footer">
+            <p>Last updated: <span id="update-time">2026-02-24 01:06:33</span></p>
+            <p class="copyright">© 2026 EarWords 听词 · 栗噔噔</p>
+        </footer>
+    </div>
+
+    <script>
+        // 模拟实时进度更新
+        function updateProgress() {
+            // 这里可以连接到实际进度API
+            const now = new Date();
+            document.getElementById('update-time').textContent = 
+                now.toISOString().slice(0, 19).replace('T', ' ');
+        }
+        setInterval(updateProgress, 60000);
+        updateProgress();
+    </script>
+</body>
+</html>

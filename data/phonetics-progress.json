@@ -1,0 +1,1207 @@
+{
+  "completed": 291,
+  "failed": [
+    {
+      "word": "El Nino",
+      "error": "not_found"
+    },
+    {
+      "word": "greenhouse",
+      "error": "fetch failed"
+    },
+    {
+      "word": "thermodynamic",
+      "error": "not_found"
+    },
+    {
+      "word": "Mediterranean",
+      "error": "not_found"
+    },
+    {
+      "word": "Atlantic",
+      "error": "not_found"
+    },
+    {
+      "word": "Oceania",
+      "error": "not_found"
+    },
+    {
+      "word": "eco-friendly",
+      "error": "not_found"
+    },
+    {
+      "word": "short-day",
+      "error": "not_found"
+    },
+    {
+      "word": "shade-tolerant",
+      "error": "not_found"
+    }
+  ],
+  "phoneticsMap": {
+    "atmosphere": {
+      "phonetic": "/ˈætməsˌfɪɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/atmosphere-us.mp3"
+    },
+    "hydrosphere": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "lithosphere": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "oxygen": {
+      "phonetic": "/ˈɒksɪdʒən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/oxygen-us.mp3"
+    },
+    "oxide": {
+      "phonetic": "/ˈɒksaɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/oxide-uk.mp3"
+    },
+    "carbon dioxide": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "hydrogen": {
+      "phonetic": "/ˈhaɪdɹədʒən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hydrogen-us.mp3"
+    },
+    "core": {
+      "phonetic": "/kɔɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/core-us.mp3"
+    },
+    "crust": {
+      "phonetic": "/kɹʌst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/crust-uk.mp3"
+    },
+    "mantle": {
+      "phonetic": "/ˈmæn.təl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mantle-us.mp3"
+    },
+    "longitude": {
+      "phonetic": "/ˈlɑndʒəˌtud/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/longitude-us.mp3"
+    },
+    "latitude": {
+      "phonetic": "/ˈlæt.ə.tjud/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/latitude-us.mp3"
+    },
+    "horizon": {
+      "phonetic": "/həˈɹaɪzən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/horizon-us.mp3"
+    },
+    "altitude": {
+      "phonetic": "/ˈælt.ɪˌtuːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/altitude-uk.mp3"
+    },
+    "disaster": {
+      "phonetic": "/dɪˈzæs.tɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/disaster-us.mp3"
+    },
+    "mishap": {
+      "phonetic": "/ˈmɪs.hæp/",
+      "audioUrl": ""
+    },
+    "catastrophic": {
+      "phonetic": "/kætəˈstɹɒfɪk/",
+      "audioUrl": ""
+    },
+    "calamity": {
+      "phonetic": "/kəˈlæmɪti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/calamity-us.mp3"
+    },
+    "endanger": {
+      "phonetic": "/ənˈdeɪndʒɚ/",
+      "audioUrl": ""
+    },
+    "jeopardise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "destructive": {
+      "phonetic": "/dɪˈstɹʊktɪv/",
+      "audioUrl": ""
+    },
+    "phenomenon": {
+      "phonetic": "/fɪˈnɑmənɑn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/phenomenon-uk.mp3"
+    },
+    "pebble": {
+      "phonetic": "/ˈpɛb.əl/",
+      "audioUrl": ""
+    },
+    "magnet": {
+      "phonetic": "/ˈmæɡnət/",
+      "audioUrl": ""
+    },
+    "ore": {
+      "phonetic": "/ɔɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ore-us.mp3"
+    },
+    "mineral": {
+      "phonetic": "/ˈmɪ.nəɹ.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mineral-us.mp3"
+    },
+    "marble": {
+      "phonetic": "/ˈmɑɹbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/marble-us.mp3"
+    },
+    "quartz": {
+      "phonetic": "/kwɔɹts/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quartz-us.mp3"
+    },
+    "granite": {
+      "phonetic": "/ˈɡɹæ.nɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/granite-us.mp3"
+    },
+    "gust": {
+      "phonetic": "/ɡʌst/",
+      "audioUrl": ""
+    },
+    "breeze": {
+      "phonetic": "/bɹiːz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/breeze-us.mp3"
+    },
+    "monsoon": {
+      "phonetic": "/mɑnˈsuːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/monsoon-us.mp3"
+    },
+    "gale": {
+      "phonetic": "/ɡeɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gale-us.mp3"
+    },
+    "hurricane": {
+      "phonetic": "/ˈhɝɪˌkeɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hurricane-us.mp3"
+    },
+    "tornado": {
+      "phonetic": "/tɔː(ɹ)ˈneɪ.dəʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tornado-us.mp3"
+    },
+    "typhoon": {
+      "phonetic": "/taɪˈfun/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/typhoon-us.mp3"
+    },
+    "volcano": {
+      "phonetic": "/vɑlˈkeɪnoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/volcano-us.mp3"
+    },
+    "erupt": {
+      "phonetic": "/ɪˈɹʌpt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/erupt-us.mp3"
+    },
+    "magma": {
+      "phonetic": "/ˈmæɡ.mə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/magma-us.mp3"
+    },
+    "smog": {
+      "phonetic": "/smɑɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/smog-uk.mp3"
+    },
+    "fume": {
+      "phonetic": "/fjuːm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fume-us.mp3"
+    },
+    "mist": {
+      "phonetic": "/mɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mist-us.mp3"
+    },
+    "tsunami": {
+      "phonetic": "/suˈnɑmi/",
+      "audioUrl": ""
+    },
+    "drought": {
+      "phonetic": "/dɹaʊt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drought-uk.mp3"
+    },
+    "flooding": {
+      "phonetic": "/ˈflʌdɪŋ/",
+      "audioUrl": ""
+    },
+    "torrent": {
+      "phonetic": "/ˈtɑɹ.ənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/torrent-us.mp3"
+    },
+    "earthquake": {
+      "phonetic": "/ˈɝθkweɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/earthquake-us.mp3"
+    },
+    "seismic": {
+      "phonetic": "/ˈsaɪzmɪk/",
+      "audioUrl": ""
+    },
+    "avalanche": {
+      "phonetic": "/ˈævəlæntʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/avalanche-us.mp3"
+    },
+    "terrain": {
+      "phonetic": "/tə.ˈreɪn/",
+      "audioUrl": ""
+    },
+    "landscape": {
+      "phonetic": "/ˈlandskeɪp/",
+      "audioUrl": ""
+    },
+    "continent": {
+      "phonetic": "/ˈkɑntɪnənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/continent-us.mp3"
+    },
+    "cave": {
+      "phonetic": "/keɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cave-1-us.mp3"
+    },
+    "cliff": {
+      "phonetic": "/klɪf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cliff-us.mp3"
+    },
+    "glacier": {
+      "phonetic": "/ˈɡleɪ.ʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/glacier-us.mp3"
+    },
+    "swamp": {
+      "phonetic": "/swɑmp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/swamp-us.mp3"
+    },
+    "delta": {
+      "phonetic": "/ˈdɛltə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/delta-us.mp3"
+    },
+    "plain": {
+      "phonetic": "/pleɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plain-us.mp3"
+    },
+    "plateau": {
+      "phonetic": "/plæˈtoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plateau-us.mp3"
+    },
+    "oasis": {
+      "phonetic": "/oʊˈeɪsəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/oasis-us.mp3"
+    },
+    "globe": {
+      "phonetic": "/ɡloʊb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/globe-au.mp3"
+    },
+    "hemisphere": {
+      "phonetic": "/ˈhɛmɪsfɪəɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hemisphere-us.mp3"
+    },
+    "equator": {
+      "phonetic": "/iˈkweɪ.tɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/equator-us.mp3"
+    },
+    "arctic": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "Antarctic": {
+      "phonetic": "/ænˈtɑːktɪk/",
+      "audioUrl": ""
+    },
+    "pole": {
+      "phonetic": "/poʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pole-us.mp3"
+    },
+    "polar": {
+      "phonetic": "/ˈpoʊ̯lɚ/",
+      "audioUrl": ""
+    },
+    "axis": {
+      "phonetic": "/ˈæksɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/axis-us.mp3"
+    },
+    "deteriorate": {
+      "phonetic": "/dɪˈtɪəɹɪəɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/deteriorate-uk.mp3"
+    },
+    "aggravate": {
+      "phonetic": "/ˈæɡ.ɹə.veɪ̯t/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/aggravate-uk.mp3"
+    },
+    "degrade": {
+      "phonetic": "/diˈɡɹeɪd/",
+      "audioUrl": ""
+    },
+    "upgrade": {
+      "phonetic": "/əpˈɡɹeɪd/",
+      "audioUrl": ""
+    },
+    "erode": {
+      "phonetic": "/ɪˈɹoʊd/",
+      "audioUrl": ""
+    },
+    "pacific": {
+      "phonetic": "/pəˈsɪfɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pacific-us.mp3"
+    },
+    "ocean": {
+      "phonetic": "/ˈoʊ.ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ocean-us.mp3"
+    },
+    "marine": {
+      "phonetic": "/məˈɹiːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/marine-us.mp3"
+    },
+    "navigation": {
+      "phonetic": "/nævɪˈɡeɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/navigation-us.mp3"
+    },
+    "gulf": {
+      "phonetic": "/ɡʌlf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gulf-us.mp3"
+    },
+    "beach": {
+      "phonetic": "/bit͡ʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/beach-us.mp3"
+    },
+    "coast": {
+      "phonetic": "/koʊst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/coast-us.mp3"
+    },
+    "shore": {
+      "phonetic": "/ʃɔɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shore-us.mp3"
+    },
+    "tide": {
+      "phonetic": "/taɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tide-us.mp3"
+    },
+    "current": {
+      "phonetic": "/ˈkɝɹənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/current-us.mp3"
+    },
+    "brook": {
+      "phonetic": "/bɹʊk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brook-us.mp3"
+    },
+    "stream": {
+      "phonetic": "/stɹiːm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stream-us.mp3"
+    },
+    "source": {
+      "phonetic": "/sɔɹs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/source-us.mp3"
+    },
+    "shallow": {
+      "phonetic": "/ˈʃæl.oʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shallow-us.mp3"
+    },
+    "superficial": {
+      "phonetic": "/ˌsupɚˈfɪʃəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/superficial-us.mp3"
+    },
+    "flat": {
+      "phonetic": "/flæt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flat-us.mp3"
+    },
+    "smooth": {
+      "phonetic": "/smuːð/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/smooth-us.mp3"
+    },
+    "rough": {
+      "phonetic": "/ɹʌf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rough-us.oga"
+    },
+    "sandy": {
+      "phonetic": "/ˈsændi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sandy-us.mp3"
+    },
+    "stony": {
+      "phonetic": "/ˈstoʊni/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stony-au.mp3"
+    },
+    "vertical": {
+      "phonetic": "/ˈvɝtɪkəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vertical-us.mp3"
+    },
+    "steep": {
+      "phonetic": "/stiːp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/steep-us.mp3"
+    },
+    "parallel": {
+      "phonetic": "/ˈpæɹəˌlɛl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/parallel-us.mp3"
+    },
+    "narrow": {
+      "phonetic": "/ˈnæɹoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/narrow-us.mp3"
+    },
+    "mainland": {
+      "phonetic": "/ˈmeɪ̪nlənd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mainland-us.mp3"
+    },
+    "peninsula": {
+      "phonetic": "/pəˈnɪn.sə.lə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/peninsula-us.mp3"
+    },
+    "climate": {
+      "phonetic": "/ˈklaɪmɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/climate-us.mp3"
+    },
+    "weather": {
+      "phonetic": "/ˈwɛðɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/weather-us.mp3"
+    },
+    "meteorology": {
+      "phonetic": "/ˌmiti.əˈɹɑːlədʒi/",
+      "audioUrl": ""
+    },
+    "mild": {
+      "phonetic": "/ˈmaɪld/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mild-us.mp3"
+    },
+    "heating": {
+      "phonetic": "/ˈhiːtɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/heating-us.mp3"
+    },
+    "moderate": {
+      "phonetic": "/ˈmɑdəɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/moderate.mp3"
+    },
+    "warm": {
+      "phonetic": "/wɔɹm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/warm-us.mp3"
+    },
+    "thermal": {
+      "phonetic": "/ˈθɝməl/",
+      "audioUrl": ""
+    },
+    "tropics": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "arid": {
+      "phonetic": "/ˈæ.ɹɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/arid-us.mp3"
+    },
+    "moist": {
+      "phonetic": "/mɔɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/moist-us.mp3"
+    },
+    "damp": {
+      "phonetic": "/dæmp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/damp-us.mp3"
+    },
+    "humid": {
+      "phonetic": "/ˈhjuːmɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/humid-us.mp3"
+    },
+    "snowy": {
+      "phonetic": "/snəʊi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/snowy-us.mp3"
+    },
+    "frost": {
+      "phonetic": "/fɹɔst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/frost-us.mp3"
+    },
+    "hail": {
+      "phonetic": "/heɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hail-us.mp3"
+    },
+    "thaw": {
+      "phonetic": "/θɔː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thaw-us.mp3"
+    },
+    "chill": {
+      "phonetic": "/tʃɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/chill-1-us.mp3"
+    },
+    "freeze": {
+      "phonetic": "/ˈfɹiːz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/freeze-us.mp3"
+    },
+    "frigid": {
+      "phonetic": "/ˈfɹɪdʒɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/frigid-us.mp3"
+    },
+    "tremble": {
+      "phonetic": "/ˈtɹɛmbl̩/",
+      "audioUrl": ""
+    },
+    "shiver": {
+      "phonetic": "/ˈʃɪvɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shiver-us.mp3"
+    },
+    "thunder": {
+      "phonetic": "/ˈθʌndɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thunder-us.mp3"
+    },
+    "lightning": {
+      "phonetic": "/ˈlaɪt.nɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lightning-us.mp3"
+    },
+    "stormy": {
+      "phonetic": "/ˈstɔɹmi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stormy-us.mp3"
+    },
+    "downpour": {
+      "phonetic": "/ˈdaʊn.pɔː(ɹ)/",
+      "audioUrl": ""
+    },
+    "rainfall": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "sprinkle": {
+      "phonetic": "/ˈspɹɪŋkəl/",
+      "audioUrl": ""
+    },
+    "rainbow": {
+      "phonetic": "/ˈɹeɪmboʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rainbow-us.mp3"
+    },
+    "shower": {
+      "phonetic": "/ˈʃoʊ.ɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shower-1-au.mp3"
+    },
+    "Celsius": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "temperature": {
+      "phonetic": "/ˈtɛmp(ə)ɹətʃə(ɹ)/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/temperature-us.mp3"
+    },
+    "forecast": {
+      "phonetic": "/ˈfɔɹkæst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/forecast-us.mp3"
+    },
+    "peak": {
+      "phonetic": "/piːk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/peak-uk.mp3"
+    },
+    "mount": {
+      "phonetic": "/maʊnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mount-us.mp3"
+    },
+    "mountain": {
+      "phonetic": "/ˈmaʊntn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mountain-us.mp3"
+    },
+    "range": {
+      "phonetic": "/ɹeɪndʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/range-us.mp3"
+    },
+    "ridge": {
+      "phonetic": "/ɹɪdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ridge-us.mp3"
+    },
+    "slope": {
+      "phonetic": "/sloʊp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/slope-us.mp3"
+    },
+    "valley": {
+      "phonetic": "/ˈvæli/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/valley-us.mp3"
+    },
+    "hillside": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "overlook": {
+      "phonetic": "/oʊvəɹˈlʊk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/overlook-us.mp3"
+    },
+    "southern": {
+      "phonetic": "/ˈsʌðɚn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/southern-us.mp3"
+    },
+    "southeast": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "southwest": {
+      "phonetic": "/saʊˈwɛst/",
+      "audioUrl": ""
+    },
+    "northeast": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "northwest": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "eastern": {
+      "phonetic": "/ˈiːstən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/eastern-us.mp3"
+    },
+    "oriental": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "inevitable": {
+      "phonetic": "/ɪnˈɛvɪtəbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inevitable-us.mp3"
+    },
+    "irreversible": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "irregularly": {
+      "phonetic": "/ɪˈɹɛɡjʊləli/",
+      "audioUrl": ""
+    },
+    "inappropriate": {
+      "phonetic": "/ˌɪnəˈpɹoʊpɹi.ət/",
+      "audioUrl": ""
+    },
+    "abnormal": {
+      "phonetic": "/əbˈnɔɹ.ml̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/abnormal-us.mp3"
+    },
+    "sediment": {
+      "phonetic": "/ˈsɛd.ɪ.mənt/",
+      "audioUrl": ""
+    },
+    "silt": {
+      "phonetic": "/sɪlt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/silt-uk.mp3"
+    },
+    "muddy": {
+      "phonetic": "[ˈmʌdi]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/muddy-us.mp3"
+    },
+    "clay": {
+      "phonetic": "/kleɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/clay-us.mp3"
+    },
+    "dirt": {
+      "phonetic": "/dɝt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dirt-us.mp3"
+    },
+    "rural": {
+      "phonetic": "/ˈɹɝəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rural-uk.mp3"
+    },
+    "suburb": {
+      "phonetic": "/ˈsʌbɝb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/suburb-au.mp3"
+    },
+    "outskirts": {
+      "phonetic": "/ˈaʊtskɝts/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/outskirts-us.mp3"
+    },
+    "remote": {
+      "phonetic": "[ɹɪˈmoʊt]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/remote-us.mp3"
+    },
+    "desolate": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/desolate-us.mp3"
+    },
+    "distant": {
+      "phonetic": "/ˈdɪstənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/distant-us.mp3"
+    },
+    "adjacent": {
+      "phonetic": "/əˈdʒeɪ.sənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/adjacent-us.mp3"
+    },
+    "toxic": {
+      "phonetic": "/ˈtɑk.sɪk/",
+      "audioUrl": ""
+    },
+    "pollution": {
+      "phonetic": "/pəˈl(j)uːʃn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pollution-uk.mp3"
+    },
+    "pollutant": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "contaminate": {
+      "phonetic": "/kənˈtæmɪneɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/contaminate-us.mp3"
+    },
+    "geology": {
+      "phonetic": "/dʒiˈɑlədʒi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/geology-us.mp3"
+    },
+    "border": {
+      "phonetic": "/ˈbɔɹdɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/border-us.mp3"
+    },
+    "margin": {
+      "phonetic": "/ˈmɑːɹdʒ(ə)n/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/margin-us.mp3"
+    },
+    "fringe": {
+      "phonetic": "/fɹɪndʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fringe-us.mp3"
+    },
+    "plate": {
+      "phonetic": "/pleɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plate-us.mp3"
+    },
+    "debris": {
+      "phonetic": "/dəˈbɹiː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/debris-us.mp3"
+    },
+    "crack": {
+      "phonetic": "/kɹæk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/crack-us.mp3"
+    },
+    "gap": {
+      "phonetic": "/ɡæp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gap-us.mp3"
+    },
+    "splendid": {
+      "phonetic": "/ˈsplɛndɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/splendid-us.mp3"
+    },
+    "grand": {
+      "phonetic": "/ɡɹænd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/grand-us.mp3"
+    },
+    "magnificent": {
+      "phonetic": "/mæɡˈnɪfəsənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/magnificent-us.mp3"
+    },
+    "super": {
+      "phonetic": "/ˈs(j)upɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/super-au.mp3"
+    },
+    "interesting": {
+      "phonetic": "/ˈɪnt(ʃ)ɹɛstɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/interesting-us.mp3"
+    },
+    "dramatic": {
+      "phonetic": "/dɹəˈmætɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dramatic-us.mp3"
+    },
+    "wilderness": {
+      "phonetic": "/ˈwɪl.dəɹ.nəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wilderness-us.mp3"
+    },
+    "desert": {
+      "phonetic": "/dəˈzɝt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/desert-1-uk.mp3"
+    },
+    "deforest": {
+      "phonetic": "/dɪˈfɒɹɪst/",
+      "audioUrl": ""
+    },
+    "barren": {
+      "phonetic": "/ˈbæɹən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/barren-us.mp3"
+    },
+    "fertile": {
+      "phonetic": "/ˈfɝːtaɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fertile-us.mp3"
+    },
+    "fertilise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "solar": {
+      "phonetic": "/ˈsoʊlɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/solar-us.mp3"
+    },
+    "lunar": {
+      "phonetic": "/ˈlunɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lunar-us.mp3"
+    },
+    "calendar": {
+      "phonetic": "/ˈkæl.ən.dɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/calendar-us.mp3"
+    },
+    "sunrise": {
+      "phonetic": "/ˈsʌnɹaɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sunrise-ca.mp3"
+    },
+    "sunset": {
+      "phonetic": "/ˈsʌnˌsɛt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sunset-us.mp3"
+    },
+    "eclipse": {
+      "phonetic": "/iˈklɪps/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/eclipse-us.mp3"
+    },
+    "dusk": {
+      "phonetic": "/dʌsk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dusk-us.mp3"
+    },
+    "heaven": {
+      "phonetic": "/hɛvn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/heaven-us.mp3"
+    },
+    "paradise": {
+      "phonetic": "/ˈpæ.ɹə.daɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/paradise-us.mp3"
+    },
+    "sunshine": {
+      "phonetic": "/ˈsʌnʃaɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sunshine-us.mp3"
+    },
+    "shade": {
+      "phonetic": "/ʃeɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shade-us.mp3"
+    },
+    "shadow": {
+      "phonetic": "/ˈʃædoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shadow-us.mp3"
+    },
+    "vapour": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "evaporate": {
+      "phonetic": "/ɪˈvæpəɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/evaporate-us.mp3"
+    },
+    "circulate": {
+      "phonetic": "/ˈsɚˌkju.leɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/circulate-us.mp3"
+    },
+    "precipitate": {
+      "phonetic": "/pɹəˈsɪpɪteɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/precipitate-1-us.mp3"
+    },
+    "reservoir": {
+      "phonetic": "/ˈɹɛz.ə(ɹ).vwɑɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reservoir-us.mp3"
+    },
+    "waterfall": {
+      "phonetic": "/ˈwɔtɚfɔl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/waterfall-us.mp3"
+    },
+    "fountain": {
+      "phonetic": "[ˈfaʊn.ʔn̩]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fountain-us.mp3"
+    },
+    "spring": {
+      "phonetic": "/spɹɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spring-us.mp3"
+    },
+    "dew": {
+      "phonetic": "/du/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dew-us.mp3"
+    },
+    "pour": {
+      "phonetic": "/pɔɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pour-us.mp3"
+    },
+    "drain": {
+      "phonetic": "/dɹeɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drain-us.mp3"
+    },
+    "drip": {
+      "phonetic": "/dɹɪp/",
+      "audioUrl": ""
+    },
+    "drown": {
+      "phonetic": "/dɹaʊn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drown-us.mp3"
+    },
+    "blow": {
+      "phonetic": "/bloʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/blow-us.mp3"
+    },
+    "puff": {
+      "phonetic": "/pʌf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/puff-au.mp3"
+    },
+    "gush": {
+      "phonetic": "/ˈɡʌʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gush-us.mp3"
+    },
+    "dense": {
+      "phonetic": "/dɛns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dense-us.mp3"
+    },
+    "intensity": {
+      "phonetic": "/ɪnˈtɛnsɪti/",
+      "audioUrl": ""
+    },
+    "intensive": {
+      "phonetic": "/ɪnˈtɛnsɪv/",
+      "audioUrl": ""
+    },
+    "emerge": {
+      "phonetic": "/iˈmɝd͡ʒ/",
+      "audioUrl": ""
+    },
+    "flash": {
+      "phonetic": "/flæʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flash-us.mp3"
+    },
+    "float": {
+      "phonetic": "/floʊt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/float-us.mp3"
+    },
+    "environment": {
+      "phonetic": "/-mɪnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/environment-us.mp3"
+    },
+    "surrounding": {
+      "phonetic": "/səˈɹaʊndɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/surrounding-us.mp3"
+    },
+    "condition": {
+      "phonetic": "/kənˈdɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/condition-us.mp3"
+    },
+    "situation": {
+      "phonetic": "/sɪtjuːˈeɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/situation-us.mp3"
+    },
+    "nature": {
+      "phonetic": "/ˈneɪtʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/nature-us.mp3"
+    },
+    "natural": {
+      "phonetic": "/-ɚəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/natural-us.mp3"
+    },
+    "artificial": {
+      "phonetic": "/ɑː(ɹ)təˈfɪʃəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/artificial-us.mp3"
+    },
+    "synthetic": {
+      "phonetic": "/sɪnˈθɛtɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/synthetic-us.mp3"
+    },
+    "petrol": {
+      "phonetic": "/ˈpɛt.ɹəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/petrol-au.mp3"
+    },
+    "gas": {
+      "phonetic": "/ɡæs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gas-us.mp3"
+    },
+    "gasoline": {
+      "phonetic": "/ɡæsl̩ˈin/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gasoline-us.mp3"
+    },
+    "petroleum": {
+      "phonetic": "/pəˈtɹoʊliəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/petroleum-us.mp3"
+    },
+    "photosynthesis": {
+      "phonetic": "/ˌfoʊ.toʊ.ˈsɪn.θə.sɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/photosynthesis-uk.mp3"
+    },
+    "respire": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "dioxide": {
+      "phonetic": "/daɪˈɒksaɪd/",
+      "audioUrl": ""
+    },
+    "vegetation": {
+      "phonetic": "/ˌvɛd͡ʒəˈteɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vegetation-us.mp3"
+    },
+    "herb": {
+      "phonetic": "/(h)ɝb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/herb-uk.mp3"
+    },
+    "perennial": {
+      "phonetic": "/pəˈɹɛni.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/perennial-us.mp3"
+    },
+    "botany": {
+      "phonetic": "/-ɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/botany-us.mp3"
+    },
+    "ecology": {
+      "phonetic": "/i.ˈkɑ.lə.dʒi/",
+      "audioUrl": ""
+    },
+    "ecosystem": {
+      "phonetic": "/ˈikoʊˌsɪstəm/",
+      "audioUrl": ""
+    },
+    "horticulture": {
+      "phonetic": "/ˈhɔɹ.tɪˌkʌl.tʃɚ/",
+      "audioUrl": ""
+    },
+    "organism": {
+      "phonetic": "/ˈɔɹ.ɡən.ɪ.zəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/organism-us.mp3"
+    },
+    "genetics": {
+      "phonetic": "/dʒɛˈnɛ.tɪks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/genetics-uk.mp3"
+    },
+    "mutation": {
+      "phonetic": "/mjuˈteɪʃən/",
+      "audioUrl": ""
+    },
+    "variation": {
+      "phonetic": "/ˌvæɹiˈeɪʃn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/variation-us.mp3"
+    },
+    "diversity": {
+      "phonetic": "/daɪˈvɜː(ɹ)sɪti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/diversity-uk.mp3"
+    },
+    "hybridisation": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "classify": {
+      "phonetic": "/ˈklæsɪfaɪ/",
+      "audioUrl": ""
+    },
+    "reproduce": {
+      "phonetic": "/ˌɹi.pɹoʊˈdus/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reproduce-us.mp3"
+    },
+    "evolve": {
+      "phonetic": "/ɪˈvɑlv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/evolve-uk.mp3"
+    },
+    "fluctuate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "reclaim": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "cultivate": {
+      "phonetic": "/ˈkʌltɪveɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cultivate-us.mp3"
+    },
+    "sow": {
+      "phonetic": "/saʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sow-1-us.mp3"
+    },
+    "harvest": {
+      "phonetic": "/ˈhɑɹ.vəst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/harvest-us.mp3"
+    },
+    "pluck": {
+      "phonetic": "/plʌk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pluck-us.mp3"
+    },
+    "pick": {
+      "phonetic": "/pɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pick-us.mp3"
+    },
+    "yield": {
+      "phonetic": "/jiːld/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/yield-us.mp3"
+    },
+    "rear": {
+      "phonetic": "/ɹiɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rear-us.mp3"
+    },
+    "arable": {
+      "phonetic": "/ˈæɹəbl̩/",
+      "audioUrl": ""
+    },
+    "plough": {
+      "phonetic": "/plaʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plough-us.mp3"
+    },
+    "spade": {
+      "phonetic": "/speɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spade-us.mp3"
+    },
+    "rake": {
+      "phonetic": "/ɹeɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rake-us.mp3"
+    },
+    "stack": {
+      "phonetic": "/stæk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stack-au.mp3"
+    },
+    "heap": {
+      "phonetic": "/hiːp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/heap-us.mp3"
+    },
+    "bundle": {
+      "phonetic": "/ˈbʌnd(ə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bundle-us.mp3"
+    },
+    "bunch": {
+      "phonetic": "/ˈbʌntʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bunch-us.mp3"
+    },
+    "vase": {
+      "phonetic": "/veɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vase-us.mp3"
+    },
+    "sunlight": {
+      "phonetic": "/ˈsʌnˌlaɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sunlight-us.mp3"
+    },
+    "fungus": {
+      "phonetic": "/ˈfʌŋ.ɡəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fungus-us.mp3"
+    },
+    "mould": {
+      "phonetic": "/moʊld/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mould-us.mp3"
+    },
+    "pollen": {
+      "phonetic": "/ˈpɑlən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pollen-us.mp3"
+    },
+    "germinate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "seed": {
+      "phonetic": "/siːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/seed-us.mp3"
+    },
+    "burgeon": {
+      "phonetic": "/ˈbɝː.d͡ʒən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/burgeon-us.mp3"
+    },
+    "bud": {
+      "phonetic": "/bʌd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bud-us.mp3"
+    },
+    "flower": {
+      "phonetic": "/ˈflaʊ.ɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flower-1-us.mp3"
+    },
+    "blossom": {
+      "phonetic": "/ˈblɑ.səm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/blossom-us.mp3"
+    },
+    "bloom": {
+      "phonetic": "/bluːm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bloom-us.mp3"
+    },
+    "scent": {
+      "phonetic": "/sɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scent-us.mp3"
+    },
+    "aromatic": {
+      "phonetic": "/æ.ɹəˈmæt.ɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/aromatic-us.mp3"
+    },
+    "ripen": {
+      "phonetic": "/ˈɹaɪpən/",
+      "audioUrl": ""
+    },
+    "fruit": {
+      "phonetic": "/fɹut/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fruit-us.mp3"
+    },
+    "wither": {
+      "phonetic": "/ˈwɪðɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wither-uk.mp3"
+    },
+    "decompose": {
+      "phonetic": "/ˌdiːkəmˈpəʊz/",
+      "audioUrl": ""
+    },
+    "rot": {
+      "phonetic": "[ɹɑt]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rot-us.mp3"
+    },
+    "decay": {
+      "phonetic": "/di.ˈkeɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/decay-uk.mp3"
+    }
+  }
+}
