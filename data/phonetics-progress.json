@@ -1,5 +1,5 @@
 {
-  "completed": 291,
+  "completed": 1647,
   "failed": [
     {
       "word": "El Nino",
@@ -36,6 +36,61 @@
     {
       "word": "shade-tolerant",
       "error": "not_found"
+    },
+    {
+      "word": "rainforest",
+      "error": "This operation was aborted",
+      "index": 301
+    },
+    {
+      "word": "jungle",
+      "error": "This operation was aborted",
+      "index": 302
+    },
+    {
+      "word": "elephant",
+      "error": "This operation was aborted",
+      "index": 442
+    },
+    {
+      "word": "horn",
+      "error": "This operation was aborted",
+      "index": 445
+    },
+    {
+      "word": "subject",
+      "error": "This operation was aborted",
+      "index": 760
+    },
+    {
+      "word": "Fahrenheit",
+      "error": "not_found",
+      "index": 842
+    },
+    {
+      "word": "dissolve",
+      "error": "This operation was aborted",
+      "index": 857
+    },
+    {
+      "word": "high-definition",
+      "error": "not_found",
+      "index": 1090
+    },
+    {
+      "word": "phase",
+      "error": "not_found",
+      "index": 1115
+    },
+    {
+      "word": "X-rated",
+      "error": "not_found",
+      "index": 1332
+    },
+    {
+      "word": "Olympic",
+      "error": "not_found",
+      "index": 1379
     }
   ],
   "phoneticsMap": {
@@ -1202,6 +1257,5430 @@
     "decay": {
       "phonetic": "/di.ˈkeɪ/",
       "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/decay-uk.mp3"
+    },
+    "stale": {
+      "phonetic": "/steɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stale-uk.mp3"
+    },
+    "plantation": {
+      "phonetic": "/plænˈteɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plantation-us.mp3"
+    },
+    "field": {
+      "phonetic": "/fild/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/field-us.mp3"
+    },
+    "terrace": {
+      "phonetic": "/ˈtɛɹəs/",
+      "audioUrl": ""
+    },
+    "timber": {
+      "phonetic": "/ˈtɪmbɚ/",
+      "audioUrl": ""
+    },
+    "charcoal": {
+      "phonetic": "/ˈtʃɑɹ.koʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/charcoal-us.mp3"
+    },
+    "log": {
+      "phonetic": "/lɑɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/log-us.mp3"
+    },
+    "logo": {
+      "phonetic": "/ˈloʊɡoʊ/",
+      "audioUrl": ""
+    },
+    "forestry": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "branch": {
+      "phonetic": "/bɹæntʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/branch-us.mp3"
+    },
+    "trunk": {
+      "phonetic": "/tɹʌŋk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/trunk-us.mp3"
+    },
+    "bough": {
+      "phonetic": "/baʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bough-us.mp3"
+    },
+    "root": {
+      "phonetic": "/ɹuːt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/root-us.mp3"
+    },
+    "hay": {
+      "phonetic": "/heɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hay-us.mp3"
+    },
+    "straw": {
+      "phonetic": "/stɹɔ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/straw-us.mp3"
+    },
+    "reed": {
+      "phonetic": "/ɹiːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reed-us.mp3"
+    },
+    "thorn": {
+      "phonetic": "/θɔɹn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thorn-us.mp3"
+    },
+    "weed": {
+      "phonetic": "/wiːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/weed-us.mp3"
+    },
+    "grass": {
+      "phonetic": "[ɡɹ̠eəs]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/grass-us.mp3"
+    },
+    "meadow": {
+      "phonetic": "/ˈmɛdoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/meadow-us.mp3"
+    },
+    "lawn": {
+      "phonetic": "/lɔn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lawn-us.mp3"
+    },
+    "olive": {
+      "phonetic": "/ˈɑlɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/olive-us.mp3"
+    },
+    "pine": {
+      "phonetic": "/paɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pine-au.mp3"
+    },
+    "vine": {
+      "phonetic": "/vaɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vine-us.mp3"
+    },
+    "violet": {
+      "phonetic": "/ˈvaɪlət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/violet-uk.mp3"
+    },
+    "tulip": {
+      "phonetic": "/ˈt(j)uːlɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tulip-us.mp3"
+    },
+    "mint": {
+      "phonetic": "/mɪnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mint-us.mp3"
+    },
+    "reef": {
+      "phonetic": "/ɹiːf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reef-us.mp3"
+    },
+    "alga": {
+      "phonetic": "/ˈæl.ɡə/",
+      "audioUrl": ""
+    },
+    "enzyme": {
+      "phonetic": "/ˈɛn.zaɪm/",
+      "audioUrl": ""
+    },
+    "catalyst": {
+      "phonetic": "/ˈkæt.ə.lɪst/",
+      "audioUrl": ""
+    },
+    "release": {
+      "phonetic": "/ɹɪˈliːs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/release-1-us.mp3"
+    },
+    "emission": {
+      "phonetic": "/ɪˈmɪʃn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/emission-us.mp3"
+    },
+    "absorb": {
+      "phonetic": "/æbˈsɔɹb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/absorb-us.mp3"
+    },
+    "circulation": {
+      "phonetic": "/ˌsɝkjʊˈleɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/circulation-us.mp3"
+    },
+    "exceed": {
+      "phonetic": "/ɪkˈsiːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exceed-uk.mp3"
+    },
+    "uptake": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/uptake-us.mp3"
+    },
+    "nutrient": {
+      "phonetic": "/ˈnuː.tɹi.ənt/",
+      "audioUrl": ""
+    },
+    "energy": {
+      "phonetic": "/ˈɛnɚd͡ʒi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/energy-us.mp3"
+    },
+    "surroundings": {
+      "phonetic": "/səˈɹaʊndɪŋz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/surroundings-us.mp3"
+    },
+    "mechanism": {
+      "phonetic": "/ˈmɛkənɪzm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mechanism-us.mp3"
+    },
+    "counterbalance": {
+      "phonetic": "/ˌkaʊntə(ɹ)ˈbæləns/",
+      "audioUrl": ""
+    },
+    "protect": {
+      "phonetic": "/pɹəˈtɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/protect-us.mp3"
+    },
+    "preserve": {
+      "phonetic": "/pɹəˈzɝv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/preserve-us.mp3"
+    },
+    "conservation": {
+      "phonetic": "/ˌkɑnsə(ɹ)ˈveɪʃən/",
+      "audioUrl": ""
+    },
+    "bush fire": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bush%20fire-au.mp3"
+    },
+    "extinguish": {
+      "phonetic": "/ɪkˈstɪŋ.ɡwɪʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/extinguish-us.mp3"
+    },
+    "destruct": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/destruct-us.mp3"
+    },
+    "ruin": {
+      "phonetic": "/ˈɹuː.ɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ruin-us.mp3"
+    },
+    "perish": {
+      "phonetic": "/ˈpɛɹɪʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/perish-us.mp3"
+    },
+    "demolish": {
+      "phonetic": "/dəˈmɒl.ɪʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/demolish-us.mp3"
+    },
+    "infringe": {
+      "phonetic": "/ɪnˈfɹɪndʒ/",
+      "audioUrl": ""
+    },
+    "undermine": {
+      "phonetic": "/ʌndəˈmaɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/undermine-us.mp3"
+    },
+    "extinction": {
+      "phonetic": "/ɪkˈstɪŋkʃ(ə)n/",
+      "audioUrl": ""
+    },
+    "pattern": {
+      "phonetic": "/ˈpætəɹn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pattern-uk.mp3"
+    },
+    "outcome": {
+      "phonetic": "/ˈaʊtkʌm/",
+      "audioUrl": ""
+    },
+    "impact": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/impact-uk.mp3"
+    },
+    "seasonal": {
+      "phonetic": "/ˈsiːzənəl/",
+      "audioUrl": ""
+    },
+    "experimental": {
+      "phonetic": "/ɨkspɛɹəˈmɛntəl/",
+      "audioUrl": ""
+    },
+    "favourable": {
+      "phonetic": "/ˈfeɪv(ə)ɹəbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/favourable-us.mp3"
+    },
+    "productive": {
+      "phonetic": "/pɹəˈdʌktɪv/",
+      "audioUrl": ""
+    },
+    "effective": {
+      "phonetic": "/əˈfɛktɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/effective-us.mp3"
+    },
+    "efficient": {
+      "phonetic": "/əˈfɪʃənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/efficient-us.mp3"
+    },
+    "considerable": {
+      "phonetic": "/kənˈsɪdəɹəbl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/considerable-us.mp3"
+    },
+    "massive": {
+      "phonetic": "/ˈmæs.ɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/massive-us.mp3"
+    },
+    "immense": {
+      "phonetic": "/ɪˈmɛns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/immense-us.mp3"
+    },
+    "maximal": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "minimal": {
+      "phonetic": "/mɪnəməl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/minimal-us.mp3"
+    },
+    "optimal": {
+      "phonetic": "/ˈɑptɪməl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/optimal-us.mp3"
+    },
+    "biologist": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "zoologist": {
+      "phonetic": "/zoʊˈɑlədʒɪst/",
+      "audioUrl": ""
+    },
+    "ecologist": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "botanist": {
+      "phonetic": "/ˈbɒt.ən.ɪst/",
+      "audioUrl": ""
+    },
+    "mammal": {
+      "phonetic": "/ˈmæməl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mammal-us.mp3"
+    },
+    "primate": {
+      "phonetic": "/ˈpɹaɪmeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/primate-us.mp3"
+    },
+    "vertebrate": {
+      "phonetic": "/ˈvɛɹ.tɪ.bɹeɪt/",
+      "audioUrl": ""
+    },
+    "reptile": {
+      "phonetic": "/ˈɹɛp.taɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reptile-uk.mp3"
+    },
+    "amphibian": {
+      "phonetic": "/æmˈfɪbɪən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/amphibian-us.mp3"
+    },
+    "carnivore": {
+      "phonetic": "/ˈkɑːnɪvɔː/",
+      "audioUrl": ""
+    },
+    "herbivore": {
+      "phonetic": "/ˈhɜːɹbɪvɔːɹ/",
+      "audioUrl": ""
+    },
+    "creature": {
+      "phonetic": "/ˈkɹiːt͡ʃəɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/creature-us.mp3"
+    },
+    "wildlife": {
+      "phonetic": "/ˈwaɪldlaɪf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wildlife-au.mp3"
+    },
+    "fauna": {
+      "phonetic": "/ˈfɔː.nə/",
+      "audioUrl": ""
+    },
+    "flora": {
+      "phonetic": "/ˈflɔː.ɹə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flora-us.mp3"
+    },
+    "species": {
+      "phonetic": "/ˈspiːsiːz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/species-us.mp3"
+    },
+    "flock": {
+      "phonetic": "/flɑk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flock-us.mp3"
+    },
+    "herd": {
+      "phonetic": "/hɝd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/herd-us.mp3"
+    },
+    "swarm": {
+      "phonetic": "/swɔɹm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/swarm-us.mp3"
+    },
+    "throng": {
+      "phonetic": "/θɹɑŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/throng-us.mp3"
+    },
+    "crowd": {
+      "phonetic": "/kɹaʊd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/crowd-us.mp3"
+    },
+    "beast": {
+      "phonetic": "/biːst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/beast-us.mp3"
+    },
+    "brute": {
+      "phonetic": "/bɹut/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brute-us.mp3"
+    },
+    "cruel": {
+      "phonetic": "/kɹuː(ə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cruel-au.mp3"
+    },
+    "originate": {
+      "phonetic": "/əˈɹɪdʒɪneɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/originate-us.mp3"
+    },
+    "derive": {
+      "phonetic": "/dəˈɹaɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/derive-us.mp3"
+    },
+    "stem": {
+      "phonetic": "/stɛm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stem-us.mp3"
+    },
+    "ancestor": {
+      "phonetic": "/ˈæn.sɛs.tɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ancestor-us.mp3"
+    },
+    "descendant": {
+      "phonetic": "/dɪˈsɛndənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/descendant-us.mp3"
+    },
+    "offspring": {
+      "phonetic": "/ˈɑfspɹɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/offspring-uk.mp3"
+    },
+    "subgroup": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "feed": {
+      "phonetic": "/ˈfiːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/feed-us.mp3"
+    },
+    "breed": {
+      "phonetic": "/bɹiːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/breed-us.mp3"
+    },
+    "interbreed": {
+      "phonetic": "/ɪnteɹˈbɹid/",
+      "audioUrl": ""
+    },
+    "hybridize": {
+      "phonetic": "/ˈhaɪ.bɹɪd.aɪz/",
+      "audioUrl": ""
+    },
+    "proliferate": {
+      "phonetic": "/pɹəˈlɪf.əɹ.eɪt/",
+      "audioUrl": ""
+    },
+    "sterility": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "mate": {
+      "phonetic": "/meɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mate-us.mp3"
+    },
+    "courtship": {
+      "phonetic": "/ˈkɔː(ɹ)tʃɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/courtship-uk.mp3"
+    },
+    "lay": {
+      "phonetic": "/leɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lay-us.mp3"
+    },
+    "hatch": {
+      "phonetic": "/hætʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hatch-au.mp3"
+    },
+    "brood": {
+      "phonetic": "/bɹuːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brood-us.mp3"
+    },
+    "spawn": {
+      "phonetic": "/ˈspɔːn/",
+      "audioUrl": ""
+    },
+    "mature": {
+      "phonetic": "/məˈt(j)ʊəɹ/",
+      "audioUrl": ""
+    },
+    "skin": {
+      "phonetic": "/skɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/skin-us.mp3"
+    },
+    "claw": {
+      "phonetic": "/klɔ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/claw-us.mp3"
+    },
+    "paw": {
+      "phonetic": "/pɔ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/paw-1-us.mp3"
+    },
+    "beak": {
+      "phonetic": "/biːk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/beak-us.mp3"
+    },
+    "fin": {
+      "phonetic": "/fɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fin-us.mp3"
+    },
+    "wing": {
+      "phonetic": "/wɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wing-us.mp3"
+    },
+    "plume": {
+      "phonetic": "/ˈplum/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plume-us.mp3"
+    },
+    "feather": {
+      "phonetic": "/ˈfɛð.ɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/feather-us.mp3"
+    },
+    "fur": {
+      "phonetic": "/fɝ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fur-1-us.mp3"
+    },
+    "bristle": {
+      "phonetic": "/ˈbɹɪs.l̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bristle-uk.mp3"
+    },
+    "curl": {
+      "phonetic": "/kɝl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/curl-us.mp3"
+    },
+    "insect": {
+      "phonetic": "/ˈɪnsɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/insect-us.mp3"
+    },
+    "worm": {
+      "phonetic": "/wɝm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/worm-us.mp3"
+    },
+    "pest": {
+      "phonetic": "/pɛst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pest-uk.mp3"
+    },
+    "parasite": {
+      "phonetic": "/ˈpæɹəˌsaɪt/",
+      "audioUrl": ""
+    },
+    "spider": {
+      "phonetic": "/ˈspaɪ̯dɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spider-us.mp3"
+    },
+    "butterfly": {
+      "phonetic": "[ˈbʌɾɚflaɪ]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/butterfly-au.mp3"
+    },
+    "mosquito": {
+      "phonetic": "/məˈski.toʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mosquito-us.mp3"
+    },
+    "cricket": {
+      "phonetic": "/ˈkɹɪk.ɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cricket-us.mp3"
+    },
+    "penguin": {
+      "phonetic": "/ˈpɛŋɡwɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/penguin-us.mp3"
+    },
+    "seal": {
+      "phonetic": "/siːl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/seal-us.mp3"
+    },
+    "tortoise": {
+      "phonetic": "/ˈtɔːɹ.təs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tortoise-us.mp3"
+    },
+    "turtle": {
+      "phonetic": "/ˈtɝtəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/turtle-us.mp3"
+    },
+    "whale": {
+      "phonetic": "/weɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/whale-us.mp3"
+    },
+    "kangaroo": {
+      "phonetic": "/kaŋ.ɡə.ˈɹuː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/kangaroo-us.mp3"
+    },
+    "camel": {
+      "phonetic": "/ˈkæməl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/camel-1-us.mp3"
+    },
+    "panda": {
+      "phonetic": "/ˈpændə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/panda-1-us.mp3"
+    },
+    "ivory": {
+      "phonetic": "/ˈaɪvəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ivory-us.mp3"
+    },
+    "bear": {
+      "phonetic": "/bɑɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bear-us.mp3"
+    },
+    "wolf": {
+      "phonetic": "/wʊlf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wolf-us.mp3"
+    },
+    "dragon": {
+      "phonetic": "/ˈdɹæɡən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dragon-us.mp3"
+    },
+    "fox": {
+      "phonetic": "/fɑks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fox-us.mp3"
+    },
+    "cub": {
+      "phonetic": "/kʌb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cub-us.mp3"
+    },
+    "calf": {
+      "phonetic": "/kæf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/calf-us.mp3"
+    },
+    "pup": {
+      "phonetic": "/pʌp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pup-us.mp3"
+    },
+    "lamb": {
+      "phonetic": "/læm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lamb-us.mp3"
+    },
+    "cattle": {
+      "phonetic": "/ˈkæt(ə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cattle-us.mp3"
+    },
+    "ox": {
+      "phonetic": "/ˈɑks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ox-ca.mp3"
+    },
+    "bull": {
+      "phonetic": "/ˈbʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bull-us.mp3"
+    },
+    "buffalo": {
+      "phonetic": "/ˈbʌf.ə.loʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/buffalo-us.mp3"
+    },
+    "horse": {
+      "phonetic": "/hɔɹs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/horse-us.mp3"
+    },
+    "zebra": {
+      "phonetic": "/ˈziːbɹə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/zebra-uk.mp3"
+    },
+    "donkey": {
+      "phonetic": "/ˈdɑŋki/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/donkey-us.mp3"
+    },
+    "saddle": {
+      "phonetic": "/ˈsædəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/saddle-us.mp3"
+    },
+    "harness": {
+      "phonetic": "/ˈhɑː(ɹ).nəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/harness-us.mp3"
+    },
+    "falcon": {
+      "phonetic": "/ˈfælkən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/falcon-us.mp3"
+    },
+    "hawk": {
+      "phonetic": "/hɔk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hawk-us.mp3"
+    },
+    "eagle": {
+      "phonetic": "/ˈiːɡəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/eagle-us.mp3"
+    },
+    "owl": {
+      "phonetic": "/aʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/owl-us.mp3"
+    },
+    "swallow": {
+      "phonetic": "/ˈswɑloʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/swallow-us.mp3"
+    },
+    "sparrow": {
+      "phonetic": "/ˈspæɹoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sparrow-us.mp3"
+    },
+    "pigeon": {
+      "phonetic": "/ˈpɪ.dʒən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pigeon-us.mp3"
+    },
+    "crow": {
+      "phonetic": "/kɹoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/crow-us.mp3"
+    },
+    "swan": {
+      "phonetic": "/swɑn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/swan-us.mp3"
+    },
+    "goose": {
+      "phonetic": "/ˈɡuːs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/goose-us.mp3"
+    },
+    "cock": {
+      "phonetic": "/kɑk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cock-us.mp3"
+    },
+    "mouse": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "rat": {
+      "phonetic": "/ɹæt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rat-us.mp3"
+    },
+    "squirrel": {
+      "phonetic": "/ˈskwɝl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/squirrel-ca.mp3"
+    },
+    "hare": {
+      "phonetic": "/heə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hare-us.mp3"
+    },
+    "frog": {
+      "phonetic": "/fɹɑɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/frog-us.mp3"
+    },
+    "behaviour": {
+      "phonetic": "/bɪˈheɪvjɚ/",
+      "audioUrl": ""
+    },
+    "bite": {
+      "phonetic": "/baɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bite-us.mp3"
+    },
+    "sting": {
+      "phonetic": "/stɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sting-us.mp3"
+    },
+    "bark": {
+      "phonetic": "/bɑɹk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bark-us.mp3"
+    },
+    "roar": {
+      "phonetic": "/ɹɔɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/roar-us.mp3"
+    },
+    "rub": {
+      "phonetic": "/ɹʌb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rub-us.mp3"
+    },
+    "creep": {
+      "phonetic": "/kɹiːp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/creep-us.mp3"
+    },
+    "crawl": {
+      "phonetic": "/kɹɔl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/crawl-us.mp3"
+    },
+    "habitat": {
+      "phonetic": "/ˈhæbɪtæt/",
+      "audioUrl": ""
+    },
+    "nest": {
+      "phonetic": "/nɛst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/nest-us.mp3"
+    },
+    "hive": {
+      "phonetic": "/haɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hive-uk.mp3"
+    },
+    "cell": {
+      "phonetic": "/sɛl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cell-us.mp3"
+    },
+    "cage": {
+      "phonetic": "/keɪdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cage-us.mp3"
+    },
+    "stable": {
+      "phonetic": "/ˈsteɪ.bəɫ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stable-uk.mp3"
+    },
+    "barn": {
+      "phonetic": "[baːn]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/barn-uk.mp3"
+    },
+    "hedge": {
+      "phonetic": "/hɛdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hedge-us.mp3"
+    },
+    "barrier": {
+      "phonetic": "/ˈbæɹi.əɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/barrier-us.mp3"
+    },
+    "bar": {
+      "phonetic": "/bɑɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bar-us.mp3"
+    },
+    "anatomy": {
+      "phonetic": "/əˈnætəmi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/anatomy-us.mp3"
+    },
+    "epidemic": {
+      "phonetic": "/ˌɛpɪˈdɛmɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/epidemic.mp3"
+    },
+    "gene": {
+      "phonetic": "/dʒiːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gene-us.mp3"
+    },
+    "germ": {
+      "phonetic": "/d͡ʒɝm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/germ-us.mp3"
+    },
+    "bacteria": {
+      "phonetic": "/bækˈtɪɹ.i.ə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bacteria-us.mp3"
+    },
+    "virus": {
+      "phonetic": "/ˈvaɪɹəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/virus-us.mp3"
+    },
+    "microbe": {
+      "phonetic": "/ˈmaɪkɹoʊb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/microbe-us.mp3"
+    },
+    "metabolism": {
+      "phonetic": "/məˈtæ.bəlˌɪz.əm/",
+      "audioUrl": ""
+    },
+    "protein": {
+      "phonetic": "/ˈpɹoʊtiːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/protein-us.mp3"
+    },
+    "vitamin": {
+      "phonetic": "/ˈvaɪ.tə.mɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vitamin-us.mp3"
+    },
+    "secrete": {
+      "phonetic": "/sɪˈkɹiːt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/secrete-us.mp3"
+    },
+    "excrete": {
+      "phonetic": "/ɛkˈskɹiːt/",
+      "audioUrl": ""
+    },
+    "devour": {
+      "phonetic": "/dɪˈvaʊ(w)ə(ɹ)/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/devour-us.mp3"
+    },
+    "instinct": {
+      "phonetic": "/ˈɪn.stɪŋkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/instinct-us.mp3"
+    },
+    "intuitive": {
+      "phonetic": "/ɪnˈtjuːɪtɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/intuitive-us.mp3"
+    },
+    "potential": {
+      "phonetic": "/po(ʊ)ˈtɛnʃəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/potential-us.mp3"
+    },
+    "intelligence": {
+      "phonetic": "/ɪnˈtɛl.ɪ.d͡ʒəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/intelligence-us.mp3"
+    },
+    "functional": {
+      "phonetic": "/ˈfʌŋk(t)ʃnəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/functional-us.mp3"
+    },
+    "sensitive": {
+      "phonetic": "/ˈsɛnsɪtɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sensitive-us.mp3"
+    },
+    "flexible": {
+      "phonetic": "/ˈflɛk.sə.bəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flexible-us.mp3"
+    },
+    "acoustic": {
+      "phonetic": "/əˈkuːstɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/acoustic-us.mp3"
+    },
+    "optical": {
+      "phonetic": "/ˈɑptɪkəl/",
+      "audioUrl": ""
+    },
+    "nocturnal": {
+      "phonetic": "/nɑkˈtɚnəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/nocturnal-us.mp3"
+    },
+    "dormant": {
+      "phonetic": "/ˈdɔɹmənt/",
+      "audioUrl": ""
+    },
+    "hibernation": {
+      "phonetic": "/ˌhaɪ.bəɹˈneɪ.ʃən/",
+      "audioUrl": ""
+    },
+    "track": {
+      "phonetic": "/tɹæk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/track-us.mp3"
+    },
+    "trace": {
+      "phonetic": "/tɹeɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/trace-us.mp3"
+    },
+    "alternate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "prey": {
+      "phonetic": "/pɹeɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prey-us.mp3"
+    },
+    "predator": {
+      "phonetic": "/ˈpɹɛd.ə.təɹ/",
+      "audioUrl": ""
+    },
+    "victim": {
+      "phonetic": "/ˈvɪktəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/victim-us.mp3"
+    },
+    "captive": {
+      "phonetic": "/ˈkæptɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/captive-us.mp3"
+    },
+    "defensive": {
+      "phonetic": "/dɪˈfɛnsɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/defensive-au.mp3"
+    },
+    "undergo": {
+      "phonetic": "/ˌʌndɚˈɡoʊ/",
+      "audioUrl": ""
+    },
+    "suffer": {
+      "phonetic": "/ˈsʌfɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/suffer-us.mp3"
+    },
+    "vulnerable": {
+      "phonetic": "/ˈvʌln(ə)ɹəbl̩/",
+      "audioUrl": ""
+    },
+    "subsistence": {
+      "phonetic": "/səbˈsɪstəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/subsistence-uk.mp3"
+    },
+    "exist": {
+      "phonetic": "/ɪɡˈzɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exist-us.mp3"
+    },
+    "exterminate": {
+      "phonetic": "/ɛkˈstɝ.mɪ.neɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exterminate-us.mp3"
+    },
+    "tame": {
+      "phonetic": "/teɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tame-us.mp3"
+    },
+    "keeper": {
+      "phonetic": "/ˈkiːpɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/keeper-us.mp3"
+    },
+    "shepherd": {
+      "phonetic": "/ˈʃɛpɚd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shepherd-us.mp3"
+    },
+    "galaxy": {
+      "phonetic": "/ˈɡæləksi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/galaxy-us.mp3"
+    },
+    "cosmos": {
+      "phonetic": "/ˈkɔz.moʊz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cosmos-1-uk.mp3"
+    },
+    "universe": {
+      "phonetic": "/ˈjuːnəˌvɝs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/universe-us.mp3"
+    },
+    "interstellar": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "terrestrial": {
+      "phonetic": "/təˈɹɛstɹi.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/terrestrial-uk.mp3"
+    },
+    "celestial": {
+      "phonetic": "/səˈlɛstiəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/celestial-us.mp3"
+    },
+    "astronomy": {
+      "phonetic": "/æˈstɹɑnəˌmi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/astronomy-us.mp3"
+    },
+    "astrology": {
+      "phonetic": "/əˈstɹɒlədʒi/",
+      "audioUrl": ""
+    },
+    "astronaut": {
+      "phonetic": "/ˈæstɹəˌnɔt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/astronaut-ca.mp3"
+    },
+    "comet": {
+      "phonetic": "/ˈkɒmət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/comet-us.mp3"
+    },
+    "meteorite": {
+      "phonetic": "/-ɾi-/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/meteorite-us.mp3"
+    },
+    "crater": {
+      "phonetic": "/ˈkɹeː.təɹ/",
+      "audioUrl": ""
+    },
+    "dust": {
+      "phonetic": "/dʌst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dust-us.mp3"
+    },
+    "ash": {
+      "phonetic": "/æʃ/",
+      "audioUrl": ""
+    },
+    "envelope": {
+      "phonetic": "/ˈɑn.vəˌloʊp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/envelope-1-us.mp3"
+    },
+    "chunk": {
+      "phonetic": "/t͡ʃʌŋk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/chunk-us.mp3"
+    },
+    "spacecraft": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "spaceship": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "probe": {
+      "phonetic": "/pɹoʊb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/probe-uk.mp3"
+    },
+    "module": {
+      "phonetic": "/ˈmɑdʒuːl/",
+      "audioUrl": ""
+    },
+    "propulsion": {
+      "phonetic": "/pɹəˈpʌlʃən/",
+      "audioUrl": ""
+    },
+    "pressure": {
+      "phonetic": "[ˈpɹɛʃ.ɚ]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pressure-us.mp3"
+    },
+    "dynamics": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "motion": {
+      "phonetic": "/ˈmoʊʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/motion-us.mp3"
+    },
+    "vent": {
+      "phonetic": "/vɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vent-1-us.mp3"
+    },
+    "tail": {
+      "phonetic": "/teɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tail-us.mp3"
+    },
+    "curve": {
+      "phonetic": "/kɝv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/curve-us.mp3"
+    },
+    "exploration": {
+      "phonetic": "/ˌɛkspləˈɹeɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exploration-us.mp3"
+    },
+    "expedition": {
+      "phonetic": "/ɛkspəˈdɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/expedition-us.mp3"
+    },
+    "flyby": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "observatory": {
+      "phonetic": "/əbˈzəɹvətɔɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/observatory-us.mp3"
+    },
+    "telescope": {
+      "phonetic": "/ˈtɛləˌskoʊp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/telescope-us.mp3"
+    },
+    "spectacle": {
+      "phonetic": "/ˈspɛktəkl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spectacle-uk.mp3"
+    },
+    "orbit": {
+      "phonetic": "/ˈɔː(ɹ)bɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/orbit-us.mp3"
+    },
+    "ecliptic": {
+      "phonetic": "/ɪˈklɪp.tɪk/",
+      "audioUrl": ""
+    },
+    "diameter": {
+      "phonetic": "/daɪˈæmɪtɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/diameter-us.mp3"
+    },
+    "radius": {
+      "phonetic": "/ˈɹeɪ.di.əs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/radius-us.mp3"
+    },
+    "substance": {
+      "phonetic": "/ˈsʌbstəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/substance-us.mp3"
+    },
+    "composition": {
+      "phonetic": "/ˌkɒmpəˈzɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/composition-us.mp3"
+    },
+    "compound": {
+      "phonetic": "/kəmˈpaʊnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/compound-2-us.mp3"
+    },
+    "fossil": {
+      "phonetic": "/ˈfɑːsəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fossil-us.mp3"
+    },
+    "sample": {
+      "phonetic": "/ˈsæm.pəl/",
+      "audioUrl": ""
+    },
+    "specimen": {
+      "phonetic": "/ˈspɛsɪmɪn/",
+      "audioUrl": ""
+    },
+    "particle": {
+      "phonetic": "/ˈpɑɹtɪkəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/particle-us.mp3"
+    },
+    "molecule": {
+      "phonetic": "/ˈmɑləkjul/",
+      "audioUrl": ""
+    },
+    "atom": {
+      "phonetic": "/ˈatəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/atom-us.mp3"
+    },
+    "ion": {
+      "phonetic": "/ˈaɪ.ɑn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ion-1-us.mp3"
+    },
+    "electron": {
+      "phonetic": "/ɪˈlɛktɹɑn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/electron-us.mp3"
+    },
+    "quantum": {
+      "phonetic": "/ˈkwɑntəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quantum-us.mp3"
+    },
+    "liquid": {
+      "phonetic": "/ˈlɪkwɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/liquid-us.mp3"
+    },
+    "fluid": {
+      "phonetic": "/ˈfluːɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fluid-us.mp3"
+    },
+    "solid": {
+      "phonetic": "/ˈsɑlɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/solid-us.mp3"
+    },
+    "synthesise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "formation": {
+      "phonetic": "/fɔɹ.ˈmeɪ.ʃən/",
+      "audioUrl": ""
+    },
+    "method": {
+      "phonetic": "/ˈmɛθəd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/method-us.mp3"
+    },
+    "spectrum": {
+      "phonetic": "/ˈspɛkt(ʃ)ɹəm/",
+      "audioUrl": ""
+    },
+    "dimension": {
+      "phonetic": "/daɪˈmɛnʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dimension-us.mp3"
+    },
+    "frequency": {
+      "phonetic": "/ˈfɹiːkwənsi/",
+      "audioUrl": ""
+    },
+    "signal": {
+      "phonetic": "/ˈsɪɡnəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/signal-us.mp3"
+    },
+    "antenna": {
+      "phonetic": "/ænˈtɛn.ə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/antenna-us.mp3"
+    },
+    "circuit": {
+      "phonetic": "[ˈsɝ.kət]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/circuit-us.mp3"
+    },
+    "refraction": {
+      "phonetic": "/ɹəˈfɹækʃən/",
+      "audioUrl": ""
+    },
+    "ultraviolet": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "radioactive": {
+      "phonetic": "/ˌɹeɪdioʊˈæktɪv/",
+      "audioUrl": ""
+    },
+    "distinct": {
+      "phonetic": "/dɪsˈtɪŋkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/distinct-us.mp3"
+    },
+    "discernible": {
+      "phonetic": "/dɪˈsɝnɪbl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/discernible-au.mp3"
+    },
+    "invisible": {
+      "phonetic": "/ɪnˈvɪzəb(ə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/invisible-us.mp3"
+    },
+    "collision": {
+      "phonetic": "/kəˈlɪʒən/",
+      "audioUrl": ""
+    },
+    "squash": {
+      "phonetic": "/skwɔʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/squash-us.mp3"
+    },
+    "fragment": {
+      "phonetic": "/fɹæɡˈmɛnt/",
+      "audioUrl": ""
+    },
+    "cataclysmic": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "overwhelming": {
+      "phonetic": "/ˌoʊvɚˈ(h)wɛlmɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/overwhelming-us.mp3"
+    },
+    "despair": {
+      "phonetic": "/dɪˈspɛəɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/despair-us.mp3"
+    },
+    "desperate": {
+      "phonetic": "/ˈdɛsp(ə)ɹət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/desperate-us.mp3"
+    },
+    "hopeless": {
+      "phonetic": "/ˈhoʊplɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hopeless-us.mp3"
+    },
+    "education": {
+      "phonetic": "/ˌɛdjʊˈkeɪʃn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/education-us.mp3"
+    },
+    "primary": {
+      "phonetic": "/ˈpɹaɪməɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/primary-us.mp3"
+    },
+    "secondary": {
+      "phonetic": "/ˈsɛkənˌdɛɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/secondary-us.mp3"
+    },
+    "university": {
+      "phonetic": "/junɨˈvɝsəti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/university-us.mp3"
+    },
+    "college": {
+      "phonetic": "/ˈkɑlɪd͡ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/college-us.mp3"
+    },
+    "institute": {
+      "phonetic": "/ˈɪnstɪt(j)uːt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/institute-us.mp3"
+    },
+    "academy": {
+      "phonetic": "/əˈkæd.ə.mi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/academy-us.mp3"
+    },
+    "learn": {
+      "phonetic": "/lɝn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/learn-us.mp3"
+    },
+    "study": {
+      "phonetic": "/ˈstʌdi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/study-us.mp3"
+    },
+    "acquire": {
+      "phonetic": "/əˈkwaɪəɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/acquire-us.mp3"
+    },
+    "knowledge": {
+      "phonetic": "/ˈnɑlɪdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/knowledge-us.mp3"
+    },
+    "expertise": {
+      "phonetic": "/ˌɛkspɚˈtiːs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/expertise-us.mp3"
+    },
+    "novice": {
+      "phonetic": "/ˈnɑːvɪs/",
+      "audioUrl": ""
+    },
+    "recruit": {
+      "phonetic": "/ɹɪˈkɹut/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/recruit-uk.mp3"
+    },
+    "literate": {
+      "phonetic": "/ˈlɪtəɹət/",
+      "audioUrl": ""
+    },
+    "illiteracy": {
+      "phonetic": "/ɪˈlɪt(ʃ)ɹəsi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/illiteracy-us.mp3"
+    },
+    "numerate": {
+      "phonetic": "/ˈnuːməɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/numerate-uk-adjective.mp3"
+    },
+    "problem": {
+      "phonetic": "/ˈpɹɑbləm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/problem-us.mp3"
+    },
+    "issue": {
+      "phonetic": "/ˈɪʃ(j)u/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/issue-us.mp3"
+    },
+    "affair": {
+      "phonetic": "/əˈfɛə(ɹ)/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/affair-us.mp3"
+    },
+    "controversial": {
+      "phonetic": "/kɑn.tɹə.ˈvɝ.si.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/controversial-uk.mp3"
+    },
+    "puzzle": {
+      "phonetic": "/ˈpʌzəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/puzzle-ca.mp3"
+    },
+    "riddle": {
+      "phonetic": "/ˈɹɪdəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/riddle-uk.mp3"
+    },
+    "obscure": {
+      "phonetic": "/əbˈskjɝ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/obscure-us.mp3"
+    },
+    "instil": {
+      "phonetic": "/ɪnˈstɪl/",
+      "audioUrl": ""
+    },
+    "cram": {
+      "phonetic": "/kɹæm/",
+      "audioUrl": ""
+    },
+    "emphasise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "enhance": {
+      "phonetic": "/ɪnˈhæns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/enhance-us.mp3"
+    },
+    "enable": {
+      "phonetic": "/ɪˈneɪbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/enable-us.mp3"
+    },
+    "inspire": {
+      "phonetic": "/ɪn.ˈspaɪɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inspire-uk.mp3"
+    },
+    "motive": {
+      "phonetic": "/ˈmoʊtɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/motive-us.mp3"
+    },
+    "motivate": {
+      "phonetic": "/ˈmoʊtɪveɪt/",
+      "audioUrl": ""
+    },
+    "stimulate": {
+      "phonetic": "/ˈstɪmjʊleɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stimulate-us.mp3"
+    },
+    "spur": {
+      "phonetic": "/spɝ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spur-us.mp3"
+    },
+    "impetus": {
+      "phonetic": "/ˈɪm.pə.təs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/impetus-us.mp3"
+    },
+    "indulge": {
+      "phonetic": "/ɪnˈdʌldʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/indulge-us.mp3"
+    },
+    "spoil": {
+      "phonetic": "/spɔɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spoil-us.mp3"
+    },
+    "abuse": {
+      "phonetic": "/əˈbjus/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/abuse-1-us.mp3"
+    },
+    "intelligent": {
+      "phonetic": "/ɪnˈtɛlɪd͡ʒənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/intelligent-us.mp3"
+    },
+    "clever": {
+      "phonetic": "/ˈklɛvɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/clever-us.mp3"
+    },
+    "smart": {
+      "phonetic": "/smɑɹt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/smart-us.mp3"
+    },
+    "all-round": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "genius": {
+      "phonetic": "/ˈdʒi.ni.əs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/genius-us.mp3"
+    },
+    "elite": {
+      "phonetic": "/eɪˈliːt/",
+      "audioUrl": ""
+    },
+    "idiot": {
+      "phonetic": "/ˈɪd.i.(j)ɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/idiot-us.mp3"
+    },
+    "wisdom": {
+      "phonetic": "/ˈwɪzdəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wisdom-us.mp3"
+    },
+    "wit": {
+      "phonetic": "/wɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wit-us.mp3"
+    },
+    "aptitude": {
+      "phonetic": "/ˈæptɪˌtjuːd/",
+      "audioUrl": ""
+    },
+    "capable": {
+      "phonetic": "/ˈkeɪpəbl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/capable-us.mp3"
+    },
+    "excellent": {
+      "phonetic": "/ˈɛksələnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/excellent-us.mp3"
+    },
+    "outstanding": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/outstanding-us.mp3"
+    },
+    "brilliant": {
+      "phonetic": "/ˈbɹɪljənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brilliant-us.mp3"
+    },
+    "prestige": {
+      "phonetic": "/pɹəˈsti(d)ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prestige-us.mp3"
+    },
+    "reputation": {
+      "phonetic": "/ˌɹɛpjʊˈteɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reputation-us.mp3"
+    },
+    "eminent": {
+      "phonetic": "/ˈɛmɪnənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/eminent-us.mp3"
+    },
+    "notorious": {
+      "phonetic": "/noʊˈtɔɹiəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/notorious-us.mp3"
+    },
+    "esteem": {
+      "phonetic": "[ɛsˈtiːm]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/esteem-us.mp3"
+    },
+    "respect": {
+      "phonetic": "/ɹɪˈspɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/respect-uk.mp3"
+    },
+    "diligent": {
+      "phonetic": "/ˈdɪlɪdʒənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/diligent-us.mp3"
+    },
+    "painstaking": {
+      "phonetic": "/ˈpeɪnˌsteɪkɪŋ/",
+      "audioUrl": ""
+    },
+    "skill": {
+      "phonetic": "/skɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/skill-us.mp3"
+    },
+    "approach": {
+      "phonetic": "/əˈpɹoʊt͡ʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/approach-us.mp3"
+    },
+    "scheme": {
+      "phonetic": "/skiːm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scheme-us.mp3"
+    },
+    "headmaster": {
+      "phonetic": "/ˈhɛdˌmæstɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/headmaster-uk.mp3"
+    },
+    "principal": {
+      "phonetic": "/ˈpɹɪnsəp̬əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/principal-us.mp3"
+    },
+    "dean": {
+      "phonetic": "/diːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dean-us.mp3"
+    },
+    "faculty": {
+      "phonetic": "/ˈfæ.kəl.ti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/faculty-us.mp3"
+    },
+    "professor": {
+      "phonetic": "/pɹəˈfɛsɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/professor-us.mp3"
+    },
+    "scholar": {
+      "phonetic": "/ˈskɑlɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scholar-uk.mp3"
+    },
+    "scientist": {
+      "phonetic": "/ˈsaɪ.ən.tɪst/",
+      "audioUrl": ""
+    },
+    "mentor": {
+      "phonetic": "/ˈmɛn.tɔɹ/",
+      "audioUrl": ""
+    },
+    "tutor": {
+      "phonetic": "/ˈtutɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tutor-us.mp3"
+    },
+    "lecturer": {
+      "phonetic": "/ˈlɛktʃəɹɚ/",
+      "audioUrl": ""
+    },
+    "assistant": {
+      "phonetic": "/əˈsɪstənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/assistant-us.mp3"
+    },
+    "candidate": {
+      "phonetic": "/ˈkæn.dɪ.deɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/candidate-us.mp3"
+    },
+    "degree": {
+      "phonetic": "/dɪˈɡɹiː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/degree-us.mp3"
+    },
+    "qualify": {
+      "phonetic": "/ˈkwɑl.ɪ.faɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/qualify-us.mp3"
+    },
+    "certify": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "license": {
+      "phonetic": "/ˈlaɪsəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/license-us.mp3"
+    },
+    "permit": {
+      "phonetic": "/ˈpɝmɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/permit-2-us.mp3"
+    },
+    "diploma": {
+      "phonetic": "/dɪˈpləʊmə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/diploma-uk.mp3"
+    },
+    "diplomat": {
+      "phonetic": "/ˈdɪ.plə.mæt/",
+      "audioUrl": ""
+    },
+    "ambassador": {
+      "phonetic": "/æmˈbæs.ə.dɚ/",
+      "audioUrl": ""
+    },
+    "pupil": {
+      "phonetic": "/ˈpjuːpəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pupil-us.mp3"
+    },
+    "graduate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "ceremony": {
+      "phonetic": "/ˈsɛɹəmoʊni/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ceremony-us.mp3"
+    },
+    "bachelor": {
+      "phonetic": "/ˈbætʃ.lɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bachelor-us.mp3"
+    },
+    "master": {
+      "phonetic": "/ˈmæstɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/master-us.mp3"
+    },
+    "doctor": {
+      "phonetic": "/ˈdɑktɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/doctor-us.mp3"
+    },
+    "fresher": {
+      "phonetic": "/ˈfɹɛʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fresher-uk.mp3"
+    },
+    "sophomore": {
+      "phonetic": "/ˈsɑfmɔɹ/",
+      "audioUrl": ""
+    },
+    "junior": {
+      "phonetic": "/ˈdʒunjɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/junior-uk.mp3"
+    },
+    "senior": {
+      "phonetic": "/ˈsinjɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/senior-us.mp3"
+    },
+    "alumni": {
+      "phonetic": "/əˈlʌmnaɪ/",
+      "audioUrl": ""
+    },
+    "campus": {
+      "phonetic": "/ˈkæmpəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/campus-us.mp3"
+    },
+    "orientation": {
+      "phonetic": "/ˌɔɹiɛnˈteɪʃən/",
+      "audioUrl": ""
+    },
+    "platform": {
+      "phonetic": "/ˈplætfɔɹm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/platform-us.mp3"
+    },
+    "coed": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "register": {
+      "phonetic": "/ˈɹɛdʒ.ɪs.tɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/register-us.mp3"
+    },
+    "roster": {
+      "phonetic": "/ˈɹɑstɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/roster-us.mp3"
+    },
+    "enrol": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/enrol-au.mp3"
+    },
+    "matriculation": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "accommodation": {
+      "phonetic": "/ə.ˌkɑm.ə.ˈdeɪ.ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/accommodation-uk.mp3"
+    },
+    "dorm": {
+      "phonetic": "/dɔɹm/",
+      "audioUrl": ""
+    },
+    "dining hall": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "canteen": {
+      "phonetic": "/kænˈtiːn/",
+      "audioUrl": ""
+    },
+    "laboratory": {
+      "phonetic": "/ˈlæb(ə)ɹəˌtɔɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/laboratory-us.mp3"
+    },
+    "experiment": {
+      "phonetic": "/ɪk.ˈspɛɹ.ə.mənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/experiment-us.mp3"
+    },
+    "data": {
+      "phonetic": "/ˈdætə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/data-ca-ie-us.mp3"
+    },
+    "quantity": {
+      "phonetic": "/ˈkwɑn(t)ɨti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quantity-us.mp3"
+    },
+    "quality": {
+      "phonetic": "/ˈkwɑləti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quality-us.mp3"
+    },
+    "library": {
+      "phonetic": "/ˈlaɪbɹəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/library-us.mp3"
+    },
+    "literature": {
+      "phonetic": "/ˈlɪ.tɚ.tʃɚ/",
+      "audioUrl": ""
+    },
+    "article": {
+      "phonetic": "/ˈɑɹtəkl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/article-us.mp3"
+    },
+    "author": {
+      "phonetic": "/ˈɔ.θɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/author-us.mp3"
+    },
+    "tale": {
+      "phonetic": "/ˈteɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tale-au.mp3"
+    },
+    "fiction": {
+      "phonetic": "/ˈfɪk.ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fiction-us.mp3"
+    },
+    "story": {
+      "phonetic": "/ˈstɔː.ɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/story-us.mp3"
+    },
+    "diary": {
+      "phonetic": "/ˈdaɪəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/diary-us.mp3"
+    },
+    "poetry": {
+      "phonetic": "/ˈpoʊətɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/poetry-us.mp3"
+    },
+    "magazine": {
+      "phonetic": "/mæɡəˈzin/",
+      "audioUrl": ""
+    },
+    "journal": {
+      "phonetic": "/ˈd͡ʒɝnəl/",
+      "audioUrl": ""
+    },
+    "coverage": {
+      "phonetic": "/ˈkʌv.əɹ.ɪdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/coverage-us.mp3"
+    },
+    "bibliography": {
+      "phonetic": "/bɪbliɒɡɹəfi/",
+      "audioUrl": ""
+    },
+    "encyclopedia": {
+      "phonetic": "/ɪnˌsaɪ.kləˈpi(ː).di.ə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/encyclopedia-us.mp3"
+    },
+    "biography": {
+      "phonetic": "/baɪˈɑːɡɹəfi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/biography-us.mp3"
+    },
+    "documentary": {
+      "phonetic": "/ˌdɑ.kjəˈmɛn.(tɚ.)ɹi/",
+      "audioUrl": ""
+    },
+    "series": {
+      "phonetic": "/ˈsiɹiz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/series-us.mp3"
+    },
+    "record": {
+      "phonetic": "/ˈɹɛkɚd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/record-1-us.mp3"
+    },
+    "file": {
+      "phonetic": "/faɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/file-us.mp3"
+    },
+    "profile": {
+      "phonetic": "/ˈpɹoʊfaɪl/",
+      "audioUrl": ""
+    },
+    "draft": {
+      "phonetic": "/dɹæft/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/draft-us.mp3"
+    },
+    "sketch": {
+      "phonetic": "/skɛtʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sketch-us.mp3"
+    },
+    "brochure": {
+      "phonetic": "/bɹoʊˈʃɝ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brochure-us.mp3"
+    },
+    "manual": {
+      "phonetic": "/ˈmænjə(wə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/manual-us.mp3"
+    },
+    "frame": {
+      "phonetic": "/fɹeɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/frame-us.mp3"
+    },
+    "index": {
+      "phonetic": "/ˈɪndɛks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/index-us.mp3"
+    },
+    "catalogue": {
+      "phonetic": "/ˈkætəlɔɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/catalogue-us.mp3"
+    },
+    "category": {
+      "phonetic": "/ˈkætəˌɡɔɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/category-us.mp3"
+    },
+    "inventory": {
+      "phonetic": "/ˈɪn.vənˌtɔ.ɹi/",
+      "audioUrl": ""
+    },
+    "content": {
+      "phonetic": "/ˈkɑn.tɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/content-2-us.mp3"
+    },
+    "context": {
+      "phonetic": "/ˈkɑːntɛkst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/context-uk.mp3"
+    },
+    "list": {
+      "phonetic": "/lɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/list-us.mp3"
+    },
+    "chapter": {
+      "phonetic": "/ˈt͡ʃæptɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/chapter-us.mp3"
+    },
+    "volume": {
+      "phonetic": "/ˈvɑl.jum/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/volume-us.mp3"
+    },
+    "reel": {
+      "phonetic": "/ɹiːl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reel-us.mp3"
+    },
+    "object": {
+      "phonetic": "/ˈɑb.d͡ʒɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/object-us-noun.mp3"
+    },
+    "major": {
+      "phonetic": "/ˈmeɪ.dʒɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/major-us.mp3"
+    },
+    "minor": {
+      "phonetic": "/ˈmaɪnɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/minor-us.mp3"
+    },
+    "sociology": {
+      "phonetic": "/ˌsəʊsiːˈɒlədʒiː/",
+      "audioUrl": ""
+    },
+    "politics": {
+      "phonetic": "/ˈpɑl.ɪˌtɪks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/politics-us.mp3"
+    },
+    "economics": {
+      "phonetic": "/ˌikəˈnɑmɪks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/economics-us.mp3"
+    },
+    "marketing": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "accounting": {
+      "phonetic": "/ə.ˈkaʊn.tɪŋ/",
+      "audioUrl": ""
+    },
+    "audit": {
+      "phonetic": "/ɔː.dɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/audit-us.mp3"
+    },
+    "statistics": {
+      "phonetic": "/stəˈtɪstɪks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/statistics-us.mp3"
+    },
+    "psychology": {
+      "phonetic": "/saɪˈkɑlədʒi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/psychology-us.mp3"
+    },
+    "philosophy": {
+      "phonetic": "/fɪˈlɑsəfi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/philosophy-us.mp3"
+    },
+    "logic": {
+      "phonetic": "/ˈlɑdʒɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/logic-us.mp3"
+    },
+    "biology": {
+      "phonetic": "/baɪˈɑlədʒi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/biology-us.mp3"
+    },
+    "physics": {
+      "phonetic": "/ˈfɪz.ɪks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/physics-us.mp3"
+    },
+    "chemistry": {
+      "phonetic": "/ˈkɛm.ɪ.stɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/chemistry-us.mp3"
+    },
+    "agriculture": {
+      "phonetic": "/ˈæɡɹɪˌkʌltʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/agriculture-us.mp3"
+    },
+    "logistics": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "geography": {
+      "phonetic": "/dʒiˈɑɡɹəfi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/geography-us.mp3"
+    },
+    "history": {
+      "phonetic": "/ˈhɪst(ə)ɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/history-us.mp3"
+    },
+    "engineering": {
+      "phonetic": "/ˌen.dʒɪˈnɪə.ɹɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/engineering-us.mp3"
+    },
+    "mechanics": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "electronics": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "maths": {
+      "phonetic": "/mæθs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/maths-uk.mp3"
+    },
+    "arithmetic": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "geometry": {
+      "phonetic": "/dʒiˈɑmətɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/geometry-us.mp3"
+    },
+    "algebra": {
+      "phonetic": "/ˈæl.dʒə.bɹə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/algebra-us.mp3"
+    },
+    "calculus": {
+      "phonetic": "/ˈkæl.kjə.ləs/",
+      "audioUrl": ""
+    },
+    "plus": {
+      "phonetic": "/plʌs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plus-us.mp3"
+    },
+    "sum": {
+      "phonetic": "/sʌm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sum-us.mp3"
+    },
+    "total": {
+      "phonetic": "/ˈtoʊ.təl/",
+      "audioUrl": ""
+    },
+    "merger": {
+      "phonetic": "/ˈmɝdʒɚ/",
+      "audioUrl": ""
+    },
+    "equation": {
+      "phonetic": "/ɪˈkweɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/equation-us.mp3"
+    },
+    "identical": {
+      "phonetic": "/aɪˈdɛntɪkl̩/",
+      "audioUrl": ""
+    },
+    "minus": {
+      "phonetic": "/ˈmaɪnəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/minus-us.mp3"
+    },
+    "subtract": {
+      "phonetic": "/səbˈtɹækt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/subtract-us.mp3"
+    },
+    "multiply": {
+      "phonetic": "/ˈmʌltɪpli/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/multiply-1-uk.mp3"
+    },
+    "divide": {
+      "phonetic": "/dɪˈvaɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/divide-us.mp3"
+    },
+    "dividend": {
+      "phonetic": "/ˈdɪvɪdɛnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dividend-us.mp3"
+    },
+    "remainder": {
+      "phonetic": "/ɹəˈmeɪndɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/remainder-us.mp3"
+    },
+    "rational": {
+      "phonetic": "/ˈɹæʃ(ə)nəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rational-us.mp3"
+    },
+    "parameter": {
+      "phonetic": "/pəˈɹæm.ɪ.tə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/parameter-us.mp3"
+    },
+    "variable": {
+      "phonetic": "/ˈvæɹ.i.ə.bl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/variable-us.mp3"
+    },
+    "even": {
+      "phonetic": "/ˈivn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/even-us.mp3"
+    },
+    "odd": {
+      "phonetic": "/ɑd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/odd-us.mp3"
+    },
+    "mean": {
+      "phonetic": "/miːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mean-us.mp3"
+    },
+    "double": {
+      "phonetic": "/ˈdʌb.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/double-us.mp3"
+    },
+    "triple": {
+      "phonetic": "/ˈtɹɪpl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/triple-us.mp3"
+    },
+    "quadruple": {
+      "phonetic": "/kwɑˈdɹupəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quadruple-us.mp3"
+    },
+    "multiple": {
+      "phonetic": "/ˈmʌltɪpl̩/",
+      "audioUrl": ""
+    },
+    "maximum": {
+      "phonetic": "/ˈmæksɪməm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/maximum-au.mp3"
+    },
+    "minimum": {
+      "phonetic": "/ˈmɪn.ə.məm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/minimum-us.mp3"
+    },
+    "approximately": {
+      "phonetic": "/əˈpɹɑk.sɪ.mət.li/",
+      "audioUrl": ""
+    },
+    "chart": {
+      "phonetic": "/tʃɑɹt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/chart-us.mp3"
+    },
+    "graph": {
+      "phonetic": "/ɡɹæf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/graph-us.mp3"
+    },
+    "diagram": {
+      "phonetic": "/ˈdaɪ.ə.ɡɹæm/",
+      "audioUrl": ""
+    },
+    "table": {
+      "phonetic": "/ˈteɪbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/table-us.mp3"
+    },
+    "matrix": {
+      "phonetic": "/ˈmeɪtɹɪks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/matrix-us.mp3"
+    },
+    "rectangle": {
+      "phonetic": "/ˈrɛkˌtæŋɡəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rectangle-us.mp3"
+    },
+    "cube": {
+      "phonetic": "/kjub/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cube-1-us.mp3"
+    },
+    "angle": {
+      "phonetic": "/ˈæŋ.ɡəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/angle-us.mp3"
+    },
+    "triangle": {
+      "phonetic": "/ˈtɹaɪˌæŋɡəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/triangle-us.mp3"
+    },
+    "diagonal": {
+      "phonetic": "/daɪˈæɡnəl/",
+      "audioUrl": ""
+    },
+    "straight": {
+      "phonetic": "/stɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/straight-us.mp3"
+    },
+    "circle": {
+      "phonetic": "[ˈsɝ.kəɫ]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/circle-us.mp3"
+    },
+    "round": {
+      "phonetic": "/ˈɹaʊnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/round-us.mp3"
+    },
+    "dot": {
+      "phonetic": "/dɑt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dot-us.mp3"
+    },
+    "sphere": {
+      "phonetic": "/sfɪɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sphere-us.mp3"
+    },
+    "cone": {
+      "phonetic": "/koʊn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cone-us.mp3"
+    },
+    "extent": {
+      "phonetic": "/ɪksˈtɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/extent-us.mp3"
+    },
+    "width": {
+      "phonetic": "/ˈwɪdθ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/width-us.mp3"
+    },
+    "length": {
+      "phonetic": "/lɛn(t)θ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/length-us.mp3"
+    },
+    "decimal": {
+      "phonetic": "/ˈdɛsɪməl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/decimal-us.mp3"
+    },
+    "percent": {
+      "phonetic": "/pɚˈsɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/percent-us.mp3"
+    },
+    "proportion": {
+      "phonetic": "/pɹəˈpɔɹʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/proportion-us.mp3"
+    },
+    "rate": {
+      "phonetic": "/ɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rate-us.mp3"
+    },
+    "ratio": {
+      "phonetic": "/ˈɹeɪ.ʃiˌoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ratio-us.mp3"
+    },
+    "fraction": {
+      "phonetic": "/ˈfɹæk.ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fraction-uk.mp3"
+    },
+    "scale": {
+      "phonetic": "/skeɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scale-us.mp3"
+    },
+    "ounce": {
+      "phonetic": "/aʊns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ounce-uk.mp3"
+    },
+    "density": {
+      "phonetic": "/ˈdɛn.sə.ti/",
+      "audioUrl": ""
+    },
+    "mercury": {
+      "phonetic": "/ˈmɝkjəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mercury-us.mp3"
+    },
+    "battery": {
+      "phonetic": "/ˈbætəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/battery-us.mp3"
+    },
+    "volt": {
+      "phonetic": "/vɒlt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/volt-uk.mp3"
+    },
+    "radiate": {
+      "phonetic": "/ˈɹeɪdieɪt/",
+      "audioUrl": ""
+    },
+    "emit": {
+      "phonetic": "/iˈmɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/emit-us.mp3"
+    },
+    "transparent": {
+      "phonetic": "/tɹæn(t)sˈpæɹənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/transparent-us.mp3"
+    },
+    "hollow": {
+      "phonetic": "/hɑlɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hollow-us.mp3"
+    },
+    "ozone": {
+      "phonetic": "/ˈoʊzoʊn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ozone-us.mp3"
+    },
+    "gravity": {
+      "phonetic": "/ˈɡɹævɪti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gravity-us.mp3"
+    },
+    "friction": {
+      "phonetic": "/ˈfɹɪkʃən̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/friction-us.mp3"
+    },
+    "eccentric": {
+      "phonetic": "/ɛkˈsɛntɹɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/eccentric-us.mp3"
+    },
+    "displace": {
+      "phonetic": "/dɪsˈpleɪs/",
+      "audioUrl": ""
+    },
+    "boil": {
+      "phonetic": "/bɔɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/boil-uk.mp3"
+    },
+    "melt": {
+      "phonetic": "/mɛlt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/melt-us.mp3"
+    },
+    "rust": {
+      "phonetic": "/ɹʌst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rust-us.mp3"
+    },
+    "ferment": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "dilute": {
+      "phonetic": "/daɪˈlut/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dilute-uk.mp3"
+    },
+    "acid": {
+      "phonetic": "/ˈæs.ɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/acid-us.mp3"
+    },
+    "noxious": {
+      "phonetic": "/ˈnɒkʃəs/",
+      "audioUrl": ""
+    },
+    "static": {
+      "phonetic": "/ˈstæt.ɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/static-us.mp3"
+    },
+    "inert": {
+      "phonetic": "/ɪnˈɝt/",
+      "audioUrl": ""
+    },
+    "inherent": {
+      "phonetic": "/ɪnˈhɛɹənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inherent-uk.mp3"
+    },
+    "formula": {
+      "phonetic": "/ˈfɔɹ.mjə.lə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/formula-uk.mp3"
+    },
+    "component": {
+      "phonetic": "/kʌmˈpoʊnənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/component-us.mp3"
+    },
+    "compose": {
+      "phonetic": "/kəmˈpoʊz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/compose-us.mp3"
+    },
+    "mixture": {
+      "phonetic": "/ˈmɪkstʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mixture-us.mp3"
+    },
+    "blend": {
+      "phonetic": "/blɛnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/blend-us.mp3"
+    },
+    "theory": {
+      "phonetic": "/ˈθiːəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/theory-us.mp3"
+    },
+    "empirical": {
+      "phonetic": "/ɪmˈpɪɹɪkəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/empirical-us.mp3"
+    },
+    "practical": {
+      "phonetic": "/ˈpɹæktɪkəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/practical-us.mp3"
+    },
+    "doctrine": {
+      "phonetic": "/ˈdɑktɹɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/doctrine-us.mp3"
+    },
+    "principle": {
+      "phonetic": "/ˈpɹɪnsəpəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/principle-us.mp3"
+    },
+    "discipline": {
+      "phonetic": "/ˈdɪ.sə.plɪn/",
+      "audioUrl": ""
+    },
+    "term": {
+      "phonetic": "/tɝm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/term-us.mp3"
+    },
+    "semester": {
+      "phonetic": "/sɪˈmɛstɚ/",
+      "audioUrl": ""
+    },
+    "timetable": {
+      "phonetic": "/ˈtaɪmˌteɪbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/timetable-us.mp3"
+    },
+    "schedule": {
+      "phonetic": "/ˈskɛ.dʒu.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/schedule-us.mp3"
+    },
+    "deadline": {
+      "phonetic": "/ˈdɛdˌlaɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/deadline-uk.mp3"
+    },
+    "course": {
+      "phonetic": "/kɔɹs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/course-us.mp3"
+    },
+    "lesson": {
+      "phonetic": "/ˈlɛsn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lesson-us.mp3"
+    },
+    "curriculum": {
+      "phonetic": "/kəˈɹɪkjələm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/curriculum-us.mp3"
+    },
+    "seminar": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "forum": {
+      "phonetic": "/ˈfɔːɹəm/",
+      "audioUrl": ""
+    },
+    "syllabus": {
+      "phonetic": "/ˈsɪləbəs/",
+      "audioUrl": ""
+    },
+    "system": {
+      "phonetic": "/ˈsɪstəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/system-us.mp3"
+    },
+    "rudimentary": {
+      "phonetic": "/ˌɹuːdɪˈmɛntəɹi/",
+      "audioUrl": ""
+    },
+    "basic": {
+      "phonetic": "/ˈbeɪsɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/basic-au.mp3"
+    },
+    "fundamental": {
+      "phonetic": "/ˌfʌndəˈmɛntəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fundamental-us.mp3"
+    },
+    "elementary": {
+      "phonetic": "/ˌɛlɪ̈ˈmɛnt(ə)ɹi/",
+      "audioUrl": ""
+    },
+    "profound": {
+      "phonetic": "/pɹəˈfaʊnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/profound-us.mp3"
+    },
+    "surface": {
+      "phonetic": "/ˈsɝːfəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/surface-us.mp3"
+    },
+    "compulsory": {
+      "phonetic": "/kəmˈpʌlsəri/",
+      "audioUrl": ""
+    },
+    "prerequisite": {
+      "phonetic": "/pɹiˈɹɛkwəzət/",
+      "audioUrl": ""
+    },
+    "selective": {
+      "phonetic": "/səˈlɛktɪv/",
+      "audioUrl": ""
+    },
+    "elective": {
+      "phonetic": "/ɪˈlɛktɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/elective-uk.mp3"
+    },
+    "assignment": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/assignment-us.mp3"
+    },
+    "submit": {
+      "phonetic": "/səbˈmɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/submit-us.mp3"
+    },
+    "preview": {
+      "phonetic": "/ˈpɹiːvjʉː/",
+      "audioUrl": ""
+    },
+    "review": {
+      "phonetic": "/ɹɪˈvjuː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/review-us.mp3"
+    },
+    "revise": {
+      "phonetic": "/ɹɪˈvaɪ̯z/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/revise-us.mp3"
+    },
+    "inspect": {
+      "phonetic": "/ɪnˈspɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inspect-us.mp3"
+    },
+    "consult": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "skim": {
+      "phonetic": "/skɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/skim-uk.mp3"
+    },
+    "scan": {
+      "phonetic": "/skæn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scan-us.mp3"
+    },
+    "scrutinise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "recite": {
+      "phonetic": "/ɹɪˈsaɪt/",
+      "audioUrl": ""
+    },
+    "dictate": {
+      "phonetic": "/ˈdɪkˌteɪt/",
+      "audioUrl": ""
+    },
+    "examination": {
+      "phonetic": "/ɪɡˌzæmɪˈneɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/examination-us.mp3"
+    },
+    "test": {
+      "phonetic": "/test/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/test-us.mp3"
+    },
+    "quiz": {
+      "phonetic": "/kwɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quiz-us.mp3"
+    },
+    "presentation": {
+      "phonetic": "/ˌpɹizənˈteɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/presentation-us.mp3"
+    },
+    "plagiarise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "copy": {
+      "phonetic": "/ˈkɑpi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/copy-us.mp3"
+    },
+    "print": {
+      "phonetic": "/pɹɪnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/print-us.mp3"
+    },
+    "thesis": {
+      "phonetic": "/ˈθisiz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thesis-us.mp3"
+    },
+    "essay": {
+      "phonetic": "/ˈɛˌseɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/essay-1-us.mp3"
+    },
+    "paper": {
+      "phonetic": "/ˈpeɪpɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/paper-us.mp3"
+    },
+    "dissertation": {
+      "phonetic": "/ˌdɪsɚˈteɪʃən/",
+      "audioUrl": ""
+    },
+    "project": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "heading": {
+      "phonetic": "[ˈhɛɾ.ɪŋ]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/heading-us.mp3"
+    },
+    "outset": {
+      "phonetic": "/ˈaʊtsɛt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/outset-us.mp3"
+    },
+    "outline": {
+      "phonetic": "/ˈaʊtlaɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/outline-us.mp3"
+    },
+    "point": {
+      "phonetic": "/pɔɪnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/point-us.mp3"
+    },
+    "gist": {
+      "phonetic": "/dʒɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gist-us.mp3"
+    },
+    "opinion": {
+      "phonetic": "/əˈpɪnjən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/opinion-us.mp3"
+    },
+    "introduce": {
+      "phonetic": "/ˌɪntɹəˈdus/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/introduce-us.mp3"
+    },
+    "reference": {
+      "phonetic": "/ˈɹɛf.(ə)ɹəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reference-us.mp3"
+    },
+    "cite": {
+      "phonetic": "/saɪt/",
+      "audioUrl": ""
+    },
+    "elicit": {
+      "phonetic": "/ɪˈlɪsɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/elicit-us.mp3"
+    },
+    "quote": {
+      "phonetic": "/kwəʊt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quote-us.mp3"
+    },
+    "extract": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "abstract": {
+      "phonetic": "/əbˈstɹækt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/abstract-uk.mp3"
+    },
+    "summary": {
+      "phonetic": "/ˈsʌməɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/summary-us.mp3"
+    },
+    "assume": {
+      "phonetic": "/əˈsuːm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/assume-us.mp3"
+    },
+    "presume": {
+      "phonetic": "/pɹiˈz(j)um/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/presume-us.mp3"
+    },
+    "suppose": {
+      "phonetic": "/səˈpoʊz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/suppose-us.mp3"
+    },
+    "hypothesis": {
+      "phonetic": "/haɪˈpɑː.θə.sɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hypothesis-us.mp3"
+    },
+    "postulate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "speculate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "predict": {
+      "phonetic": "/pɹɪˈdɪkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/predict-us.mp3"
+    },
+    "perceive": {
+      "phonetic": "/pɚˈsiv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/perceive-us.mp3"
+    },
+    "detect": {
+      "phonetic": "/dɪˈtɛkt/",
+      "audioUrl": ""
+    },
+    "discern": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "recognise": {
+      "phonetic": "/ˈɹɛkənaɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/recognise-us.mp3"
+    },
+    "conscious": {
+      "phonetic": "/ˈkɑn.ʃəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/conscious-us.mp3"
+    },
+    "reckon": {
+      "phonetic": "/ˈɹɛkən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reckon-us.mp3"
+    },
+    "deem": {
+      "phonetic": "/dim/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/deem-au.mp3"
+    },
+    "imply": {
+      "phonetic": "/ɪmˈplaɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/imply-us.mp3"
+    },
+    "deliberate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "represent": {
+      "phonetic": "/ɹɛp.ɹɪ.ˈzɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/represent-us.mp3"
+    },
+    "insist": {
+      "phonetic": "/ɪnˈsɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/insist-us.mp3"
+    },
+    "persist": {
+      "phonetic": "/pɚˈsɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/persist-us.mp3"
+    },
+    "understand": {
+      "phonetic": "/ˌʌndɚˈstænd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/understand-us.mp3"
+    },
+    "comprehend": {
+      "phonetic": "/kɑmpɹɪˈhɛnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/comprehend-us.mp3"
+    },
+    "analyse": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "diagnose": {
+      "phonetic": "/daɪəɡˈnoʊs/",
+      "audioUrl": ""
+    },
+    "infer": {
+      "phonetic": "/ɪnˈfɝ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/infer-us.mp3"
+    },
+    "deduce": {
+      "phonetic": "/dɪˈduːs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/deduce-us.mp3"
+    },
+    "conclude": {
+      "phonetic": "/kən.ˈkluːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/conclude-us.mp3"
+    },
+    "analogy": {
+      "phonetic": "/əˈnæləd͡ʒi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/analogy-us.mp3"
+    },
+    "compare": {
+      "phonetic": "/kəmˈpɛɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/compare-us.mp3"
+    },
+    "contrast": {
+      "phonetic": "/ˈkɑnt(ʃ)ɹæst/",
+      "audioUrl": ""
+    },
+    "overlap": {
+      "phonetic": "/ˈoʊvɚˌlæp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/overlap-uk.mp3"
+    },
+    "contradiction": {
+      "phonetic": "/ˌkɑːntɹəˈdɪkʃən/",
+      "audioUrl": ""
+    },
+    "disagree": {
+      "phonetic": "/dɪsəˈɡɹi/",
+      "audioUrl": ""
+    },
+    "differ": {
+      "phonetic": "/ˈdɪfɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/differ-us.mp3"
+    },
+    "diverse": {
+      "phonetic": "/daɪ.ˈvɝs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/diverse-us.mp3"
+    },
+    "nuance": {
+      "phonetic": "/ˈnuː.ɑːns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/nuance-us.mp3"
+    },
+    "inductive": {
+      "phonetic": "/ɪnˈdʌktɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inductive-uk.mp3"
+    },
+    "detail": {
+      "phonetic": "/dɪˈteɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/detail-us-noun.mp3"
+    },
+    "thorough": {
+      "phonetic": "/ˈθɜɹoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thorough-us.mp3"
+    },
+    "example": {
+      "phonetic": "/əɡˈzæmpl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/example-us.mp3"
+    },
+    "instance": {
+      "phonetic": "/ˈɪnstəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/instance-us.mp3"
+    },
+    "confirm": {
+      "phonetic": "/kənˈfɝm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/confirm-us.mp3"
+    },
+    "demonstrate": {
+      "phonetic": "/ˈdɛmənstɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/demonstrate-us.mp3"
+    },
+    "illustrate": {
+      "phonetic": "/ɪ.ˈlʌs.tɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/illustrate-uk.mp3"
+    },
+    "manifest": {
+      "phonetic": "/ˈmæn.ə.fɛst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/manifest-us.mp3"
+    },
+    "prove": {
+      "phonetic": "/pɹuːv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prove-1-us.mp3"
+    },
+    "determine": {
+      "phonetic": "/dɪˈtɝmɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/determine-us.mp3"
+    },
+    "decide": {
+      "phonetic": "/dɪˈsaɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/decide-us.mp3"
+    },
+    "resolve": {
+      "phonetic": "/ɹɪˈzɑlv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/resolve-1-us.mp3"
+    },
+    "survey": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "research": {
+      "phonetic": "/ɹiˈsɝtʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/research-us.mp3"
+    },
+    "observe": {
+      "phonetic": "/əbˈzɝv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/observe-us.mp3"
+    },
+    "inquire": {
+      "phonetic": "/ɪnˈkwaɪɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inquire-us.mp3"
+    },
+    "query": {
+      "phonetic": "/ˈkwɛ.ɹi/",
+      "audioUrl": ""
+    },
+    "questionnaire": {
+      "phonetic": "/ˌkwɛs.t͡ʃəˈnɛ͡ɹ/",
+      "audioUrl": ""
+    },
+    "achieve": {
+      "phonetic": "/əˈtʃiːv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/achieve-us.mp3"
+    },
+    "accomplish": {
+      "phonetic": "/əˈkɑm.plɪʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/accomplish-us.mp3"
+    },
+    "attain": {
+      "phonetic": "/əˈteɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/attain-us.mp3"
+    },
+    "credit": {
+      "phonetic": "/ˈkɹɛdɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/credit-us.mp3"
+    },
+    "score": {
+      "phonetic": "/skɔɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/score-us.mp3"
+    },
+    "mark": {
+      "phonetic": "/mɑɹk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mark-us.mp3"
+    },
+    "grade": {
+      "phonetic": "/ɡɹeɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/grade-us.mp3"
+    },
+    "rank": {
+      "phonetic": "/ɹæŋk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rank-us.mp3"
+    },
+    "row": {
+      "phonetic": "/ˈɹoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/row-1-us.mp3"
+    },
+    "queue": {
+      "phonetic": "/kju/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/queue-au.mp3"
+    },
+    "grant": {
+      "phonetic": "/ɡɹænt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/grant-us.mp3"
+    },
+    "praise": {
+      "phonetic": "/pɹeɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/praise-us.mp3"
+    },
+    "appreciate": {
+      "phonetic": "/əˈpɹiː.si.eɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/appreciate-us.mp3"
+    },
+    "feedback": {
+      "phonetic": "/ˈfiːdˌbæk/",
+      "audioUrl": ""
+    },
+    "underestimate": {
+      "phonetic": "/ʌndɚˈɛs.tɨ.meɪt/",
+      "audioUrl": ""
+    },
+    "overestimate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "apply": {
+      "phonetic": "/əˈplaɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/apply-1-us.mp3"
+    },
+    "fellowship": {
+      "phonetic": "/ˈfɛloʊʃɪp/",
+      "audioUrl": ""
+    },
+    "scholarship": {
+      "phonetic": "/ˈskɑːləɹʃɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scholarship-au.mp3"
+    },
+    "reward": {
+      "phonetic": "/ɹiˈwɔɹd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reward-us.mp3"
+    },
+    "award": {
+      "phonetic": "/əˈwɔɹd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/award-us.mp3"
+    },
+    "prize": {
+      "phonetic": "/pɹaɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prize-1-us.mp3"
+    },
+    "fee": {
+      "phonetic": "/fiː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fee-us.mp3"
+    },
+    "technology": {
+      "phonetic": "/tɛkˈnɑlədʒi/",
+      "audioUrl": ""
+    },
+    "technique": {
+      "phonetic": "/tɛkˈniːk/",
+      "audioUrl": ""
+    },
+    "polytechnic": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "engineer": {
+      "phonetic": "/ˌɛnd͡ʒɪˈnɪɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/engineer-us.mp3"
+    },
+    "mechanic": {
+      "phonetic": "/məˈkænɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mechanic-us.mp3"
+    },
+    "advance": {
+      "phonetic": "/ədˈvæns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/advance-us.mp3"
+    },
+    "innovate": {
+      "phonetic": "/ˈɪnəveɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/innovate-us.mp3"
+    },
+    "breakthrough": {
+      "phonetic": "/ˈbɹeɪkθɹuː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/breakthrough-us.mp3"
+    },
+    "gizmo": {
+      "phonetic": "/ˈɡɪzmoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gizmo-us.mp3"
+    },
+    "patent": {
+      "phonetic": "/ˈpeɪtənt/",
+      "audioUrl": ""
+    },
+    "devise": {
+      "phonetic": "/dɪˈvaɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/devise-us.mp3"
+    },
+    "invent": {
+      "phonetic": "/ɪnˈvɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/invent-us.mp3"
+    },
+    "discover": {
+      "phonetic": "/dɪsˈkʌvɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/discover-us.mp3"
+    },
+    "disclose": {
+      "phonetic": "/dɪsˈkləʊz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/disclose-us.mp3"
+    },
+    "reveal": {
+      "phonetic": "/ɹəˈviːl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reveal-us.mp3"
+    },
+    "uncover": {
+      "phonetic": "/ʌnˈkʌvɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/uncover-uk.mp3"
+    },
+    "expose": {
+      "phonetic": "/ɛkˈspoʊz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/expose-us.mp3"
+    },
+    "domain": {
+      "phonetic": "/doʊˈmeɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/domain-uk.mp3"
+    },
+    "realm": {
+      "phonetic": "/ɹɛlm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/realm-us.mp3"
+    },
+    "foundation": {
+      "phonetic": "/faʊnˈdeɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/foundation-us.mp3"
+    },
+    "specialise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "concentrate": {
+      "phonetic": "/ˈkɑn.sən.tɹeɪt/",
+      "audioUrl": ""
+    },
+    "focus": {
+      "phonetic": "/ˈfoʊ.kəs/",
+      "audioUrl": ""
+    },
+    "utilise": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "usage": {
+      "phonetic": "/ˈjuːsɪd͡ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/usage-us.mp3"
+    },
+    "tester": {
+      "phonetic": "/ˈtɛstə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tester-au.mp3"
+    },
+    "device": {
+      "phonetic": "/dəˈvaɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/device-us.mp3"
+    },
+    "appliance": {
+      "phonetic": "/əˈplaɪəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/appliance-us.mp3"
+    },
+    "facility": {
+      "phonetic": "/fəˈsɪlɪti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/facility-us.mp3"
+    },
+    "equipment": {
+      "phonetic": "/ɪˈkwɪpmənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/equipment-us.mp3"
+    },
+    "instrument": {
+      "phonetic": "/ˈɪnstɹəmənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/instrument-us.mp3"
+    },
+    "tool": {
+      "phonetic": "/tuːl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tool-uk.mp3"
+    },
+    "gauge": {
+      "phonetic": "/ˈɡeɪdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gauge-us.mp3"
+    },
+    "measure": {
+      "phonetic": "/ˈmɛʒɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/measure-us.mp3"
+    },
+    "calculate": {
+      "phonetic": "/ˈkælkjəleɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/calculate-us.mp3"
+    },
+    "compute": {
+      "phonetic": "/kəmˈpjuːt/",
+      "audioUrl": ""
+    },
+    "count": {
+      "phonetic": "/kaʊnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/count-us.mp3"
+    },
+    "estimate": {
+      "phonetic": "/ˈɛstɨmɨt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/estimate-us.mp3"
+    },
+    "assess": {
+      "phonetic": "/əˈsɛs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/assess-us.mp3"
+    },
+    "evaluate": {
+      "phonetic": "/ɪ̈ˈvaljəˌweɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/evaluate-us.mp3"
+    },
+    "accessory": {
+      "phonetic": "/ækˈsɛsəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/accessory-us.mp3"
+    },
+    "byproduct": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "auxiliary": {
+      "phonetic": "/ɔɡˈzɪliɛɹi/",
+      "audioUrl": ""
+    },
+    "versatile": {
+      "phonetic": "/ˈvɝsətl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/versatile-uk.mp3"
+    },
+    "add": {
+      "phonetic": "/æd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/add-us.mp3"
+    },
+    "accumulate": {
+      "phonetic": "/ə.ˈkjum.jə.ˌleɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/accumulate-us.mp3"
+    },
+    "assemble": {
+      "phonetic": "/əˈsɛmbl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/assemble-us.mp3"
+    },
+    "gather": {
+      "phonetic": "/ˈɡæðɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gather-us.mp3"
+    },
+    "attach": {
+      "phonetic": "/əˈtætʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/attach-uk.mp3"
+    },
+    "belong": {
+      "phonetic": "/bɪˈlɔŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/belong-us.mp3"
+    },
+    "optics": {
+      "phonetic": "/ˈɑptɪks/",
+      "audioUrl": ""
+    },
+    "microscope": {
+      "phonetic": "/ˈmaɪkɹəˌskoʊp/",
+      "audioUrl": ""
+    },
+    "lens": {
+      "phonetic": "/lɛnz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lens-us.mp3"
+    },
+    "radar": {
+      "phonetic": "/ˈɹeɪdɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/radar-us.mp3"
+    },
+    "echo": {
+      "phonetic": "/ˈɛkoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/echo-us.mp3"
+    },
+    "sensor": {
+      "phonetic": "/ˈsɛn.sɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sensor-us.mp3"
+    },
+    "multimedia": {
+      "phonetic": "/mʌltiˈmiːdi.ə/",
+      "audioUrl": ""
+    },
+    "network": {
+      "phonetic": "/nɛtwɝk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/network-us.mp3"
+    },
+    "browser": {
+      "phonetic": "/ˈbɹaʊzə(ɹ)/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/browser-us.mp3"
+    },
+    "dial": {
+      "phonetic": "/ˈdaɪəɫ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dial-au.mp3"
+    },
+    "microcomputer": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "laptop": {
+      "phonetic": "/ˈlæp.tɑp/",
+      "audioUrl": ""
+    },
+    "software": {
+      "phonetic": "/ˈsɔftˌwɛɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/software-us.mp3"
+    },
+    "keyboard": {
+      "phonetic": "/ˈkibɔɹd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3"
+    },
+    "screen": {
+      "phonetic": "/skɹiːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/screen-us.mp3"
+    },
+    "loudspeaker": {
+      "phonetic": "/ˈlaʊdspiːkɚ/",
+      "audioUrl": ""
+    },
+    "microphone": {
+      "phonetic": "/ˈmaɪ.kɹəˌfoʊn/",
+      "audioUrl": ""
+    },
+    "cassette": {
+      "phonetic": "/kæˈsɛt/",
+      "audioUrl": ""
+    },
+    "tape": {
+      "phonetic": "/teɪ̯p/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tape-us.mp3"
+    },
+    "binary": {
+      "phonetic": "/ˈbaɪ.nə.ɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/binary-us.mp3"
+    },
+    "digital": {
+      "phonetic": "/ˈdɪd͡ʒɪtəɫ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/digital-us.mp3"
+    },
+    "wireless": {
+      "phonetic": "/ˈwaɪ.ə(ɹ).ləs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wireless-us.mp3"
+    },
+    "audio": {
+      "phonetic": "/ˈɔ.di.oʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/audio-us.mp3"
+    },
+    "vision": {
+      "phonetic": "/ˈvɪ.ʒ(ə)n/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vision-us.mp3"
+    },
+    "fantasy": {
+      "phonetic": "/ˈfæntəsi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fantasy-us.mp3"
+    },
+    "science fiction": {
+      "phonetic": "/ˈsaɪəns ˌfɪkʃən/",
+      "audioUrl": ""
+    },
+    "pump": {
+      "phonetic": "/pʌmp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pump-us.mp3"
+    },
+    "generator": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "gear": {
+      "phonetic": "/ɡɪɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gear-au.mp3"
+    },
+    "pivot": {
+      "phonetic": "/ˈpɪvət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pivot-us.mp3"
+    },
+    "hydraulic": {
+      "phonetic": "/haɪˈdɹɔːlɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hydraulic-us.mp3"
+    },
+    "drainage": {
+      "phonetic": "/ˈdɹeɪnədʒ/",
+      "audioUrl": ""
+    },
+    "sewage": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "ventilation": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ventilation-us.mp3"
+    },
+    "compress": {
+      "phonetic": "/ˈkɑmpɹɛs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/compress-1.mp3"
+    },
+    "condense": {
+      "phonetic": "/kənˈdɛns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/condense-us.mp3"
+    },
+    "refine": {
+      "phonetic": "/ɹɪˈfaɪn/",
+      "audioUrl": ""
+    },
+    "simplify": {
+      "phonetic": "/ˈsɪmpləfaɪ/",
+      "audioUrl": ""
+    },
+    "purify": {
+      "phonetic": "/ˈpjʊəɹɪfaɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/purify-uk.mp3"
+    },
+    "filter": {
+      "phonetic": "/ˈfɪltɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/filter-us.mp3"
+    },
+    "distil": {
+      "phonetic": "[dɪˈstɪɫ]",
+      "audioUrl": ""
+    },
+    "mode": {
+      "phonetic": "/moʊd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mode-us.mp3"
+    },
+    "prototype": {
+      "phonetic": "/-ɾə-/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prototype-us.mp3"
+    },
+    "framework": {
+      "phonetic": "/ˈfɹeɪm.wɝk/",
+      "audioUrl": ""
+    },
+    "aspect": {
+      "phonetic": "/ˈæspɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/aspect-us.mp3"
+    },
+    "operate": {
+      "phonetic": "/ˈɑpəɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/operate-us.mp3"
+    },
+    "facilitate": {
+      "phonetic": "/fəˈsɪləteɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/facilitate-us.mp3"
+    },
+    "transform": {
+      "phonetic": "/tɹænzˈfɔɹm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/transform-us.mp3"
+    },
+    "convert": {
+      "phonetic": "/ˈkɑn.vəɹt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/convert-us.mp3"
+    },
+    "alter": {
+      "phonetic": "/ˈɔl.tɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/alter-us.mp3"
+    },
+    "shift": {
+      "phonetic": "/ʃɪft/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shift-ca.mp3"
+    },
+    "turn": {
+      "phonetic": "/tɝn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/turn-us.mp3"
+    },
+    "adapt": {
+      "phonetic": "/əˈdæpt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/adapt-us.mp3"
+    },
+    "adjust": {
+      "phonetic": "/əˈdʒʌst/",
+      "audioUrl": ""
+    },
+    "pinpoint": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "accurate": {
+      "phonetic": "/ˈæk.jə.ɹɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/accurate-us.mp3"
+    },
+    "precise": {
+      "phonetic": "/pɹɪˈsaɪs/",
+      "audioUrl": ""
+    },
+    "correct": {
+      "phonetic": "/kəˈɹɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/correct-us.mp3"
+    },
+    "error": {
+      "phonetic": "/ˈɛɹɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/error-us.mp3"
+    },
+    "mistake": {
+      "phonetic": "/mɪˈsteɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mistake-us.mp3"
+    },
+    "flaw": {
+      "phonetic": "/ˈflɔ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flaw-1-us.mp3"
+    },
+    "wrong": {
+      "phonetic": "/ɹɔŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wrong-us.mp3"
+    },
+    "fault": {
+      "phonetic": "/fɔlt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fault-uk.mp3"
+    },
+    "stumble": {
+      "phonetic": "/ˈstʌmbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stumble-us.mp3"
+    },
+    "contingency": {
+      "phonetic": "/kənˈtɪndʒənsi/",
+      "audioUrl": ""
+    },
+    "circumstance": {
+      "phonetic": "/ˈsɝ.kəm.ˌstæns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/circumstance-us.mp3"
+    },
+    "culture": {
+      "phonetic": "/ˈkʌlt͡ʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/culture-us.mp3"
+    },
+    "civilisation": {
+      "phonetic": "/ˌsɪv.ɪ.lɪˈzeɪ.ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/civilisation-us.mp3"
+    },
+    "renaissance": {
+      "phonetic": "/ˈɹɛnəˌsɑns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/renaissance-us.mp3"
+    },
+    "epic": {
+      "phonetic": "/ˈɛp.ɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/epic-au.mp3"
+    },
+    "ideology": {
+      "phonetic": "/aɪ.di.ˈɑl.ə.d͡ʒi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ideology-us.mp3"
+    },
+    "tradition": {
+      "phonetic": "/tɹəˈdɪʃn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tradition-us.mp3"
+    },
+    "convention": {
+      "phonetic": "/kənˈvɛn.ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/convention-us.mp3"
+    },
+    "custom": {
+      "phonetic": "/ˈkʌstəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/custom-us.mp3"
+    },
+    "feudalism": {
+      "phonetic": "/ˈfju.dəlɪzəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/feudalism-us.mp3"
+    },
+    "slavery": {
+      "phonetic": "/ˈsleɪvəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/slavery-1-us.mp3"
+    },
+    "ethical": {
+      "phonetic": "/ˈɛθɪkəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ethical-us.mp3"
+    },
+    "moral": {
+      "phonetic": "/ˈmɑɹəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/moral-us.mp3"
+    },
+    "tribe": {
+      "phonetic": "/tɹaɪb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tribe-us.mp3"
+    },
+    "aboriginal": {
+      "phonetic": "/ˌæb.əˈɹɪd͡ʒ.n̩.l̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/aboriginal-uk.mp3"
+    },
+    "inhabitant": {
+      "phonetic": "/ɪnˈhæ.bɪ.tənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inhabitant-us.mp3"
+    },
+    "native": {
+      "phonetic": "/ˈneɪtəv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/native-us.mp3"
+    },
+    "local": {
+      "phonetic": "/ˈloʊkl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/local-us.mp3"
+    },
+    "exotic": {
+      "phonetic": "/ɪɡˈzɑtɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exotic-uk.mp3"
+    },
+    "foreigner": {
+      "phonetic": "/ˈfɑɹ.ɪ.nɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/foreigner-us.mp3"
+    },
+    "alien": {
+      "phonetic": "/ˈeɪ.li.ən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/alien-us.mp3"
+    },
+    "anthropologist": {
+      "phonetic": "/ˌæn.θɹoʊˈpɑl.ə.d͡ʒɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/anthropologist-us.mp3"
+    },
+    "humanitarian": {
+      "phonetic": "/hjuˌmæ.nəˈtɛ.ɹi.ən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/humanitarian-us.mp3"
+    },
+    "heritage": {
+      "phonetic": "/ˈhɛɹɪtɪd͡ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/heritage-us.mp3"
+    },
+    "inherit": {
+      "phonetic": "/ɪnˈhɛɹɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inherit-us.mp3"
+    },
+    "antique": {
+      "phonetic": "/ænˈtiːk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/antique-us.mp3"
+    },
+    "archaeology": {
+      "phonetic": "/ˌɑɹ.kiˈɑ.lə.dʒi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/archaeology-us.mp3"
+    },
+    "excavate": {
+      "phonetic": "/ˈɛk.skə.veɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/excavate-1-uk.mp3"
+    },
+    "museum": {
+      "phonetic": "/mjuˈzi.əm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/museum-us.mp3"
+    },
+    "pottery": {
+      "phonetic": "/ˈpɑtəɹi/",
+      "audioUrl": ""
+    },
+    "engrave": {
+      "phonetic": "/ɪnˈɡɹeɪv/",
+      "audioUrl": ""
+    },
+    "decorate": {
+      "phonetic": "/ˈdɛkəɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/decorate-us.mp3"
+    },
+    "religion": {
+      "phonetic": "/ɹɪˈlɪdʒən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/religion-us.mp3"
+    },
+    "ritual": {
+      "phonetic": "/ˈɹɪ.tʃu.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ritual-us.mp3"
+    },
+    "etiquette": {
+      "phonetic": "/ˈɛtɪkɪt/",
+      "audioUrl": ""
+    },
+    "belief": {
+      "phonetic": "/bəˈliːf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/belief-us.mp3"
+    },
+    "soul": {
+      "phonetic": "/soʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/soul-1-us.mp3"
+    },
+    "spirit": {
+      "phonetic": "/ˈspiɹɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spirit-us.mp3"
+    },
+    "sacred": {
+      "phonetic": "/ˈseɪkɹɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sacred-1-us.mp3"
+    },
+    "hallowed": {
+      "phonetic": "/ˈhæloʊd/",
+      "audioUrl": ""
+    },
+    "holy": {
+      "phonetic": "/ˈhoʊli/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/holy-us.mp3"
+    },
+    "Pope": {
+      "phonetic": "/poʊp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pope-us.mp3"
+    },
+    "bishop": {
+      "phonetic": "/ˈbɪʃəp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bishop-us.mp3"
+    },
+    "missionary": {
+      "phonetic": "/ˈmɪʃəˌnɛɹɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/missionary-us.mp3"
+    },
+    "priest": {
+      "phonetic": "/ˈpɹiːst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/priest-us.mp3"
+    },
+    "Bible": {
+      "phonetic": "/ˈbaɪbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bible-us.mp3"
+    },
+    "church": {
+      "phonetic": "/t͡ʃɝt͡ʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/church-us.mp3"
+    },
+    "cathedral": {
+      "phonetic": "/kəˈθiː.dɹəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cathedral-us.mp3"
+    },
+    "choir": {
+      "phonetic": "/kwaɪɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/choir-us.mp3"
+    },
+    "monk": {
+      "phonetic": "/mʌŋk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/monk-au.mp3"
+    },
+    "temple": {
+      "phonetic": "/ˈtɛmp(ə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/temple-us.mp3"
+    },
+    "pagoda": {
+      "phonetic": "/pəˈɡoʊ.də/",
+      "audioUrl": ""
+    },
+    "empire": {
+      "phonetic": "/ˈɛmˌpaɪɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/empire-us.mp3"
+    },
+    "imperial": {
+      "phonetic": "/ɪmˈpɪ.ɹi.əl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/imperial-us.mp3"
+    },
+    "royal": {
+      "phonetic": "/ˈɹɔɪəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/royal-us.mp3"
+    },
+    "dynasty": {
+      "phonetic": "/ˈdaɪnəsti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dynasty-us.mp3"
+    },
+    "chronology": {
+      "phonetic": "/kɹəˈnɒl.ə.dʒi/",
+      "audioUrl": ""
+    },
+    "emperor": {
+      "phonetic": "/ˈɛmpəɹɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/emperor-us.mp3"
+    },
+    "king": {
+      "phonetic": "/kiŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/king-us.mp3"
+    },
+    "queen": {
+      "phonetic": "/kwiːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/queen-us.mp3"
+    },
+    "prince": {
+      "phonetic": "/pɹɪns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prince-us.mp3"
+    },
+    "princess": {
+      "phonetic": "/ˈpɹɪnsɛs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/princess-us.mp3"
+    },
+    "majesty": {
+      "phonetic": "/ˈmædʒ.əs.ti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/majesty-us.mp3"
+    },
+    "nobility": {
+      "phonetic": "/noʊˈbɪlɪti/",
+      "audioUrl": ""
+    },
+    "lord": {
+      "phonetic": "/lɔɹd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lord-us.mp3"
+    },
+    "knight": {
+      "phonetic": "/naɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/knight-us.mp3"
+    },
+    "guardian": {
+      "phonetic": "/ˈɡɑɹdi.ən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/guardian-us.mp3"
+    },
+    "nostalgia": {
+      "phonetic": "/nɑˈstældʒə/",
+      "audioUrl": ""
+    },
+    "homesick": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "celebrity": {
+      "phonetic": "/sɪˈlɛbɹɪti/",
+      "audioUrl": ""
+    },
+    "status": {
+      "phonetic": "/ˈstæt.əs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/status-us.mp3"
+    },
+    "background": {
+      "phonetic": "/ˈbæk.ɡɹaʊnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/background-us.mp3"
+    },
+    "experience": {
+      "phonetic": "/ɪkˈspɪɹ.i.əns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/experience-us.mp3"
+    },
+    "anecdote": {
+      "phonetic": "/ˈæ.nɪk.doʊt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/anecdote-us.mp3"
+    },
+    "accident": {
+      "phonetic": "/ˈæk.sə.dənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/accident-us.mp3"
+    },
+    "incident": {
+      "phonetic": "/ˈɪn.sɪ.dənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/incident-us.mp3"
+    },
+    "thrive": {
+      "phonetic": "/θɹaɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/thrive-us.mp3"
+    },
+    "prosperity": {
+      "phonetic": "/pɹɑˈspɛɹ.ɪ.ti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prosperity-us.mp3"
+    },
+    "setback": {
+      "phonetic": "/ˈsɛtbæk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/setback-us.mp3"
+    },
+    "adversity": {
+      "phonetic": "/ædˈvɝ.sɪ.ti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/adversity-au.mp3"
+    },
+    "language": {
+      "phonetic": "[ˈleɪŋɡwɪd͡ʒ]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/language-us.mp3"
+    },
+    "symbol": {
+      "phonetic": "/ˈsɪmbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/symbol-us.mp3"
+    },
+    "sign": {
+      "phonetic": "/saɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sign-us.mp3"
+    },
+    "gesture": {
+      "phonetic": "/ˈdʒɛs.tʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gesture-us.mp3"
+    },
+    "handwriting": {
+      "phonetic": "/ˈhændɹaɪtɪŋ/",
+      "audioUrl": ""
+    },
+    "pictograph": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "wedge": {
+      "phonetic": "/wɛdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wedge-au.mp3"
+    },
+    "knot": {
+      "phonetic": "/nɑt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/knot-us.mp3"
+    },
+    "linguistics": {
+      "phonetic": "/liŋˈɡwɪstɪks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/linguistics-us.mp3"
+    },
+    "semantic": {
+      "phonetic": "/sɪˈmæntɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/semantic-au.mp3"
+    },
+    "syntax": {
+      "phonetic": "/ˈsɪn.tæks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/syntax-uk.mp3"
+    },
+    "grammar": {
+      "phonetic": "/ˈɡɹæmɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/grammar-us.mp3"
+    },
+    "phonetics": {
+      "phonetic": "/fəˈnɛtɪks/",
+      "audioUrl": ""
+    },
+    "pronounce": {
+      "phonetic": "/pɹəˈnaʊns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pronounce-us.mp3"
+    },
+    "intonation": {
+      "phonetic": "/ɪntɵˈneɪʃən/",
+      "audioUrl": ""
+    },
+    "inflection": {
+      "phonetic": "/ɪnˈflɛkʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inflection-us.mp3"
+    },
+    "dialect": {
+      "phonetic": "/ˈdaɪ.əˌlɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dialect-us.mp3"
+    },
+    "accent": {
+      "phonetic": "/ækˈsɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/accent-1-uk.mp3"
+    },
+    "utterance": {
+      "phonetic": "/ˈʌtəɹəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/utterance-us.mp3"
+    },
+    "oral": {
+      "phonetic": "/ˈɑɹəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/oral-uk.mp3"
+    },
+    "verbal": {
+      "phonetic": "/ˈvɝ.bəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/verbal-us.mp3"
+    },
+    "syllable": {
+      "phonetic": "/ˈsɪləbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/syllable-uk.mp3"
+    },
+    "phoneme": {
+      "phonetic": "/ˈfoʊnim/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/phoneme-us.mp3"
+    },
+    "vowel": {
+      "phonetic": "/vaʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vowel-us.mp3"
+    },
+    "consonant": {
+      "phonetic": "/ˈkɑn.sə.nənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/consonant-us.mp3"
+    },
+    "alphabet": {
+      "phonetic": "/ˈæl.fə.bɛt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/alphabet-us.mp3"
+    },
+    "logogram": {
+      "phonetic": "/ˈlɔːɡəɡɹæm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/logogram-us.mp3"
+    },
+    "vocabulary": {
+      "phonetic": "/voʊˈkæbjəlɛɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vocabulary-us.mp3"
+    },
+    "dictionary": {
+      "phonetic": "/ˈdɪkʃəˌnɛɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dictionary-uk.mp3"
+    },
+    "idiom": {
+      "phonetic": "/ˈɪdɪəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/idiom-uk.mp3"
+    },
+    "phrase": {
+      "phonetic": "/fɹeɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/phrase-us.mp3"
+    },
+    "clause": {
+      "phonetic": "/klɔːz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/clause-us.mp3"
+    },
+    "expression": {
+      "phonetic": "/ɪkˈspɹɛʃ.ən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/expression-us.mp3"
+    },
+    "tense": {
+      "phonetic": "/tɛns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tense-us.mp3"
+    },
+    "prefix": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prefix-uk.mp3"
+    },
+    "suffix": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/suffix-us.mp3"
+    },
+    "abbreviation": {
+      "phonetic": "/əˌbɹi.viˈeɪ.ʃn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/abbreviation-uk.mp3"
+    },
+    "synonym": {
+      "phonetic": "/ˈsɪnənɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/synonym-us.mp3"
+    },
+    "antonym": {
+      "phonetic": "/ˈæntəˌnɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/antonym-us.mp3"
+    },
+    "noun": {
+      "phonetic": "/naʊn/",
+      "audioUrl": ""
+    },
+    "singular": {
+      "phonetic": "/ˈsɪŋɡjəlɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/singular-us.mp3"
+    },
+    "plural": {
+      "phonetic": "/ˈpləɹəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plural-us.mp3"
+    },
+    "pronoun": {
+      "phonetic": "/ˈpɹoʊ.naʊn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pronoun-us.mp3"
+    },
+    "verb": {
+      "phonetic": "/vɝb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/verb-us.mp3"
+    },
+    "adjective": {
+      "phonetic": "/ˈæ.d͡ʒə(k).tɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/adjective-us.mp3"
+    },
+    "adverb": {
+      "phonetic": "/ˈæd.vɝb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/adverb-us.mp3"
+    },
+    "preposition": {
+      "phonetic": "/ˌpɹɛpəˈzɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/preposition-1-us.mp3"
+    },
+    "conjunction": {
+      "phonetic": "/kənˈdʒʌŋkʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/conjunction-us.mp3"
+    },
+    "consistent": {
+      "phonetic": "/kənˈsɪstənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/consistent-us.mp3"
+    },
+    "complicated": {
+      "phonetic": "/ˈkɑmplɪkeɪtɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/complicated-us.mp3"
+    },
+    "complex": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "compile": {
+      "phonetic": "/kəmˈpaɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/compile-uk.mp3"
+    },
+    "version": {
+      "phonetic": "/ˈvɝʒən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/version-us.mp3"
+    },
+    "translate": {
+      "phonetic": "/tɹæn(t)s-/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/translate-us.mp3"
+    },
+    "paraphrase": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "interpret": {
+      "phonetic": "/ɪnˈtɝ.pɹɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/interpret-us.mp3"
+    },
+    "narrate": {
+      "phonetic": "/ˈnæɹeɪt/",
+      "audioUrl": ""
+    },
+    "illuminate": {
+      "phonetic": "/ɪlˈl(j)uməneɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/illuminate-us-verb.mp3"
+    },
+    "decipher": {
+      "phonetic": "/dɪˈsaɪfə(ɹ)/",
+      "audioUrl": ""
+    },
+    "eloquence": {
+      "phonetic": "/ˈɛl.ə.kwəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/eloquence-us.mp3"
+    },
+    "communicate": {
+      "phonetic": "/kəˈmjuːnɪkeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/communicate-us.mp3"
+    },
+    "discussion": {
+      "phonetic": "/dɪˈskʌʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/discussion-us.mp3"
+    },
+    "brainstorm": {
+      "phonetic": "/ˈbɹeɪnstɔː(ɹ)m/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brainstorm-uk.mp3"
+    },
+    "debate": {
+      "phonetic": "/dɪˈbeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/debate-us.mp3"
+    },
+    "commentary": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "negotiate": {
+      "phonetic": "/nəˈɡoʊ.ʃi.eɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/negotiate-us.mp3"
+    },
+    "contention": {
+      "phonetic": "/kənˈtɛnʃən/",
+      "audioUrl": ""
+    },
+    "medium": {
+      "phonetic": "/ˈmiːdɪəm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/medium-us.mp3"
+    },
+    "press": {
+      "phonetic": "/pɹɛs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/press-us.mp3"
+    },
+    "journalist": {
+      "phonetic": "/ˈdʒɝnəlɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/journalist-uk.mp3"
+    },
+    "critic": {
+      "phonetic": "/ˈkɹɪt.ɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/critic-us.mp3"
+    },
+    "commentator": {
+      "phonetic": "/ˈkɑmənˌteɪtəɹ/",
+      "audioUrl": ""
+    },
+    "exponent": {
+      "phonetic": "/ˈɛkspoʊnənt/",
+      "audioUrl": ""
+    },
+    "announcer": {
+      "phonetic": "/əˈnaʊnsɚ/",
+      "audioUrl": ""
+    },
+    "correspondent": {
+      "phonetic": "/ˌkɔɹɪˈspɑndənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/correspondent-us.mp3"
+    },
+    "messenger": {
+      "phonetic": "/ˈmɛs.n̩.d͡ʒɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/messenger-us.mp3"
+    },
+    "editor": {
+      "phonetic": "/ˈɛdɪtəɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/editor-us.mp3"
+    },
+    "typist": {
+      "phonetic": "/ˈtaɪpɪst/",
+      "audioUrl": ""
+    },
+    "handout": {
+      "phonetic": "/ˈhændaʊt/",
+      "audioUrl": ""
+    },
+    "leaflet": {
+      "phonetic": "/ˈliːflɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/leaflet-us.mp3"
+    },
+    "propaganda": {
+      "phonetic": "[ˌpɹɑp.ə.ˈɡæn.də]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/propaganda-us.mp3"
+    },
+    "publish": {
+      "phonetic": "/ˈpʌblɪʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/publish-us.mp3"
+    },
+    "disseminate": {
+      "phonetic": "/dɪˈsɛmɪˌneɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/disseminate-uk.mp3"
+    },
+    "foresee": {
+      "phonetic": "/fɔɹˈsi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/foresee-us.mp3"
+    },
+    "anticipate": {
+      "phonetic": "/ænˈtɪs.ə.peɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/anticipate-us.mp3"
+    },
+    "expect": {
+      "phonetic": "/ɛkˈspɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/expect-us.mp3"
+    },
+    "await": {
+      "phonetic": "/əˈwɛɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/await-us.mp3"
+    },
+    "pastime": {
+      "phonetic": "/ˈpæs.taɪm/",
+      "audioUrl": ""
+    },
+    "entertain": {
+      "phonetic": "/ˌɛntɚˈteɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/entertain-us.mp3"
+    },
+    "recreation": {
+      "phonetic": "/ɹiːkɹiˈeɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/recreation-1-uk.mp3"
+    },
+    "amuse": {
+      "phonetic": "/əˈmjuːz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/amuse-uk.mp3"
+    },
+    "gossip": {
+      "phonetic": "/ˈɡɑs.ɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gossip-us.mp3"
+    },
+    "rumour": {
+      "phonetic": "/ˈɹuːmɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rumour-au.mp3"
+    },
+    "consensus": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "festival": {
+      "phonetic": "/ˈfɛstəvəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/festival-us.mp3"
+    },
+    "feast": {
+      "phonetic": "/fiːst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/feast-us.mp3"
+    },
+    "programme": {
+      "phonetic": "/ˈpɹoʊˌɡɹæm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/programme-us.mp3"
+    },
+    "rehearsal": {
+      "phonetic": "/ɹɪˈhɜː(ɹ)səl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rehearsal-uk.mp3"
+    },
+    "perform": {
+      "phonetic": "/pɚˈfɔɹm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/perform-us.mp3"
+    },
+    "imitate": {
+      "phonetic": "/ˈɪmɪteɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/imitate-us.mp3"
+    },
+    "mimic": {
+      "phonetic": "/ˈmɪm.ɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mimic-us.mp3"
+    },
+    "simulate": {
+      "phonetic": "/-jə-/",
+      "audioUrl": ""
+    },
+    "circus": {
+      "phonetic": "/ˈsɝkəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/circus-us.mp3"
+    },
+    "magic": {
+      "phonetic": "/ˈmædʒɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/magic-us.mp3"
+    },
+    "drama": {
+      "phonetic": "/ˈdɹɑmə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drama-us.mp3"
+    },
+    "concert": {
+      "phonetic": "/kənˈsɝt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/concert-uk.mp3"
+    },
+    "symphony": {
+      "phonetic": "/ˈsɪm.fə.ni/",
+      "audioUrl": ""
+    },
+    "orchestra": {
+      "phonetic": "/ˈɔɹkəstɹə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/orchestra-us.mp3"
+    },
+    "ballet": {
+      "phonetic": "/bæˈleɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ballet-us.mp3"
+    },
+    "opera": {
+      "phonetic": "/ˈɑ.pəɹ.ə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/opera-us.mp3"
+    },
+    "comedy": {
+      "phonetic": "/ˈkɑmədi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/comedy-us.mp3"
+    },
+    "tragedy": {
+      "phonetic": "/ˈtɹæd͡ʒɪdi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tragedy-us.mp3"
+    },
+    "animation": {
+      "phonetic": "/æn.əˈmeɪ.ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/animation-us.mp3"
+    },
+    "film": {
+      "phonetic": "[ˈfɪlm̩]",
+      "audioUrl": ""
+    },
+    "movie": {
+      "phonetic": "/ˈmuːvi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/movie-us.mp3"
+    },
+    "artist": {
+      "phonetic": "/ˈɑɹ.tɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/artist-us.mp3"
+    },
+    "craftsman": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/craftsman-us.mp3"
+    },
+    "painter": {
+      "phonetic": "/ˈpeɪntɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/painter-us.mp3"
+    },
+    "role": {
+      "phonetic": "/ɹəʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/role-us.mp3"
+    },
+    "scene": {
+      "phonetic": "/siːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scene-us.mp3"
+    },
+    "stage": {
+      "phonetic": "/steɪd͡ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stage-us.mp3"
+    },
+    "gallery": {
+      "phonetic": "/ˈɡæləɹi/",
+      "audioUrl": ""
+    },
+    "exhibition": {
+      "phonetic": "/ɛksɪˈbɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exhibition-us.mp3"
+    },
+    "aesthetic": {
+      "phonetic": "/ɛs.ˈθɛ.tɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/aesthetic-us.mp3"
+    },
+    "collect": {
+      "phonetic": "/kəˈlɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/collect-1-us.mp3"
+    },
+    "select": {
+      "phonetic": "/sɪˈlɛkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/select-uk.mp3"
+    },
+    "opt": {
+      "phonetic": "/ɒpt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/opt-us.mp3"
+    },
+    "photograph": {
+      "phonetic": "/ˈfoʊ.tə.ˌɡɹæf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/photograph-us.mp3"
+    },
+    "portrait": {
+      "phonetic": "/ˈpɔɹtɹeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/portrait-us.mp3"
+    },
+    "painting": {
+      "phonetic": "/ˈpeɪn.tɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/painting-us.mp3"
+    },
+    "sculpture": {
+      "phonetic": "/ˈskʌlpt͡ʃɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sculpture-us.mp3"
+    },
+    "draw": {
+      "phonetic": "/dɹɔː/",
+      "audioUrl": ""
+    },
+    "depict": {
+      "phonetic": "/dɪˈpɪkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/depict-us.mp3"
+    },
+    "describe": {
+      "phonetic": "/dəˈskɹaɪb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/describe-us.mp3"
+    },
+    "carve": {
+      "phonetic": "/kɑɹv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/carve-us.mp3"
+    },
+    "improvise": {
+      "phonetic": "/ˈɪmpɹəvaɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/improvise-us.mp3"
+    },
+    "musical": {
+      "phonetic": "/ˈmju.zɪ.kəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/musical-us.mp3"
+    },
+    "classical": {
+      "phonetic": "/ˈklæsɪkl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/classical-us.mp3"
+    },
+    "jazz": {
+      "phonetic": "/d͡ʒæz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jazz-au.mp3"
+    },
+    "rock": {
+      "phonetic": "/ɹɑk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rock-us.mp3"
+    },
+    "hip-hop": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "pop": {
+      "phonetic": "/pɑp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pop-us.mp3"
+    },
+    "lyric": {
+      "phonetic": "/ˈlɪɹ.ɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lyric-uk.mp3"
+    },
+    "band": {
+      "phonetic": "/bænd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/band-us.mp3"
+    },
+    "solo": {
+      "phonetic": "/ˈsoʊ.loʊ/",
+      "audioUrl": ""
+    },
+    "melody": {
+      "phonetic": "/ˈmɛl.ə.di/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/melody-us.mp3"
+    },
+    "rhythm": {
+      "phonetic": "/ˈɹɪ.ð(ə)m/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rhythm-us.mp3"
+    },
+    "tone": {
+      "phonetic": "/toʊn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tone-1-us.mp3"
+    },
+    "tune": {
+      "phonetic": "/t(j)un/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tune-us.mp3"
+    },
+    "disc": {
+      "phonetic": "/dɪsk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/disc-us.mp3"
+    },
+    "piano": {
+      "phonetic": "/piˈɑnoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/piano-1-uk.mp3"
+    },
+    "violin": {
+      "phonetic": "/ˌvaɪəˈlɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/violin-us.mp3"
+    },
+    "cello": {
+      "phonetic": "/ˈtʃɛloʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cello-1-us.mp3"
+    },
+    "guitar": {
+      "phonetic": "/ɡɪˈtɑɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/guitar-us.mp3"
+    },
+    "harmonica": {
+      "phonetic": "/ˌhɑɹ.ˈmɑ.nɪ.kə/",
+      "audioUrl": ""
+    },
+    "trumpet": {
+      "phonetic": "/ˈtɹʌmpɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/trumpet-us.mp3"
+    },
+    "drum": {
+      "phonetic": "/ˈdɹʌm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drum-us.mp3"
+    },
+    "flute": {
+      "phonetic": "/fluːt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flute-us.mp3"
+    },
+    "competition": {
+      "phonetic": "/ˌkɑːmpəˈtɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/competition-us.mp3"
+    },
+    "tournament": {
+      "phonetic": "/ˈtɔɹnəmənt/",
+      "audioUrl": ""
+    },
+    "sponsor": {
+      "phonetic": "/ˈspɑn.səɹ/",
+      "audioUrl": ""
+    },
+    "patron": {
+      "phonetic": "/ˈpeɪ.tɹən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/patron-us.mp3"
+    },
+    "athlete": {
+      "phonetic": "/ˈæθ.lit/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/athlete-us.mp3"
+    },
+    "champion": {
+      "phonetic": "/ˈtʃæmpiən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/champion-us.mp3"
+    },
+    "spectator": {
+      "phonetic": "/ˈspɛkteɪtɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/spectator-us.mp3"
+    },
+    "volunteer": {
+      "phonetic": "/vɑl.ənˈtɪɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/volunteer-us.mp3"
+    },
+    "famous": {
+      "phonetic": "/ˈfeɪməs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/famous-us.ogg"
+    },
+    "well-known": {
+      "phonetic": "/ˌwɛlˈnoʊn/",
+      "audioUrl": ""
+    },
+    "energetic": {
+      "phonetic": "/ˌɛnɚˈdʒɛtɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/energetic-us.mp3"
+    },
+    "vigorous": {
+      "phonetic": "/ˈvɪɡəɹəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vigorous-us.mp3"
+    },
+    "stadium": {
+      "phonetic": "/ˈsteɪ.di.əm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stadium-us.mp3"
+    },
+    "gym": {
+      "phonetic": "/dʒɪm/",
+      "audioUrl": ""
+    },
+    "training": {
+      "phonetic": "/ˈtɹeɪnɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/training-us.mp3"
+    },
+    "exercise": {
+      "phonetic": "/ˈɛk.sɚ.saɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exercise-us.mp3"
+    },
+    "indoor": {
+      "phonetic": "/ˈɪndɔɹ/",
+      "audioUrl": ""
+    },
+    "outdoor": {
+      "phonetic": "/ˌaʊtˈdɔː/",
+      "audioUrl": ""
+    },
+    "mobile": {
+      "phonetic": "/ˈmoʊbaɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mobile-uk.mp3"
+    },
+    "movement": {
+      "phonetic": "/ˈmuːv.mənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/movement-us.mp3"
+    },
+    "yoga": {
+      "phonetic": "/ˈjoʊɡə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/yoga-1-us.mp3"
+    },
+    "sprawl": {
+      "phonetic": "/spɹɔːl/",
+      "audioUrl": ""
+    },
+    "stretch": {
+      "phonetic": "/stɹɛtʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stretch-us.mp3"
+    },
+    "strain": {
+      "phonetic": "/stɹeɪ̯n/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/strain-us.mp3"
+    },
+    "chess": {
+      "phonetic": "/t͡ʃɛs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/chess-us.mp3"
+    },
+    "badminton": {
+      "phonetic": "/ˈbæd.mɪn.tən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/badminton-us.mp3"
+    },
+    "golf": {
+      "phonetic": "/ɡɑlf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/golf-us.mp3"
+    },
+    "billiards": {
+      "phonetic": "/ˈbɪl.jɚdz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/billiards-uk.mp3"
+    },
+    "soccer": {
+      "phonetic": "/ˈsɑk.ɚ/",
+      "audioUrl": ""
+    },
+    "tennis": {
+      "phonetic": "/ˈtɛn.ɪs/",
+      "audioUrl": ""
+    },
+    "volleyball": {
+      "phonetic": "/ˈvɒlibɔ(ː)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/volleyball-us.mp3"
+    },
+    "hockey": {
+      "phonetic": "/ˈhɒki/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hockey-1-us.mp3"
+    },
+    "goal": {
+      "phonetic": "/ɡoʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/goal-us.mp3"
+    },
+    "bat": {
+      "phonetic": "/bæt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bat-us.mp3"
+    },
+    "racket": {
+      "phonetic": "/ˈɹækɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/racket-au.mp3"
+    },
+    "kick": {
+      "phonetic": "/kɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/kick-us.mp3"
+    },
+    "knock": {
+      "phonetic": "/nɑk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/knock-us.mp3"
+    },
+    "flip": {
+      "phonetic": "/flɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/flip-us.mp3"
+    },
+    "pitch": {
+      "phonetic": "/pɪtʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pitch-us.mp3"
+    },
+    "throw": {
+      "phonetic": "/θɹoʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/throw-us.mp3"
+    },
+    "toss": {
+      "phonetic": "/tɔs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/toss-au.mp3"
+    },
+    "slide": {
+      "phonetic": "/slaɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/slide-us.mp3"
+    },
+    "slip": {
+      "phonetic": "/slɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/slip-us.mp3"
+    },
+    "glide": {
+      "phonetic": "/ˈɡlaɪd/",
+      "audioUrl": ""
+    },
+    "tumble": {
+      "phonetic": "/ˈtʌmbl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tumble-us.mp3"
+    },
+    "ski": {
+      "phonetic": "/ʃiː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ski-uk.mp3"
+    },
+    "skate": {
+      "phonetic": "/skeɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/skate-us.mp3"
+    },
+    "cycling": {
+      "phonetic": "/ˈsaɪk(ə)lɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cycling-us.mp3"
+    },
+    "dive": {
+      "phonetic": "/ˈdaɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dive-1-us.mp3"
+    },
+    "drift": {
+      "phonetic": "/dɹɪft/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drift-us.mp3"
+    },
+    "jump": {
+      "phonetic": "/dʒʌmp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jump-us.mp3"
+    },
+    "leap": {
+      "phonetic": "/liːp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/leap-us.mp3"
+    },
+    "plunge": {
+      "phonetic": "/plʌndʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plunge-us.mp3"
+    },
+    "hop": {
+      "phonetic": "/hɑp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hop-us.mp3"
+    },
+    "bounce": {
+      "phonetic": "/baʊns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bounce-us.mp3"
+    },
+    "tent": {
+      "phonetic": "/tɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tent-us.mp3"
+    },
+    "camp": {
+      "phonetic": "[kʰɛəmp]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/camp-us.mp3"
+    },
+    "picnic": {
+      "phonetic": "/ˈpɪknɪk/",
+      "audioUrl": ""
+    },
+    "hunt": {
+      "phonetic": "/hʌnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hunt-us.mp3"
+    },
+    "race": {
+      "phonetic": "/ɹeɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/race-us.mp3"
+    },
+    "marathon": {
+      "phonetic": "/ˈmæɹəˌθɑn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/marathon-uk.mp3"
+    },
+    "pedestrian": {
+      "phonetic": "/pəˈdɛst.ɹi.ən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pedestrian-us.mp3"
+    },
+    "pace": {
+      "phonetic": "/peɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pace-1-us.mp3"
+    },
+    "step": {
+      "phonetic": "/stɛp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/step-us.mp3"
+    },
+    "excursion": {
+      "phonetic": "/ɛks.kɜː(ɹ).ʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/excursion-us.mp3"
+    },
+    "cruise": {
+      "phonetic": "/kɹuːz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cruise-uk.mp3"
+    },
+    "trip": {
+      "phonetic": "/tɹɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/trip-1-us.mp3"
+    },
+    "vacation": {
+      "phonetic": "/veɪˈkeɪʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vacation-us.mp3"
+    },
+    "hike": {
+      "phonetic": "/haɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hike-us.mp3"
+    },
+    "jog": {
+      "phonetic": "/dʒɑɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jog-us.mp3"
+    },
+    "stride": {
+      "phonetic": "/stɹaɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stride-us.mp3"
+    },
+    "wander": {
+      "phonetic": "/ˈwɑndɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wander-us.mp3"
+    },
+    "linger": {
+      "phonetic": "/ˈlɪŋɡɚ/",
+      "audioUrl": ""
+    },
+    "lag": {
+      "phonetic": "/læɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lag-au.mp3"
+    },
+    "climb": {
+      "phonetic": "/klaɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/climb-us.mp3"
+    },
+    "pull": {
+      "phonetic": "[pʰʊːɫ]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pull-us.mp3"
+    },
+    "drag": {
+      "phonetic": "/dɹæɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drag-us.mp3"
+    },
+    "bend": {
+      "phonetic": "/bɛnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bend-uk.mp3"
+    },
+    "bow": {
+      "phonetic": "/boʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bow-1-us.mp3"
+    },
+    "stuff": {
+      "phonetic": "/stʌf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stuff-us.mp3"
+    },
+    "item": {
+      "phonetic": "[ˈaɪ̯ɾm̩]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/item-us.mp3"
+    },
+    "merchandise": {
+      "phonetic": "/ˈmɝtʃənˌdaɪz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/merchandise-us.mp3"
+    },
+    "souvenir": {
+      "phonetic": "/ˌsuːvəˈnɪə(ɹ)/",
+      "audioUrl": ""
+    },
+    "artifact": {
+      "phonetic": "/ˈɑɹtɪfækt/",
+      "audioUrl": ""
+    },
+    "material": {
+      "phonetic": "/məˈtɪɹi.əl/",
+      "audioUrl": ""
+    },
+    "raw": {
+      "phonetic": "/ɹɔː/",
+      "audioUrl": ""
+    },
+    "crude": {
+      "phonetic": "/kɹuːd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/crude-us.mp3"
+    },
+    "necessity": {
+      "phonetic": "/nɪˈsɛsəti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/necessity-us.mp3"
+    },
+    "outfit": {
+      "phonetic": "/ˈaʊtfɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/outfit-uk.mp3"
+    },
+    "kit": {
+      "phonetic": "/kɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/kit-us.mp3"
+    },
+    "utensil": {
+      "phonetic": "/juˈtɛn.səl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/utensil-us.mp3"
+    },
+    "garbage": {
+      "phonetic": "/ɡɑ(ɹ)ˈbɑːʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/garbage-us.mp3"
+    },
+    "rubbish": {
+      "phonetic": "/ˈɹə-/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rubbish-us.mp3"
+    },
+    "trash": {
+      "phonetic": "/tɹæʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/trash-us.mp3"
+    },
+    "recycle": {
+      "phonetic": "/ɹiˈsaɪkəl/",
+      "audioUrl": ""
+    },
+    "reuse": {
+      "phonetic": "/ɹiːˈjuːs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/reuse-us.mp3"
+    },
+    "litter": {
+      "phonetic": "/ˈlɪtɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/litter-us.mp3"
+    },
+    "waste": {
+      "phonetic": "/weɪst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/waste-us.mp3"
+    },
+    "junk": {
+      "phonetic": "/dʒʌŋk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/junk-au.mp3"
+    },
+    "landfill": {
+      "phonetic": "/ˈlænd.fɪl/",
+      "audioUrl": ""
+    },
+    "sewerage": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "detergent": {
+      "phonetic": "/dɪˈtɜːdʒənt/",
+      "audioUrl": ""
+    },
+    "lotion": {
+      "phonetic": "/ˈloʊʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lotion-us.mp3"
+    },
+    "shampoo": {
+      "phonetic": "/ʃæmˈpuː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shampoo-us.mp3"
+    },
+    "soap": {
+      "phonetic": "/soʊp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/soap-us.mp3"
+    },
+    "tub": {
+      "phonetic": "/tʌb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tub-au.mp3"
+    },
+    "plug": {
+      "phonetic": "/plʌɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plug-us.mp3"
+    },
+    "tap": {
+      "phonetic": "/tæp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tap-us.mp3"
+    },
+    "pipe": {
+      "phonetic": "/paɪp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pipe-us.mp3"
+    },
+    "tube": {
+      "phonetic": "/tjuːb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tube-au.mp3"
+    },
+    "mop": {
+      "phonetic": "/mɑp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mop-us.mp3"
+    },
+    "broom": {
+      "phonetic": "/bɹuːm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/broom-us.mp3"
+    },
+    "sweep": {
+      "phonetic": "/swiːp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sweep-us.mp3"
+    },
+    "mattress": {
+      "phonetic": "/ˈmætɹɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mattress-us.mp3"
+    },
+    "carpet": {
+      "phonetic": "/ˈkɑɹpət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/carpet-us.mp3"
+    },
+    "rug": {
+      "phonetic": "/ɹʌɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rug-au.mp3"
+    },
+    "mat": {
+      "phonetic": "/mæt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mat-us.mp3"
+    },
+    "cushion": {
+      "phonetic": "/ˈkʊʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cushion-us.mp3"
+    },
+    "pad": {
+      "phonetic": "/pæd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pad-au.mp3"
+    },
+    "blanket": {
+      "phonetic": "/ˈblæŋkɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/blanket-us.mp3"
+    },
+    "quilt": {
+      "phonetic": "/kwɪlt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/quilt-us.mp3"
+    },
+    "sheet": {
+      "phonetic": "/ʃit/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sheet-us.mp3"
+    },
+    "pillow": {
+      "phonetic": "/ˈpɛloʊ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pillow-us.mp3"
+    },
+    "sponge": {
+      "phonetic": "/spʌnd͡ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sponge-us.mp3"
+    },
+    "towel": {
+      "phonetic": "/taʊl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/towel-us.mp3"
+    },
+    "staple": {
+      "phonetic": "/ˈsteɪ.pəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/staple-us.mp3"
+    },
+    "nail": {
+      "phonetic": "/neɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/nail-us.mp3"
+    },
+    "razor": {
+      "phonetic": "/ˈɹeɪzə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/razor-us.mp3"
+    },
+    "shave": {
+      "phonetic": "/ʃeɪv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shave-us.mp3"
+    },
+    "fuse": {
+      "phonetic": "/fjuːz/",
+      "audioUrl": ""
+    },
+    "cable": {
+      "phonetic": "/keɪ.bl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cable-us.mp3"
+    },
+    "cord": {
+      "phonetic": "/kɔɹd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cord-us.mp3"
+    },
+    "strand": {
+      "phonetic": "/stɹænd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/strand-us.mp3"
+    },
+    "match": {
+      "phonetic": "/mæt͡ʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/match-us.mp3"
+    },
+    "candle": {
+      "phonetic": "/ˈkændl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/candle-us.mp3"
+    },
+    "wax": {
+      "phonetic": "/wæks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wax-us.mp3"
+    },
+    "portfolio": {
+      "phonetic": "/-oʊl.joʊ/",
+      "audioUrl": ""
+    },
+    "paperback": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/paperback-us.mp3"
+    },
+    "pamphlet": {
+      "phonetic": "/ˈpæmf.lɪt/",
+      "audioUrl": ""
+    },
+    "tissue": {
+      "phonetic": "/ˈtɪʃu/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tissue-us.mp3"
+    },
+    "cover": {
+      "phonetic": "/ˈkʌvɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cover-us.mp3"
+    },
+    "Xerox": {
+      "phonetic": "/ˈziː(ə)ɹ.ɑks/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/xerox-au.mp3"
+    },
+    "duplicate": {
+      "phonetic": "/ˈdjuː.plɪ.kət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/duplicate-us.mp3"
+    },
+    "memorandum": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "stationery": {
+      "phonetic": "/ˈsteɪʃənɛɹi/",
+      "audioUrl": ""
+    },
+    "glue": {
+      "phonetic": "/ɡluː/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/glue-us.mp3"
+    },
+    "ink": {
+      "phonetic": "/iŋk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ink-us.mp3"
+    },
+    "rubber": {
+      "phonetic": "/ˈɹʌbɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rubber-us.mp3"
+    },
+    "scissors": {
+      "phonetic": "/ˈsɪzɚz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scissors-us.mp3"
+    },
+    "shear": {
+      "phonetic": "/ʃiɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shear-us.mp3"
+    },
+    "edge": {
+      "phonetic": "/ɛdʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/edge-us.mp3"
+    },
+    "rim": {
+      "phonetic": "/ɹɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/rim-us.mp3"
+    },
+    "element": {
+      "phonetic": "/ˈɛlɪmənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/element-us.mp3"
+    },
+    "factor": {
+      "phonetic": "/ˈfæktɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/factor-us.mp3"
+    },
+    "section": {
+      "phonetic": "/ˈsɛkʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/section-us.mp3"
+    },
+    "tag": {
+      "phonetic": "/teɪɡ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tag-1-au.mp3"
+    },
+    "label": {
+      "phonetic": "/ˈleɪbəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/label-us.mp3"
+    },
+    "badge": {
+      "phonetic": "/bædʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/badge-uk.mp3"
+    },
+    "bolt": {
+      "phonetic": "/boʊlt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bolt-us.mp3"
+    },
+    "knob": {
+      "phonetic": "/nɑb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/knob-uk.mp3"
+    },
+    "handle": {
+      "phonetic": "/ˈhæn.dl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/handle-us.mp3"
+    },
+    "shutter": {
+      "phonetic": "/ˈʃʌtɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/shutter-us.mp3"
+    },
+    "curtain": {
+      "phonetic": "/ˈkɝtn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/curtain-us.mp3"
+    },
+    "pane": {
+      "phonetic": "/peɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pane-us.mp3"
+    },
+    "opacity": {
+      "phonetic": "/oʊˈpæsɪtiː/",
+      "audioUrl": ""
+    },
+    "jar": {
+      "phonetic": "/dʒɑɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jar-us.mp3"
+    },
+    "barrel": {
+      "phonetic": "/ˈbæɹəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/barrel-us.mp3"
+    },
+    "bucket": {
+      "phonetic": "/ˈbʌkɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bucket-us.mp3"
+    },
+    "pail": {
+      "phonetic": "/peɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pail-us.mp3"
+    },
+    "phone": {
+      "phonetic": "/foʊ̯n/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/phone-us.mp3"
+    },
+    "bell": {
+      "phonetic": "/bɛl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bell-us.mp3"
+    },
+    "camera": {
+      "phonetic": "/ˈkæməɹə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/camera-us.mp3"
+    },
+    "portable": {
+      "phonetic": "/ˈpɔɹtəbl̩/",
+      "audioUrl": ""
+    },
+    "spotlight": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "lantern": {
+      "phonetic": "/ˈlæn.tɚn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lantern-us.mp3"
+    },
+    "bulb": {
+      "phonetic": "/bʌlb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bulb-us.mp3"
+    },
+    "flashlight": {
+      "phonetic": "/ˈflæʃˌlaɪt/",
+      "audioUrl": ""
+    },
+    "refrigerator": {
+      "phonetic": "/ɹəˈfɹɪd͡ʒəˌɹeɪɾɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/refrigerator-us.mp3"
+    },
+    "fridge": {
+      "phonetic": "/fɹɪd͡ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fridge-uk.mp3"
+    },
+    "vacuum": {
+      "phonetic": "/ˈvæ.kjuː.əm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vacuum-us.mp3"
+    },
+    "fan": {
+      "phonetic": "/fæn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fan-uk.mp3"
+    },
+    "switch": {
+      "phonetic": "/swɪtʃ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/switch-us.mp3"
+    },
+    "hurdle": {
+      "phonetic": "/ˈhɝdəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hurdle-us.mp3"
+    },
+    "fence": {
+      "phonetic": "/fɛns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fence-us.mp3"
+    },
+    "pedal": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pedal-uk.mp3"
+    },
+    "shelf": {
+      "phonetic": "/ʃɛlf/",
+      "audioUrl": ""
+    },
+    "ladder": {
+      "phonetic": "/ˈlædɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ladder-us.mp3"
+    },
+    "lift": {
+      "phonetic": "/lɪft/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lift-us.mp3"
+    },
+    "stool": {
+      "phonetic": "/stuːl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/stool-us.mp3"
+    },
+    "drawer": {
+      "phonetic": "/dɹɔɹ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/drawer-us.mp3"
+    },
+    "umbrella": {
+      "phonetic": "/ʌmˈbɹɛlə/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/umbrella-us.mp3"
+    },
+    "raincoat": {
+      "phonetic": "/ˈɹeɪnkoʊt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/raincoat-us.mp3"
+    },
+    "dredge": {
+      "phonetic": "/dɹɛdʒ/",
+      "audioUrl": ""
+    },
+    "can": {
+      "phonetic": "/ˈkæn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/can-1-us-stressed.mp3"
+    },
+    "mill": {
+      "phonetic": "/mɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mill-us.mp3"
+    },
+    "forge": {
+      "phonetic": "/fɔɹd͡ʒ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/forge-uk.mp3"
+    },
+    "alloy": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/alloy-us.mp3"
+    },
+    "metal": {
+      "phonetic": "[ˈmɛ.ɾɫ̩]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/metal-us.mp3"
+    },
+    "iron": {
+      "phonetic": "/ˈaɪɚn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/iron-us.mp3"
+    },
+    "lead": {
+      "phonetic": "/lɛd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lead-1-us.mp3"
+    },
+    "brass": {
+      "phonetic": "/bɹæs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brass-us.mp3"
+    },
+    "bronze": {
+      "phonetic": "/bɹɑnz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/bronze-us.mp3"
+    },
+    "cement": {
+      "phonetic": "/ˈsimɛnt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cement-au.mp3"
+    },
+    "lime": {
+      "phonetic": "/laɪm/",
+      "audioUrl": ""
+    },
+    "plaster": {
+      "phonetic": "/ˈplæstɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plaster-us.mp3"
+    },
+    "leather": {
+      "phonetic": "/ˈlɛðɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/leather-us.mp3"
+    },
+    "plastic": {
+      "phonetic": "/ˈplæstɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/plastic-us.mp3"
+    },
+    "fiber": {
+      "phonetic": "/ˈfaɪ.bɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fiber-us.mp3"
+    },
+    "fabric": {
+      "phonetic": "/ˈfæb.ɹɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fabric-us.mp3"
+    },
+    "knit": {
+      "phonetic": "/ˈnɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/knit-uk.mp3"
+    },
+    "weave": {
+      "phonetic": "/wiːv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/weave-us.mp3"
+    },
+    "canvas": {
+      "phonetic": "/ˈkæn.vəs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/canvas-us.mp3"
+    },
+    "linen": {
+      "phonetic": "/ˈlɪnɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/linen-us.mp3"
+    },
+    "cotton": {
+      "phonetic": "/ˈkɑt.n̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cotton-1-us.mp3"
+    },
+    "nylon": {
+      "phonetic": "/ˈnaɪlɑn/",
+      "audioUrl": ""
+    },
+    "lumber": {
+      "phonetic": "/ˈlʌm.bɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/lumber-us.mp3"
+    },
+    "wooden": {
+      "phonetic": "/ˈwʊdən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wooden-us.mp3"
+    },
+    "mine": {
+      "phonetic": "/maɪn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/mine-us.mp3"
+    },
+    "pit": {
+      "phonetic": "/ˈpɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pit.mp3"
+    },
+    "fuel": {
+      "phonetic": "[ˈfjuw əɫ]",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fuel-uk.mp3"
+    },
+    "lubricate": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "diamond": {
+      "phonetic": "/ˈdaɪ(ə)mənd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/diamond-us.mp3"
+    },
+    "crystal": {
+      "phonetic": "/ˈkɹɪstəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/crystal-ca.mp3"
+    },
+    "inferior": {
+      "phonetic": "/ɪnˈfɪ(ə)ɹiɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/inferior-us.mp3"
+    },
+    "counterfeit": {
+      "phonetic": "/ˈkaʊn.tɚˌfɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/counterfeit-uk.mp3"
+    },
+    "fake": {
+      "phonetic": "/feɪk/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fake-us.mp3"
+    },
+    "fragile": {
+      "phonetic": "/ˈfɹædʒəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fragile-us.mp3"
+    },
+    "miniature": {
+      "phonetic": "/ˈmɪn(i)ətʃəɹ/",
+      "audioUrl": ""
+    },
+    "available": {
+      "phonetic": "/əˈveɪləb(ə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/available-us.mp3"
+    },
+    "durable": {
+      "phonetic": "/ˈd(j)ʊəɹəbəl/",
+      "audioUrl": ""
+    },
+    "fashion": {
+      "phonetic": "/ˈfæʃən/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/fashion-us.mp3"
+    },
+    "style": {
+      "phonetic": "/staɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/style-us.mp3"
+    },
+    "trend": {
+      "phonetic": "/tɹɛnd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/trend-uk.mp3"
+    },
+    "tendency": {
+      "phonetic": "/ˈtɛndənsi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/tendency-us.mp3"
+    },
+    "popularity": {
+      "phonetic": "/ˌpɒp.jəˈlæɹ.ɪ.ti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/popularity-us.mp3"
+    },
+    "vogue": {
+      "phonetic": "/vəʊɡ/",
+      "audioUrl": ""
+    },
+    "prevail": {
+      "phonetic": "/pɹɪˈveɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/prevail-us.mp3"
+    },
+    "model": {
+      "phonetic": "/ˈmɑdl̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/model-us.mp3"
+    },
+    "icon": {
+      "phonetic": "/ˈaɪ.kɑːn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/icon-us.mp3"
+    },
+    "idol": {
+      "phonetic": "/ˈaɪd(ə)l/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/idol-uk.mp3"
+    },
+    "luxury": {
+      "phonetic": "/ˈlʌkʃəɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/luxury-us.mp3"
+    },
+    "extravagant": {
+      "phonetic": "/ɪkˈstɹævəɡənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/extravagant-uk.mp3"
+    },
+    "jewelry": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "jewel": {
+      "phonetic": "/dʒul/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jewel-us.mp3"
+    },
+    "gem": {
+      "phonetic": "/d͡ʒɛm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gem-us.mp3"
+    },
+    "jade": {
+      "phonetic": "/d͡ʒeɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jade-uk.mp3"
+    },
+    "adorn": {
+      "phonetic": "/əˈdɔɹn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/adorn-us.mp3"
+    },
+    "ornament": {
+      "phonetic": "/ˈɔɹnəmənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ornament-us-noun.mp3"
+    },
+    "embellish": {
+      "phonetic": "/ɛm-/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/embellish-us.mp3"
+    },
+    "embroider": {
+      "phonetic": "/ɪmˈbɹɔɪdɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/embroider-us.mp3"
+    },
+    "hairdressing": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "pigment": {
+      "phonetic": "/ˈpɪɡ.mənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pigment-uk.mp3"
+    },
+    "dye": {
+      "phonetic": "/daɪ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dye-uk.mp3"
+    },
+    "masquerade": {
+      "phonetic": "/ˈmæskəˌɹeɪd/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/masquerade-us.mp3"
+    },
+    "veil": {
+      "phonetic": "/veɪl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/veil-us.mp3"
+    },
+    "costume": {
+      "phonetic": "/kɑsˈt(j)um/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/costume-us.mp3"
+    },
+    "fascinate": {
+      "phonetic": "/ˈfæsɪneɪt/",
+      "audioUrl": ""
+    },
+    "decent": {
+      "phonetic": "/ˈdiːsənt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/decent-us.mp3"
+    },
+    "exquisite": {
+      "phonetic": "/ɪkˈskwɪzɪt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/exquisite-us.mp3"
+    },
+    "grace": {
+      "phonetic": "/ɡɹeɪs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/grace-us.mp3"
+    },
+    "elegance": {
+      "phonetic": "/ˈɛl.ɪ.ɡəns/",
+      "audioUrl": ""
+    },
+    "perfect": {
+      "phonetic": "/ˈpɝfɪkt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/perfect-1-us.mp3"
+    },
+    "appearance": {
+      "phonetic": "/əˈpɪɹəns/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/appearance-us.mp3"
+    },
+    "cosmetics": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "make-up": {
+      "phonetic": "",
+      "audioUrl": ""
+    },
+    "handsome": {
+      "phonetic": "/ˈhæn.səm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/handsome-us.mp3"
+    },
+    "charming": {
+      "phonetic": "/ˈtʃɑː(ɹ).mɪŋ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/charming-us.mp3"
+    },
+    "pretty": {
+      "phonetic": "/ˈpɝti/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/pretty-us.mp3"
+    },
+    "beautiful": {
+      "phonetic": "/ˈbjuːtɪfəl/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/beautiful-us.mp3"
+    },
+    "ugly": {
+      "phonetic": "/ˈʌɡli/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/ugly-us.mp3"
+    },
+    "dress": {
+      "phonetic": "/dɹɛs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/dress-us.mp3"
+    },
+    "clothe": {
+      "phonetic": "/ˈkloʊð/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/clothe-us.mp3"
+    },
+    "uniform": {
+      "phonetic": "/ˈjunəfɚm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/uniform-us.mp3"
+    },
+    "garment": {
+      "phonetic": "/ˈɡɑɹ.mənt/",
+      "audioUrl": ""
+    },
+    "laundry": {
+      "phonetic": "/ˈlɔːn.dɹi/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/laundry-us.mp3"
+    },
+    "wardrobe": {
+      "phonetic": "/ˈwɔɹdɹoʊb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wardrobe-us.mp3"
+    },
+    "overall": {
+      "phonetic": "",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/overall-us.mp3"
+    },
+    "overcoat": {
+      "phonetic": "/ˈoʊvɚkoʊt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/overcoat-us.mp3"
+    },
+    "robe": {
+      "phonetic": "/ɹoʊb/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/robe-us.mp3"
+    },
+    "gown": {
+      "phonetic": "/ɡaʊn/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/gown-us.mp3"
+    },
+    "sweater": {
+      "phonetic": "/-ɾɚ/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/sweater-us.mp3"
+    },
+    "jacket": {
+      "phonetic": "/ˈd͡ʒækət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jacket-us.mp3"
+    },
+    "skirt": {
+      "phonetic": "/skɝt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/skirt-us.mp3"
+    },
+    "jeans": {
+      "phonetic": "/d͡ʒiːnz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/jeans-uk.mp3"
+    },
+    "trousers": {
+      "phonetic": "/ˈtɹaʊzɚz/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/trousers-us.mp3"
+    },
+    "clasp": {
+      "phonetic": "/klæsp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/clasp-us.mp3"
+    },
+    "button": {
+      "phonetic": "/ˈbʌtn̩/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/button-us.mp3"
+    },
+    "glove": {
+      "phonetic": "/ɡlʌv/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/glove-us.mp3"
+    },
+    "hat": {
+      "phonetic": "/hæt/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/hat-us.mp3"
+    },
+    "cap": {
+      "phonetic": "/kæp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/cap-us.mp3"
+    },
+    "brim": {
+      "phonetic": "/bɹɪm/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/brim-us.mp3"
+    },
+    "scarf": {
+      "phonetic": "/skɑːɹf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/scarf-au.mp3"
+    },
+    "handkerchief": {
+      "phonetic": "/ˈhæŋkɚtʃɪf/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/handkerchief-us.mp3"
+    },
+    "purse": {
+      "phonetic": "/pɝs/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/purse-us.mp3"
+    },
+    "wallet": {
+      "phonetic": "/ˈwɑlət/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wallet-au.mp3"
+    },
+    "vest": {
+      "phonetic": "/vɛst/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/vest-us.mp3"
+    },
+    "wrap": {
+      "phonetic": "/ɹæp/",
+      "audioUrl": "https://api.dictionaryapi.dev/media/pronunciations/en/wrap-uk.mp3"
     }
   }
 }
