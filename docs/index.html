@@ -183,45 +183,48 @@
         <section class="section">
             <h2>🎨 UI 设计预览</h2>
             <div class="ui-showcase">
+                <!-- 学习界面 -->
                 <div class="ui-card">
                     <div class="phone-frame">
                         <div class="phone-screen">
                             <div class="app-header">
-                                <span class="back-btn">‹</span>
                                 <span class="header-title">今日学习</span>
-                                <span class="menu-btn">⋯</span>
-                            </div>
-                            <div class="progress-indicator">
-                                <div class="progress-dots">
-                                    <span class="dot active"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
-                                </div>
-                                <span class="progress-text">1/20</span>
+                                <span class="progress-badge">8/20</span>
                             </div>
                             <div class="word-card">
                                 <div class="chapter-tag">01_自然地理</div>
                                 <div class="word-main">atmosphere</div>
                                 <div class="phonetic">/ˈætməsˌfɪr/</div>
                                 <div class="pos-badge">n.</div>
-                                <div class="divider"></div>
                                 <div class="meaning">大气层；氛围</div>
                                 <div class="example">The approaching examination created a tense atmosphere...</div>
+                                <button class="audio-btn">🔊</button>
                             </div>
-                            <div class="action-buttons">
-                                <button class="action-btn">显示释义</button>
-                                <button class="action-btn primary">显示例句</button>
+                            <div class="rating-section">
+                                <div class="rating-label">记忆程度</div>
+                                <div class="rating-buttons">
+                                    <button class="rating-btn" style="background: #ff6b6b;">0</button>
+                                    <button class="rating-btn" style="background: #ff8e53;">1</button>
+                                    <button class="rating-btn" style="background: #feca57;">2</button>
+                                    <button class="rating-btn" style="background: #48dbfb;">3</button>
+                                    <button class="rating-btn" style="background: #1dd1a1;">4</button>
+                                    <button class="rating-btn" style="background: #5f27cd;">5</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="ui-label">单词卡片</div>
+                    <div class="ui-label">学习界面 · SM-2评分</div>
                 </div>
 
+                <!-- 磨耳朵模式 -->
                 <div class="ui-card">
                     <div class="phone-frame">
                         <div class="phone-screen dark">
+                            <div class="mode-selector">
+                                <span class="mode">顺序</span>
+                                <span class="mode active">随机</span>
+                                <span class="mode">间隔</span>
+                            </div>
                             <div class="audio-player">
                                 <div class="album-art">
                                     <div class="wave-animation">
@@ -232,19 +235,12 @@
                                     <div class="track-word">atmosphere</div>
                                     <div class="track-example">The approaching examination...</div>
                                 </div>
-                                <div class="progress-slider">
-                                    <div class="slider-bar">
-                                        <div class="slider-fill" style="width: 35%"></div>
-                                    </div>
-                                    <div class="time-labels">
-                                        <span>0:12</span>
-                                        <span>0:35</span>
-                                    </div>
-                                </div>
-                                <div class="playback-controls">
-                                    <button class="control-btn">‹‹</button>
-                                    <button class="control-btn play">▶</button>
-                                    <button class="control-btn">››</button>
+                                <div class="progress-ring">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#333" stroke-width="4"/>
+                                        <circle cx="50" cy="50" r="45" fill="none" stroke="#7c3aed" stroke-width="4" stroke-dasharray="200, 283" stroke-linecap="round"/>
+                                    </svg>
+                                    <div class="play-btn">▶</div>
                                 </div>
                             </div>
                             <div class="playlist-preview">
@@ -264,15 +260,30 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ui-label">磨耳朵模式</div>
+                    <div class="ui-label">磨耳朵模式 · 后台播放</div>
                 </div>
 
+                <!-- 统计界面 -->
                 <div class="ui-card">
                     <div class="phone-frame">
                         <div class="phone-screen">
                             <div class="stats-header">
                                 <h3>学习统计</h3>
                                 <span class="date">2026年2月</span>
+                            </div>
+                            <div class="today-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">20</div>
+                                    <div class="stat-label">新词</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">35</div>
+                                    <div class="stat-label">复习</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">85%</div>
+                                    <div class="stat-label">正确率</div>
+                                </div>
                             </div>
                             <div class="streak-card">
                                 <div class="flame-icon">🔥</div>
@@ -281,32 +292,136 @@
                                     <div class="streak-label">连续学习天数</div>
                                 </div>
                             </div>
-                            <div class="chart-placeholder">
-                                <div class="chart-bar" style="height: 40%"></div>
-                                <div class="chart-bar" style="height: 65%"></div>
-                                <div class="chart-bar" style="height: 50%"></div>
-                                <div class="chart-bar" style="height: 80%"></div>
-                                <div class="chart-bar active" style="height: 70%"></div>
-                                <div class="chart-bar" style="height: 45%"></div>
-                                <div class="chart-bar" style="height: 60%"></div>
-                            </div>
-                            <div class="stats-summary">
-                                <div class="summary-item">
-                                    <span class="summary-value">20</span>
-                                    <span class="summary-label">今日新词</span>
-                                </div>
-                                <div class="summary-item">
-                                    <span class="summary-value">35</span>
-                                    <span class="summary-label">今日复习</span>
-                                </div>
-                                <div class="summary-item">
-                                    <span class="summary-value">85%</span>
-                                    <span class="summary-label">正确率</span>
+                            <div class="chart-container">
+                                <div class="chart-title">学习趋势</div>
+                                <div class="chart-bars">
+                                    <div class="chart-bar" style="height: 40%"><span>一</span></div>
+                                    <div class="chart-bar" style="height: 65%"><span>二</span></div>
+                                    <div class="chart-bar" style="height: 50%"><span>三</span></div>
+                                    <div class="chart-bar" style="height: 80%"><span>四</span></div>
+                                    <div class="chart-bar active" style="height: 70%"><span>五</span></div>
+                                    <div class="chart-bar" style="height: 45%"><span>六</span></div>
+                                    <div class="chart-bar" style="height: 60%"><span>日</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="ui-label">统计界面</div>
+                    <div class="ui-label">统计界面 · 数据可视化</div>
+                </div>
+
+                <!-- 词库浏览 -->
+                <div class="ui-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="library-header">
+                                <h3>词库</h3>
+                                <div class="search-bar">
+                                    <span class="search-icon">🔍</span>
+                                    <span class="search-placeholder">搜索单词...</span>
+                                </div>
+                            </div>
+                            <div class="chapter-list">
+                                <div class="chapter-item">
+                                    <div class="chapter-info">
+                                        <div class="chapter-name">01_自然地理</div>
+                                        <div class="chapter-progress">
+                                            <div class="progress-mini">
+                                                <div class="progress-fill" style="width: 65%"></div>
+                                            </div>
+                                            <span>156/241</span>
+                                        </div>
+                                    </div>
+                                    <span class="arrow">›</span>
+                                </div>
+                                <div class="chapter-item">
+                                    <div class="chapter-info">
+                                        <div class="chapter-name">02_植物研究</div>
+                                        <div class="chapter-progress">
+                                            <div class="progress-mini">
+                                                <div class="progress-fill" style="width: 30%"></div>
+                                            </div>
+                                            <span>39/130</span>
+                                        </div>
+                                    </div>
+                                    <span class="arrow">›</span>
+                                </div>
+                                <div class="chapter-item">
+                                    <div class="chapter-info">
+                                        <div class="chapter-name">03_动物保护</div>
+                                        <div class="chapter-progress">
+                                            <div class="progress-mini">
+                                                <div class="progress-fill" style="width: 45%"></div>
+                                            </div>
+                                            <span>76/168</span>
+                                        </div>
+                                    </div>
+                                    <span class="arrow">›</span>
+                                </div>
+                                <div class="chapter-item">
+                                    <div class="chapter-info">
+                                        <div class="chapter-name">04_太空探索</div>
+                                        <div class="chapter-progress">
+                                            <div class="progress-mini">
+                                                <div class="progress-fill" style="width: 80%"></div>
+                                            </div>
+                                            <span>60/75</span>
+                                        </div>
+                                    </div>
+                                    <span class="arrow">›</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-label">词库浏览 · 22章节</div>
+                </div>
+
+                <!-- 设置页面 -->
+                <div class="ui-card">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="settings-header">
+                                <h3>设置</h3>
+                            </div>
+                            <div class="settings-list">
+                                <div class="setting-group">
+                                    <div class="setting-label">每日目标</div>
+                                    <div class="setting-control">
+                                        <div class="slider-value">20词</div>
+                                        <div class="slider-bar">
+                                            <div class="slider-fill" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="setting-item">
+                                    <span>音频自动播放</span>
+                                    <div class="toggle active"></div>
+                                </div>
+                                <div class="setting-item">
+                                    <span>显示音标</span>
+                                    <div class="toggle active"></div>
+                                </div>
+                                <div class="setting-item">
+                                    <span>学习提醒</span>
+                                    <span class="setting-value">08:00</span>
+                                </div>
+                                <div class="setting-item">
+                                    <span>深色模式</span>
+                                    <span class="setting-value">跟随系统</span>
+                                </div>
+                                <div class="setting-item">
+                                    <span>iCloud同步</span>
+                                    <div class="toggle active"></div>
+                                </div>
+                            </div>
+                            <div class="theme-selector">
+                                <div class="theme-dot active" style="background: #7c3aed;"></div>
+                                <div class="theme-dot" style="background: #3b82f6;"></div>
+                                <div class="theme-dot" style="background: #10b981;"></div>
+                                <div class="theme-dot" style="background: #f59e0b;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-label">设置页面 · 主题切换</div>
                 </div>
             </div>
         </section>
