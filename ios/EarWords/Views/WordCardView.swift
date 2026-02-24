@@ -2,13 +2,16 @@
 //  WordCardView.swift
 //  EarWords
 //
-//  单词卡片组件 - 核心学习界面
+//  单词卡片组件 - 深色模式适配版
 //
 
 import SwiftUI
 
 struct WordCardView: View {
     let word: WordEntity
+    @EnvironmentObject var settings: UserSettingsViewModel
+    @Environment(\.colorScheme) var colorScheme
+    
     @State private var showMeaning = false
     @State private var showExample = false
     @State private var isFlipped = false
@@ -22,13 +25,13 @@ struct WordCardView: View {
                     .foregroundColor(.secondary)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 4)
-                    .background(Color.gray.opacity(0.2))
+                    .background(colorScheme == .dark ? Color.gray.opacity(0.3) : Color.gray.opacity(0.2))
                     .cornerRadius(8)
                 
                 Spacer()
                 
                 // 难度指示
-                DifficultyBadge(difficulty: Int(word.difficulty))
+                DifficultyBadge(difficulty: Int(word.difficulty), colorScheme: colorScheme)
             }
             .padding(.horizontal)
             
@@ -41,9 +44,10 @@ struct WordCardView: View {
                     .font(.system(size: 42, weight: .bold, design: .rounded))
                     .minimumScaleFactor(0.5)
                     .multilineTextAlignment(.center)
+                    .foregroundColor(colorScheme == .dark ? .white : .primary)
                 
                 // 音标
-                if let phonetic = word.phonetic, !phonetic.isEmpty {
+                if settings.showPhonetic, let phonetic = word.phonetic, !phonetic.isEmpty {
                     Text(phonetic)
                         .font(.system(size: 20, design: .serif))
                         .foregroundColor(.secondary)
@@ -56,7 +60,7 @@ struct WordCardView: View {
                         .foregroundColor(.blue)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 2)
-                        .background(Color.blue.opacity(0.1))
+                        .background(Color.blue.opacity(colorScheme == .dark ? 0.2 : 0.1))
                         .cornerRadius(4)
                 }
             }
@@ -68,17 +72,20 @@ struct WordCardView: View {
                 if showMeaning {
                     VStack(spacing: 8) {
                         Divider()
+                            .background(colorScheme == .dark ? Color.white.opacity(0.2) : Color.gray.opacity(0.3))
                         Text(word.meaning)
                             .font(.title3)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
+                            .foregroundColor(colorScheme == .dark ? .white : .primary)
                     }
                     .transition(.opacity.combined(with: .move(edge: .bottom)))
                 }
                 
-                if showExample, let example = word.example, !example.isEmpty {
+                if showExample, settings.showExample, let example = word.example, !example.isEmpty {
                     VStack(spacing: 8) {
                         Divider()
+                            .background(colorScheme == .dark ? Color.white.opacity(0.2) : Color.gray.opacity(0.3))
                         Text(example)
                             .font(.body)
                             .italic()
@@ -87,7 +94,7 @@ struct WordCardView: View {
                             .padding(.horizontal)
                         
                         // 播放例句音频按钮
-                        AudioPlayButton(wordId: Int(word.id))
+                        AudioPlayButton(wordId: Int(word.id), colorScheme: colorScheme)
                     }
                     .transition(.opacity.combined(with: .move(edge: .bottom)))
                 }
@@ -101,7 +108,8 @@ struct WordCardView: View {
                 ActionButton(
                     title: showMeaning ? "隐藏释义" : "显示释义",
                     icon: showMeaning ? "eye.slash" : "eye",
-                    color: .blue
+                    color: .blue,
+                    colorScheme: colorScheme
                 ) {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         showMeaning.toggle()
@@ -115,7 +123,8 @@ struct WordCardView: View {
                 ActionButton(
                     title: showExample ? "隐藏例句" : "显示例句",
                     icon: showExample ? "text.bubble" : "text.bubble.fill",
-                    color: .green
+                    color: .green,
+                    colorScheme: colorScheme
                 ) {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         showExample.toggle()
@@ -130,10 +139,23 @@ struct WordCardView: View {
         .padding(.vertical, 24)
         .background(
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color(.systemBackground))
-                .shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
+                .fill(colorScheme == .dark ? Color(.tertiarySystemBackground) : Color(.systemBackground))
+                .shadow(
+                    color: colorScheme == .dark ? .clear : .black.opacity(0.1),
+                    radius: 20, x: 0, y: 10
+                )
         )
         .padding(.horizontal, 20)
+        .onAppear {
+            // 根据设置自动播放音频
+            if settings.audioAutoPlay {
+                // 延迟播放以完成视图加载动画
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    AudioPlayerManager.shared.loadAudio(for: word)
+                    AudioPlayerManager.shared.play()
+                }
+            }
+        }
     }
 }
 
@@ -141,12 +163,15 @@ struct WordCardView: View {
 
 struct DifficultyBadge: View {
     let difficulty: Int
+    let colorScheme: ColorScheme
     
     var body: some View {
         HStack(spacing: 2) {
             ForEach(1...5, id: \.self) { level in
                 Circle()
-                    .fill(level <= difficulty ? Color.orange : Color.gray.opacity(0.3))
+                    .fill(level <= difficulty ? 
+                          Color.orange : 
+                          (colorScheme == .dark ? Color.gray.opacity(0.5) : Color.gray.opacity(0.3)))
                     .frame(width: 6, height: 6)
             }
         }
@@ -157,6 +182,7 @@ struct ActionButton: View {
     let title: String
     let icon: String
     let color: Color
+    let colorScheme: ColorScheme
     let action: () -> Void
     
     var body: some View {
@@ -169,7 +195,7 @@ struct ActionButton: View {
             .foregroundColor(color)
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
-            .background(color.opacity(0.1))
+            .background(color.opacity(colorScheme == .dark ? 0.2 : 0.1))
             .cornerRadius(12)
         }
     }
@@ -177,6 +203,7 @@ struct ActionButton: View {
 
 struct AudioPlayButton: View {
     let wordId: Int
+    let colorScheme: ColorScheme
     @State private var isPlaying = false
     
     var body: some View {
@@ -191,15 +218,30 @@ struct AudioPlayButton: View {
                     .font(.subheadline)
             }
             .foregroundColor(.purple)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+            .background(Color.purple.opacity(colorScheme == .dark ? 0.2 : 0.1))
+            .cornerRadius(20)
         }
     }
 }
 
 // MARK: - 预览
+
 struct WordCardView_Previews: PreviewProvider {
     static var previews: some View {
-        WordCardView(word: mockWord)
-            .previewLayout(.sizeThatFits)
+        Group {
+            WordCardView(word: mockWord)
+                .previewLayout(.sizeThatFits)
+                .preferredColorScheme(.light)
+                .previewDisplayName("Light Mode")
+            
+            WordCardView(word: mockWord)
+                .previewLayout(.sizeThatFits)
+                .preferredColorScheme(.dark)
+                .previewDisplayName("Dark Mode")
+        }
+        .environmentObject(UserSettingsViewModel.shared)
     }
     
     static var mockWord: WordEntity {

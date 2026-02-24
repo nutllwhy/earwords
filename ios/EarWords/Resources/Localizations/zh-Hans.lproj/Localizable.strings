@@ -1,0 +1,340 @@
+/* 
+  Localizable.strings (简体中文)
+  EarWords
+  
+  Simplified Chinese localization file
+  Created: 2026-02-24
+*/
+
+// MARK: - App Information
+"app.name" = "EarWords";
+"app.tagline" = "雅思词汇";
+"app.subtitle" = "听词学习";
+"app.version" = "版本 %@";
+
+// MARK: - Main Tab Navigation
+"tab.study" = "学习";
+"tab.audio" = "磨耳朵";
+"tab.statistics" = "统计";
+"tab.vocabulary" = "词库";
+"tab.settings" = "设置";
+
+// MARK: - Common Actions
+"common.done" = "完成";
+"common.cancel" = "取消";
+"common.save" = "保存";
+"common.delete" = "删除";
+"common.edit" = "编辑";
+"common.add" = "添加";
+"common.search" = "搜索";
+"common.close" = "关闭";
+"common.back" = "返回";
+"common.next" = "下一步";
+"common.skip" = "跳过";
+"common.continue" = "继续";
+"common.finish" = "完成";
+"common.loading" = "加载中...";
+"common.refresh" = "刷新";
+"common.retry" = "重试";
+"common.yes" = "是";
+"common.no" = "否";
+"common.ok" = "确定";
+"common.error" = "错误";
+"common.success" = "成功";
+"common.warning" = "警告";
+
+// MARK: - Study View
+"study.title" = "今日学习 (%d)";
+"study.empty.title" = "暂无学习任务";
+"study.empty.message" = "今日没有需要学习的单词，休息一下吧！";
+"study.empty.button" = "刷新";
+"study.complete.title" = "学习完成！";
+"study.complete.subtitle" = "今日学习任务已完成，继续保持！";
+"study.complete.continue" = "继续学习";
+"study.complete.finish" = "完成";
+
+// MARK: - Study Progress Bar
+"study.progress.format" = "%d/%d";
+"study.progress.new" = "新词";
+"study.progress.review" = "复习";
+"study.progress.correct" = "正确";
+"study.progress.incorrect" = "错误";
+
+// MARK: - Study Card Actions
+"study.card.showMeaning" = "显示释义";
+"study.card.hideMeaning" = "隐藏释义";
+"study.card.showExample" = "显示例句";
+"study.card.hideExample" = "隐藏例句";
+"study.card.playAudio" = "播放音频";
+"study.card.pause" = "暂停";
+"study.card.longPressDetail" = "长按查看详情";
+
+// MARK: - Study Gestures
+"study.gesture.swipeLeft" = "左滑模糊";
+"study.gesture.swipeRight" = "右滑认识";
+"study.gesture.longPress" = "长按详情";
+
+// MARK: - Rating Buttons (SM-2)
+"rating.title" = "回忆程度";
+"rating.blackout" = "忘记";
+"rating.incorrect" = "困难";
+"rating.difficult" = "模糊";
+"rating.hesitation" = "犹豫";
+"rating.good" = "认识";
+"rating.perfect" = "完美";
+"rating.score.0" = "0";
+"rating.score.1" = "1";
+"rating.score.2" = "2";
+"rating.score.3" = "3";
+"rating.score.4" = "4";
+"rating.score.5" = "5";
+
+// MARK: - Word Status
+"status.new" = "未学习";
+"status.learning" = "学习中";
+"status.mastered" = "已掌握";
+"status.due" = "待复习";
+
+// MARK: - Study Statistics Cards
+"stats.newWords" = "新词";
+"stats.reviewWords" = "复习";
+"stats.correct" = "正确";
+"stats.accuracy" = "准确率";
+"stats.streak" = "连续";
+"stats.streakDays" = "连续 %d 天";
+"stats.streakKeep" = "继续保持！";
+"stats.tomorrowPreview" = "明日学习预览";
+"stats.tomorrow.review" = "复习";
+"stats.tomorrow.new" = "新词";
+
+// MARK: - Audio Review (磨耳朵)
+"audio.title" = "磨耳朵";
+"audio.mode.sequential" = "顺序播放";
+"audio.mode.random" = "随机播放";
+"audio.mode.spaced" = "间隔重复";
+"audio.mode.sequential.desc" = "按顺序播放";
+"audio.mode.random.desc" = "随机打乱";
+"audio.mode.spaced.desc" = "针对薄弱词汇";
+
+"audio.player.preparing" = "准备中...";
+"audio.player.play" = "播放";
+"audio.player.pause" = "暂停";
+"audio.player.previous" = "上一首";
+"audio.player.next" = "下一首";
+"audio.player.showInfo" = "显示释义";
+"audio.player.hideInfo" = "隐藏释义";
+
+"audio.playlist.title" = "播放列表 (%d 词)";
+"audio.playlist.viewAll" = "查看全部";
+"audio.playlist.empty" = "暂无单词";
+"audio.playlist.timesPlayed" = "已播 %d 次";
+"audio.playlist.priorityHigh" = "高优先级";
+
+"audio.speed.title" = "播放速度";
+"audio.speed.slow" = "慢";
+"audio.speed.fast" = "快";
+
+"audio.source.bundle" = "内置音频";
+"audio.source.documents" = "已下载";
+"audio.source.online" = "在线音频";
+"audio.source.tts" = "语音合成";
+"audio.source.audioExamples" = "示例音频";
+
+// MARK: - Statistics View
+"statistics.title" = "学习统计";
+"statistics.range.week" = "7天";
+"statistics.range.month" = "30天";
+"statistics.today.overview" = "今日概览";
+"statistics.today.newWords" = "新学单词";
+"statistics.today.reviews" = "复习单词";
+"statistics.today.accuracy" = "正确率";
+"statistics.streak.title" = "🔥 连续学习";
+"statistics.streak.days" = "天";
+"statistics.streak.longest" = "最长记录：%d 天";
+"statistics.trend.title" = "学习趋势";
+"statistics.trend.new" = "新学";
+"statistics.trend.review" = "复习";
+"statistics.trend.noData" = "暂无数据";
+"statistics.mastery.title" = "词汇掌握";
+"statistics.mastery.notLearned" = "未学习";
+"statistics.mastery.learning" = "学习中";
+"statistics.mastery.mastered" = "已掌握";
+"statistics.chapters.title" = "章节进度";
+"statistics.chapters.expand" = "展开";
+"statistics.chapters.collapse" = "收起";
+
+// MARK: - Word List / Vocabulary
+"vocabulary.title" = "词库浏览";
+"vocabulary.allWords" = "全部单词";
+"vocabulary.chapters" = "章节列表 (%d个章节)";
+"vocabulary.search.prompt" = "搜索单词或释义";
+"vocabulary.search.chapter" = "搜索章节";
+
+"vocabulary.filter.all" = "全部";
+"vocabulary.filter.new" = "未学";
+"vocabulary.filter.learning" = "学习中";
+"vocabulary.filter.mastered" = "已掌握";
+
+"vocabulary.stats.total" = "总计";
+"vocabulary.stats.mastered" = "已掌握";
+"vocabulary.stats.progress" = "%d%%";
+
+"vocabulary.word.reviewCount" = "复习";
+"vocabulary.word.reviewTimes" = "%d次";
+
+// MARK: - Word Detail
+"wordDetail.title" = "单词详情";
+"wordDetail.phonetic" = "音标";
+"wordDetail.meaning" = "释义";
+"wordDetail.example" = "例句";
+"wordDetail.example.play" = "播放例句";
+"wordDetail.extra" = "补充信息";
+"wordDetail.pronunciation" = "发音";
+
+"wordDetail.learningStats.title" = "学习状态";
+"wordDetail.learningStats.reviewCount" = "复习次数";
+"wordDetail.learningStats.easeFactor" = "简易度";
+"wordDetail.learningStats.interval" = "间隔天数";
+"wordDetail.learningStats.nextReview" = "下次复习";
+"wordDetail.learningStats.studyStatus" = "学习状态";
+
+"wordDetail.studyStats.title" = "学习统计";
+"wordDetail.studyStats.correct" = "正确次数";
+"wordDetail.studyStats.incorrect" = "错误次数";
+"wordDetail.studyStats.streak" = "连续正确";
+"wordDetail.studyStats.accuracy" = "准确率";
+
+// MARK: - Settings View
+"settings.title" = "设置";
+
+"settings.goals.title" = "学习目标";
+"settings.goals.newWords" = "每日新词目标";
+"settings.goals.newWords.value" = "%d 词";
+"settings.goals.review" = "每日复习上限";
+"settings.goals.review.value" = "%d 词";
+"settings.goals.footer" = "建议根据自己的学习时间合理安排目标数量";
+
+"settings.audio.title" = "音频设置";
+"settings.audio.autoPlay" = "自动播放音频";
+"settings.audio.showPhonetic" = "显示音标";
+"settings.audio.showExample" = "显示例句";
+"settings.audio.speechRate" = "语速";
+"settings.audio.speechRate.slow" = "慢";
+"settings.audio.speechRate.fast" = "快";
+"settings.audio.speechRate.value" = "%.1fx";
+
+"settings.reminders.title" = "学习提醒";
+"settings.reminders.enable" = "启用学习提醒";
+"settings.reminders.time" = "提醒时间";
+"settings.reminders.footer" = "每天会在设定时间提醒您学习单词";
+"settings.reminders.permission" = "开启通知权限";
+"settings.reminders.permission.alert.title" = "需要通知权限";
+"settings.reminders.permission.alert.message" = "请在系统设置中开启通知权限，以便接收学习提醒。";
+
+"settings.appearance.title" = "外观";
+"settings.appearance.theme" = "主题颜色";
+"settings.appearance.followSystem" = "跟随系统外观";
+"settings.appearance.light" = "浅色";
+"settings.appearance.dark" = "深色";
+"settings.appearance.footer" = "选择你喜欢的主题颜色和外观模式";
+
+"settings.themes.purple" = "紫罗兰";
+"settings.themes.blue" = "天空蓝";
+"settings.themes.green" = "森林绿";
+"settings.themes.orange" = "活力橙";
+
+"settings.sync.title" = "数据同步";
+"settings.sync.icloud" = "iCloud 同步";
+"settings.sync.now" = "立即同步";
+"settings.sync.status.idle" = "已同步";
+"settings.sync.status.syncing" = "同步中...";
+"settings.sync.status.importing" = "下载中...";
+"settings.sync.status.exporting" = "上传中...";
+"settings.sync.status.completed" = "同步完成";
+"settings.sync.status.error" = "同步失败";
+"settings.sync.status.disabled" = "iCloud 已禁用";
+"settings.sync.footer" = "开启 iCloud 同步可在多设备间同步学习进度";
+"settings.sync.success" = "同步已触发";
+
+"settings.data.title" = "数据管理";
+"settings.data.reset" = "重置学习进度";
+"settings.data.reset.alert.title" = "确认重置";
+"settings.data.reset.alert.message" = "这将清除所有学习进度，此操作不可撤销。";
+"settings.data.export" = "导出学习数据";
+
+"settings.about.title" = "关于";
+"settings.about.version" = "版本";
+"settings.about.privacy" = "隐私政策";
+"settings.about.terms" = "使用条款";
+"settings.about.rate" = "评价应用";
+
+// MARK: - Data Export
+"export.title" = "导出数据";
+"export.studyData.title" = "学习数据导出";
+"export.studyData.desc" = "包含学习记录、单词掌握情况等数据";
+"export.studyData.button" = "导出为 JSON";
+"export.studyData.exporting" = "导出中...";
+"export.report.title" = "学习统计报告";
+"export.report.desc" = "生成可视化的学习进度报告";
+"export.report.button" = "生成报告";
+
+// MARK: - Onboarding
+"onboarding.page1.title" = "EarWords 听词";
+"onboarding.page1.subtitle" = "雅思词汇学习";
+"onboarding.page1.description" = "通过科学的间隔重复算法和磨耳朵训练，帮助您高效记忆雅思核心词汇。让单词学习成为一种享受！";
+"onboarding.page2.title" = "SM-2 记忆算法";
+"onboarding.page2.subtitle" = "科学记忆曲线";
+"onboarding.page2.description" = "基于 SuperMemo-2 间隔重复算法，智能安排复习计划。遗忘曲线？我们来对抗它！";
+"onboarding.page3.title" = "设置每日目标";
+"onboarding.page3.subtitle" = "坚持就是胜利";
+"onboarding.page3.description" = "设定适合您的学习节奏，每天进步一点点。建议新用户从每天20词开始。";
+"onboarding.dailyGoal.title" = "每日目标";
+"onboarding.dailyGoal.suffix" = "词/天";
+"onboarding.dailyGoal.estimate" = "按此速度，约 %d 个月可完成全部 %d 词";
+"onboarding.button.start" = "开始学习";
+"onboarding.button.next" = "下一步";
+"onboarding.button.back" = "返回";
+"onboarding.button.skip" = "跳过";
+
+// MARK: - Launch Screen
+"launch.title" = "EarWords";
+"launch.subtitle" = "听词";
+"launch.tagline" = "雅思词汇 · 磨耳朵学习";
+
+// MARK: - Study Settings (Sheet)
+"studySettings.title" = "学习设置";
+"studySettings.goals.new" = "每日新词目标";
+"studySettings.goals.review" = "复习上限";
+"studySettings.preferences.title" = "学习偏好";
+"studySettings.preferences.autoPlay" = "自动播放音频";
+"studySettings.preferences.showPhonetic" = "显示音标";
+"studySettings.preferences.haptic" = "震动反馈";
+"studySettings.about.sm2" = "SM-2 算法";
+"studySettings.about.enabled" = "已启用";
+
+// MARK: - Notifications
+"notification.daily.title" = "该学习了！";
+"notification.daily.body" = "保持连续打卡！复习今天的词汇吧。";
+
+// MARK: - Accessibility Labels
+"accessibility.studyCard" = "单词学习卡片";
+"accessibility.ratingButton" = "评分回忆程度 %d";
+"accessibility.playButton" = "播放音频";
+"accessibility.settingsButton" = "设置";
+"accessibility.searchButton" = "搜索";
+"accessibility.closeButton" = "关闭";
+
+// MARK: - Error Messages
+"error.loadingFailed" = "加载学习队列失败";
+"error.audioLoadFailed" = "加载音频失败";
+"error.syncFailed" = "iCloud 同步失败";
+"error.exportFailed" = "导出数据失败";
+"error.generic" = "发生错误";
+
+// MARK: - Formats
+"format.date.short" = "MM/dd";
+"format.date.medium" = "MM-dd";
+"format.time.short" = "HH:mm";
+"format.percentage" = "%d%%";
+"format.number.thousand" = "%@K";
+"format.number.million" = "%@M";

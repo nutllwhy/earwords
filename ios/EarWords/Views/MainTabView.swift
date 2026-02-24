@@ -9,7 +9,11 @@ import SwiftUI
 
 struct MainTabView: View {
     @StateObject private var dataManager = DataManager.shared
-    @State private var selectedTab = 0
+    @Binding var selectedTab: Int
+    
+    init(selectedTab: Binding<Int> = .constant(0)) {
+        self._selectedTab = selectedTab
+    }
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -35,9 +39,9 @@ struct MainTabView: View {
                 .tag(2)
             
             // 词库 Tab
-            WordListView()
+            ChapterListView()
                 .tabItem {
-                    Label("词库", systemImage: "list.bullet")
+                    Label("词库", systemImage: "books.vertical.fill")
                 }
                 .tag(3)
             
@@ -48,7 +52,7 @@ struct MainTabView: View {
                 }
                 .tag(4)
         }
-        .accentColor(.purple)
+        .accentColor(ThemeManager.shared.primary)
         .environmentObject(dataManager)
     }
 }
@@ -334,6 +338,6 @@ class UserSettings: ObservableObject {
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        MainTabView(selectedTab: .constant(0))
     }
 }

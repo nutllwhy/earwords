@@ -2,19 +2,20 @@
 //  StatisticsView.swift
 //  EarWords
 //
-//  统计与进度界面
+//  统计与进度界面 - 深色模式适配版
 //
 
 import SwiftUI
+import Charts
 
 struct StatisticsView: View {
     @StateObject private var viewModel = StatisticsViewModel()
     @State private var selectedTimeRange: TimeRange = .week
+    @Environment(\.colorScheme) var colorScheme
     
     enum TimeRange: String, CaseIterable {
-        case week = "本周"
-        case month = "本月"
-        case year = "本年"
+        case week = "7天"
+        case month = "30天"
     }
     
     var body: some View {
@@ -29,30 +30,35 @@ struct StatisticsView: View {
                     }
                     .pickerStyle(.segmented)
                     .padding(.horizontal)
+                    .onChange(of: selectedTimeRange) { newValue in
+                        viewModel.loadData(for: newValue)
+                    }
                     
                     // 今日概览卡片
-                    TodayOverviewCard(stats: viewModel.todayStats)
+                    TodayOverviewCard(stats: viewModel.todayStats, colorScheme: colorScheme)
                     
                     // 连续学习天数
-                    StreakCard(streak: viewModel.currentStreak, longest: viewModel.longestStreak)
+                    StreakCard(streak: viewModel.currentStreak, longest: viewModel.longestStreak, colorScheme: colorScheme)
                     
                     // 学习趋势图
-                    LearningTrendChart(data: viewModel.weeklyData)
+                    LearningTrendChart(data: viewModel.trendData, timeRange: selectedTimeRange, colorScheme: colorScheme)
                     
                     // 词汇掌握情况
-                    MasteryOverviewCard(
-                        new: viewModel.newWordsCount,
-                        learning: viewModel.learningWordsCount,
-                        mastered: viewModel.masteredWordsCount
-                    )
+                    MasteryOverviewCard(stats: viewModel.masteryStats, colorScheme: colorScheme)
                     
                     // 章节进度
-                    ChapterProgressList(chapters: viewModel.chapterProgress)
+                    ChapterProgressList(chapters: viewModel.chapterProgress, colorScheme: colorScheme)
                 }
                 .padding(.vertical)
             }
             .navigationTitle("学习统计")
             .navigationBarTitleDisplayMode(.large)
+            .refreshable {
+                viewModel.loadData(for: selectedTimeRange)
+            }
+            .onAppear {
+                viewModel.loadData(for: selectedTimeRange)
+            }
         }
     }
 }
@@ -61,12 +67,14 @@ struct StatisticsView: View {
 
 struct TodayOverviewCard: View {
     let stats: TodayStatistics
+    let colorScheme: ColorScheme
     
     var body: some View {
         VStack(spacing: 16) {
             HStack {
                 Text("今日概览")
                     .font(.headline)
+                    .foregroundColor(colorScheme == .dark ? .white : .primary)
                 Spacer()
                 Text(Date(), style: .date)
                     .font(.caption)
@@ -97,9 +105,14 @@ struct TodayOverviewCard: View {
             }
         }
         .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(20)
-        .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(colorScheme == .dark ? Color(.tertiarySystemBackground) : Color(.systemBackground))
+                .shadow(
+                    color: colorScheme == .dark ? .clear : .black.opacity(0.05),
+                    radius: 10, x: 0, y: 5
+                )
+        )
         .padding(.horizontal)
     }
 }
@@ -132,16 +145,19 @@ struct StatItem: View {
 struct StreakCard: View {
     let streak: Int
     let longest: Int
+    let colorScheme: ColorScheme
     
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
                 Text("🔥 连续学习")
                     .font(.headline)
+                    .foregroundColor(colorScheme == .dark ? .white : .primary)
                 
                 HStack(alignment: .lastTextBaseline, spacing: 4) {
                     Text("\(streak)")
                         .font(.system(size: 48, weight: .bold))
+                        .foregroundColor(colorScheme == .dark ? .white : .primary)
                     Text("天")
                         .font(.title3)
                         .foregroundColor(.secondary)
@@ -161,7 +177,10 @@ struct StreakCard: View {
         .padding()
         .background(
             LinearGradient(
-                colors: [.orange.opacity(0.2), .red.opacity(0.1)],
+                colors: [
+                    colorScheme == .dark ? Color.orange.opacity(0.3) : Color.orange.opacity(0.2),
+                    colorScheme == .dark ? Color.red.opacity(0.2) : Color.red.opacity(0.1)
+                ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -191,68 +210,85 @@ struct FlameAnimation: View {
 
 struct LearningTrendChart: View {
     let data: [DailyDataPoint]
+    let timeRange: StatisticsView.TimeRange
+    let colorScheme: ColorScheme
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("学习趋势")
                 .font(.headline)
+                .foregroundColor(colorScheme == .dark ? .white : .primary)
             
             if data.isEmpty {
-                EmptyChartView()
+                EmptyChartView(colorScheme: colorScheme)
             } else {
-                BarChartView(data: data)
-                    .frame(height: 150)
-            }
-        }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(20)
-        .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
-        .padding(.horizontal)
-    }
-}
-
-struct BarChartView: View {
-    let data: [DailyDataPoint]
-    
-    var maxValue: Int {
-        data.map { $0.newWords + $0.reviews }.max() ?? 1
-    }
-    
-    var body: some View {
-        HStack(alignment: .bottom, spacing: 8) {
-            ForEach(data) { point in
-                VStack(spacing: 4) {
-                    // 柱状图
-                    VStack(spacing: 0) {
-                        // 复习部分
-                        RoundedRectangle(cornerRadius: 4)
-                            .fill(Color.blue)
-                            .frame(height: CGFloat(point.reviews) / CGFloat(maxValue) * 100)
-                        
-                        // 新词部分
-                        RoundedRectangle(cornerRadius: 4)
-                            .fill(Color.green)
-                            .frame(height: CGFloat(point.newWords) / CGFloat(maxValue) * 100)
-                    }
-                    .frame(maxWidth: .infinity)
+                Chart(data) { point in
+                    BarMark(
+                        x: .value("日期", point.shortDate),
+                        y: .value("新词", point.newWords)
+                    )
+                    .foregroundStyle(
+                        colorScheme == .dark ?
+                            Color.green.opacity(0.8).gradient :
+                            Color.green.gradient
+                    )
                     
-                    // 日期标签
-                    Text(point.shortDate)
-                        .font(.caption2)
+                    BarMark(
+                        x: .value("日期", point.shortDate),
+                        y: .value("复习", point.reviews)
+                    )
+                    .foregroundStyle(
+                        colorScheme == .dark ?
+                            Color.blue.opacity(0.8).gradient :
+                            Color.blue.gradient
+                    )
+                }
+                .frame(height: 180)
+                .chartLegend(position: .top, alignment: .trailing)
+            }
+            
+            // 图例
+            HStack(spacing: 20) {
+                HStack(spacing: 6) {
+                    RoundedRectangle(cornerRadius: 2)
+                        .fill(colorScheme == .dark ? Color.green.opacity(0.8) : Color.green)
+                        .frame(width: 12, height: 12)
+                    Text("新学")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                
+                HStack(spacing: 6) {
+                    RoundedRectangle(cornerRadius: 2)
+                        .fill(colorScheme == .dark ? Color.blue.opacity(0.8) : Color.blue)
+                        .frame(width: 12, height: 12)
+                    Text("复习")
+                        .font(.caption)
                         .foregroundColor(.secondary)
                 }
             }
         }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(colorScheme == .dark ? Color(.tertiarySystemBackground) : Color(.systemBackground))
+                .shadow(
+                    color: colorScheme == .dark ? .clear : .black.opacity(0.05),
+                    radius: 10, x: 0, y: 5
+                )
+        )
+        .padding(.horizontal)
     }
 }
 
 struct EmptyChartView: View {
+    let colorScheme: ColorScheme
+    
     var body: some View {
         VStack(spacing: 12) {
             Image(systemName: "chart.bar")
                 .font(.system(size: 40))
-                .foregroundColor(.gray.opacity(0.5))
+                .foregroundColor(colorScheme == .dark ? .gray.opacity(0.5) : .gray.opacity(0.5))
             
             Text("暂无数据")
                 .foregroundColor(.secondary)
@@ -264,31 +300,31 @@ struct EmptyChartView: View {
 // MARK: - 词汇掌握情况
 
 struct MasteryOverviewCard: View {
-    let new: Int
-    let learning: Int
-    let mastered: Int
+    let stats: MasteryStats
+    let colorScheme: ColorScheme
     
-    var total: Int { new + learning + mastered }
+    var total: Int { stats.total }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("词汇掌握")
                 .font(.headline)
+                .foregroundColor(colorScheme == .dark ? .white : .primary)
             
             // 进度条
             GeometryReader { geometry in
                 HStack(spacing: 0) {
                     Rectangle()
-                        .fill(Color.gray)
-                        .frame(width: geometry.size.width * CGFloat(new) / CGFloat(total))
+                        .fill(colorScheme == .dark ? Color.gray.opacity(0.4) : Color.gray.opacity(0.3))
+                        .frame(width: geometry.size.width * CGFloat(stats.new) / CGFloat(max(total, 1)))
                     
                     Rectangle()
-                        .fill(Color.blue)
-                        .frame(width: geometry.size.width * CGFloat(learning) / CGFloat(total))
+                        .fill(colorScheme == .dark ? Color.blue.opacity(0.8) : Color.blue)
+                        .frame(width: geometry.size.width * CGFloat(stats.learning) / CGFloat(max(total, 1)))
                     
                     Rectangle()
-                        .fill(Color.green)
-                        .frame(width: geometry.size.width * CGFloat(mastered) / CGFloat(total))
+                        .fill(colorScheme == .dark ? Color.green.opacity(0.8) : Color.green)
+                        .frame(width: geometry.size.width * CGFloat(stats.mastered) / CGFloat(max(total, 1)))
                 }
             }
             .frame(height: 12)
@@ -296,15 +332,32 @@ struct MasteryOverviewCard: View {
             
             // 图例
             HStack(spacing: 16) {
-                LegendItem(color: .gray, label: "未学习", value: new)
-                LegendItem(color: .blue, label: "学习中", value: learning)
-                LegendItem(color: .green, label: "已掌握", value: mastered)
+                LegendItem(
+                    color: colorScheme == .dark ? Color.gray.opacity(0.4) : Color.gray.opacity(0.3),
+                    label: "未学习",
+                    value: stats.new
+                )
+                LegendItem(
+                    color: colorScheme == .dark ? Color.blue.opacity(0.8) : Color.blue,
+                    label: "学习中",
+                    value: stats.learning
+                )
+                LegendItem(
+                    color: colorScheme == .dark ? Color.green.opacity(0.8) : Color.green,
+                    label: "已掌握",
+                    value: stats.mastered
+                )
             }
         }
         .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(20)
-        .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(colorScheme == .dark ? Color(.tertiarySystemBackground) : Color(.systemBackground))
+                .shadow(
+                    color: colorScheme == .dark ? .clear : .black.opacity(0.05),
+                    radius: 10, x: 0, y: 5
+                )
+        )
         .padding(.horizontal)
     }
 }
@@ -334,22 +387,48 @@ struct LegendItem: View {
 
 struct ChapterProgressList: View {
     let chapters: [ChapterProgress]
+    let colorScheme: ColorScheme
+    @State private var isExpanded = false
+    
+    var displayedChapters: [ChapterProgress] {
+        isExpanded ? chapters : Array(chapters.prefix(5))
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("章节进度")
-                .font(.headline)
-                .padding(.horizontal)
+            HStack {
+                Text("章节进度")
+                    .font(.headline)
+                    .foregroundColor(colorScheme == .dark ? .white : .primary)
+                
+                Spacer()
+                
+                if chapters.count > 5 {
+                    Button(isExpanded ? "收起" : "展开") {
+                        withAnimation {
+                            isExpanded.toggle()
+                        }
+                    }
+                    .font(.caption)
+                    .foregroundColor(.blue)
+                }
+            }
+            .padding(.horizontal)
             
             VStack(spacing: 12) {
-                ForEach(chapters.prefix(5)) { chapter in
-                    ChapterProgressRow(chapter: chapter)
+                ForEach(displayedChapters) { chapter in
+                    ChapterProgressRow(chapter: chapter, colorScheme: colorScheme)
                 }
             }
             .padding()
-            .background(Color(.systemBackground))
-            .cornerRadius(20)
-            .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(colorScheme == .dark ? Color(.tertiarySystemBackground) : Color(.systemBackground))
+                    .shadow(
+                        color: colorScheme == .dark ? .clear : .black.opacity(0.05),
+                        radius: 10, x: 0, y: 5
+                    )
+            )
             .padding(.horizontal)
         }
     }
@@ -357,24 +436,68 @@ struct ChapterProgressList: View {
 
 struct ChapterProgressRow: View {
     let chapter: ChapterProgress
+    let colorScheme: ColorScheme
     
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 Text(chapter.name)
                     .font(.subheadline)
+                    .foregroundColor(colorScheme == .dark ? .white : .primary)
                 
-                ProgressView(value: Double(chapter.mastered), total: Double(chapter.total))
-                    .progressViewStyle(LinearProgressViewStyle(tint: .purple))
+                ProgressView(value: Double(chapter.mastered), total: Double(max(chapter.total, 1)))
+                    .progressViewStyle(
+                        LinearProgressViewStyle(tint: colorScheme == .dark ? Color.purple.opacity(0.8) : .purple)
+                    )
+                    .scaleEffect(x: 1, y: 1.5, anchor: .center)
             }
             
             Spacer()
             
-            Text("\(chapter.mastered)/\(chapter.total)")
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .monospacedDigit()
+            VStack(alignment: .trailing, spacing: 2) {
+                Text("\(chapter.mastered)/\(chapter.total)")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .monospacedDigit()
+                
+                Text("\(Int(chapter.progress * 100))%")
+                    .font(.caption2)
+                    .foregroundColor(colorScheme == .dark ? Color.purple.opacity(0.8) : .purple)
+            }
         }
+    }
+}
+
+// MARK: - ViewModel
+
+class StatisticsViewModel: ObservableObject {
+    @Published var todayStats = TodayStatistics(newWords: 0, reviews: 0, accuracy: 0)
+    @Published var currentStreak = 0
+    @Published var longestStreak = 0
+    @Published var trendData: [DailyDataPoint] = []
+    @Published var masteryStats = MasteryStats(new: 0, learning: 0, mastered: 0)
+    @Published var chapterProgress: [ChapterProgress] = []
+    
+    private let dataManager = DataManager.shared
+    
+    func loadData(for timeRange: StatisticsView.TimeRange) {
+        // 今日统计
+        todayStats = dataManager.getTodayStatistics()
+        
+        // 连续学习天数
+        let streak = dataManager.calculateStreak()
+        currentStreak = streak.current
+        longestStreak = streak.longest
+        
+        // 学习趋势数据
+        let days = timeRange == .week ? 7 : 30
+        trendData = dataManager.getLearningTrendData(days: days)
+        
+        // 词汇掌握统计
+        masteryStats = dataManager.getMasteryStats()
+        
+        // 章节进度
+        chapterProgress = dataManager.getChapterProgress()
     }
 }
 
@@ -386,6 +509,14 @@ struct TodayStatistics {
     let accuracy: Double
 }
 
+struct MasteryStats {
+    let new: Int
+    let learning: Int
+    let mastered: Int
+    
+    var total: Int { new + learning + mastered }
+}
+
 struct DailyDataPoint: Identifiable {
     let id = UUID()
     let date: Date
@@ -394,7 +525,7 @@ struct DailyDataPoint: Identifiable {
     
     var shortDate: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "E"
+        formatter.dateFormat = "MM/dd"
         return formatter.string(from: date)
     }
 }
@@ -404,56 +535,108 @@ struct ChapterProgress: Identifiable {
     let name: String
     let total: Int
     let mastered: Int
-}
-
-// MARK: - ViewModel
-
-class StatisticsViewModel: ObservableObject {
-    @Published var todayStats = TodayStatistics(newWords: 0, reviews: 0, accuracy: 0)
-    @Published var currentStreak = 0
-    @Published var longestStreak = 0
-    @Published var newWordsCount = 0
-    @Published var learningWordsCount = 0
-    @Published var masteredWordsCount = 0
-    @Published var weeklyData: [DailyDataPoint] = []
-    @Published var chapterProgress: [ChapterProgress] = []
     
-    init() {
-        loadStatistics()
-    }
-    
-    func loadStatistics() {
-        // 从 DataManager 加载统计数据
-        // 暂时使用模拟数据
-        todayStats = TodayStatistics(newWords: 20, reviews: 35, accuracy: 0.85)
-        currentStreak = 7
-        longestStreak = 30
-        newWordsCount = 1000
-        learningWordsCount = 1500
-        masteredWordsCount = 1174
-        
-        weeklyData = [
-            DailyDataPoint(date: Date().addingTimeInterval(-86400 * 6), newWords: 15, reviews: 30),
-            DailyDataPoint(date: Date().addingTimeInterval(-86400 * 5), newWords: 20, reviews: 40),
-            DailyDataPoint(date: Date().addingTimeInterval(-86400 * 4), newWords: 18, reviews: 35),
-            DailyDataPoint(date: Date().addingTimeInterval(-86400 * 3), newWords: 22, reviews: 45),
-            DailyDataPoint(date: Date().addingTimeInterval(-86400 * 2), newWords: 20, reviews: 38),
-            DailyDataPoint(date: Date().addingTimeInterval(-86400), newWords: 25, reviews: 50),
-            DailyDataPoint(date: Date(), newWords: 20, reviews: 35)
-        ]
-        
-        chapterProgress = [
-            ChapterProgress(name: "01_自然地理", total: 241, mastered: 200),
-            ChapterProgress(name: "02_植物研究", total: 130, mastered: 80),
-            ChapterProgress(name: "03_动物保护", total: 168, mastered: 100),
-            ChapterProgress(name: "04_太空探索", total: 75, mastered: 50),
-            ChapterProgress(name: "05_学校教育", total: 401, mastered: 150)
-        ]
+    var progress: Double {
+        guard total > 0 else { return 0 }
+        return Double(mastered) / Double(total)
     }
 }
+
+// MARK: - DataManager 扩展
+
+extension DataManager {
+    func getTodayStatistics() -> TodayStatistics {
+        let calendar = Calendar.current
+        let startOfDay = calendar.startOfDay(for: Date())
+        
+        // 今日新学
+        let newRequest = WordEntity.fetchRequest()
+        newRequest.predicate = NSPredicate(format: "createdAt >= %@ AND status != %@", startOfDay as CVarArg, "new")
+        let newWords = (try? context.count(for: newRequest)) ?? 0
+        
+        // 今日复习
+        let reviewRequest = ReviewLogEntity.fetchRequest()
+        reviewRequest.predicate = NSPredicate(format: "reviewDate >= %@", startOfDay as CVarArg)
+        let reviews = (try? context.count(for: reviewRequest)) ?? 0
+        
+        // 正确率
+        let correctRequest = ReviewLogEntity.fetchRequest()
+        correctRequest.predicate = NSPredicate(format: "reviewDate >= %@ AND result == %@", startOfDay as CVarArg, "correct")
+        let correct = (try? context.count(for: correctRequest)) ?? 0
+        let accuracy = reviews > 0 ? Double(correct) / Double(reviews) : 0
+        
+        return TodayStatistics(newWords: newWords, reviews: reviews, accuracy: accuracy)
+    }
+    
+    func calculateStreak() -> (current: Int, longest: Int) {
+        // 从 UserSettings 获取连续天数
+        let settings = UserSettingsEntity.defaultSettings(in: context)
+        return (Int(settings.currentStreak), Int(settings.longestStreak))
+    }
+    
+    func getLearningTrendData(days: Int) -> [DailyDataPoint] {
+        let calendar = Calendar.current
+        var data: [DailyDataPoint] = []
+        
+        for dayOffset in (0..<days).reversed() {
+            guard let date = calendar.date(byAdding: .day, value: -dayOffset, to: Date()) else { continue }
+            let startOfDay = calendar.startOfDay(for: date)
+            let endOfDay = calendar.date(byAdding: .day, value: 1, to: startOfDay)!
+            
+            // 新学
+            let newRequest = WordEntity.fetchRequest()
+            newRequest.predicate = NSPredicate(format: "createdAt >= %@ AND createdAt < %@ AND status != %@", startOfDay as CVarArg, endOfDay as CVarArg, "new")
+            let newWords = (try? context.count(for: newRequest)) ?? 0
+            
+            // 复习
+            let reviewRequest = ReviewLogEntity.fetchRequest()
+            reviewRequest.predicate = NSPredicate(format: "reviewDate >= %@ AND reviewDate < %@", startOfDay as CVarArg, endOfDay as CVarArg)
+            let reviews = (try? context.count(for: reviewRequest)) ?? 0
+            
+            data.append(DailyDataPoint(date: date, newWords: newWords, reviews: reviews))
+        }
+        
+        return data
+    }
+    
+    func getMasteryStats() -> MasteryStats {
+        let newRequest = WordEntity.fetchRequest()
+        newRequest.predicate = NSPredicate(format: "status == %@", "new")
+        let new = (try? context.count(for: newRequest)) ?? 0
+        
+        let learningRequest = WordEntity.fetchRequest()
+        learningRequest.predicate = NSPredicate(format: "status == %@", "learning")
+        let learning = (try? context.count(for: learningRequest)) ?? 0
+        
+        let masteredRequest = WordEntity.fetchRequest()
+        masteredRequest.predicate = NSPredicate(format: "status == %@", "mastered")
+        let mastered = (try? context.count(for: masteredRequest)) ?? 0
+        
+        return MasteryStats(new: new, learning: learning, mastered: mastered)
+    }
+    
+    func getChapterProgress() -> [ChapterProgress] {
+        let chapters = fetchAllChapters()
+        return chapters.map { chapter in
+            let words = fetchWordsByChapter(chapterKey: chapter.key)
+            let mastered = words.filter { $0.status == "mastered" }.count
+            return ChapterProgress(name: chapter.name, total: chapter.wordCount, mastered: mastered)
+        }
+    }
+}
+
+// MARK: - 预览
 
 struct StatisticsView_Previews: PreviewProvider {
     static var previews: some View {
-        StatisticsView()
+        Group {
+            StatisticsView()
+                .preferredColorScheme(.light)
+                .previewDisplayName("Light Mode")
+            
+            StatisticsView()
+                .preferredColorScheme(.dark)
+                .previewDisplayName("Dark Mode")
+        }
     }
 }

@@ -1,0 +1,344 @@
+/* 
+  Localizable.strings (English)
+  EarWords
+  
+  English localization file
+  Created: 2026-02-24
+  
+  Generation Note: This file was generated based on a comprehensive audit of the EarWords iOS project.
+  It extracts all user-facing strings from View files (StudyView, SettingsView, etc.), ViewModels,
+  and Managers to ensure complete localization coverage.
+*/
+
+// MARK: - App Information
+"app.name" = "EarWords";
+"app.tagline" = "IELTS Vocabulary";
+"app.subtitle" = "Listen & Learn";
+"app.version" = "Version %@";
+
+// MARK: - Main Tab Navigation
+"tab.study" = "Study";
+"tab.audio" = "Audio";
+"tab.statistics" = "Stats";
+"tab.vocabulary" = "Vocabulary";
+"tab.settings" = "Settings";
+
+// MARK: - Common Actions
+"common.done" = "Done";
+"common.cancel" = "Cancel";
+"common.save" = "Save";
+"common.delete" = "Delete";
+"common.edit" = "Edit";
+"common.add" = "Add";
+"common.search" = "Search";
+"common.close" = "Close";
+"common.back" = "Back";
+"common.next" = "Next";
+"common.skip" = "Skip";
+"common.continue" = "Continue";
+"common.finish" = "Finish";
+"common.loading" = "Loading...";
+"common.refresh" = "Refresh";
+"common.retry" = "Retry";
+"common.yes" = "Yes";
+"common.no" = "No";
+"common.ok" = "OK";
+"common.error" = "Error";
+"common.success" = "Success";
+"common.warning" = "Warning";
+
+// MARK: - Study View
+"study.title" = "Today's Study (%d)";
+"study.empty.title" = "No Study Tasks";
+"study.empty.message" = "No words to study today. Take a break!";
+"study.empty.button" = "Refresh";
+"study.complete.title" = "Study Complete!";
+"study.complete.subtitle" = "Great job! Keep up the good work!";
+"study.complete.continue" = "Continue Learning";
+"study.complete.finish" = "Finish";
+
+// MARK: - Study Progress Bar
+"study.progress.format" = "%d/%d";
+"study.progress.new" = "New";
+"study.progress.review" = "Review";
+"study.progress.correct" = "Correct";
+"study.progress.incorrect" = "Incorrect";
+
+// MARK: - Study Card Actions
+"study.card.showMeaning" = "Show Meaning";
+"study.card.hideMeaning" = "Hide Meaning";
+"study.card.showExample" = "Show Example";
+"study.card.hideExample" = "Hide Example";
+"study.card.playAudio" = "Play Audio";
+"study.card.pause" = "Pause";
+"study.card.longPressDetail" = "Long press for details";
+
+// MARK: - Study Gestures
+"study.gesture.swipeLeft" = "Swipe left: Not sure";
+"study.gesture.swipeRight" = "Swipe right: Know it";
+"study.gesture.longPress" = "Long press for details";
+
+// MARK: - Rating Buttons (SM-2)
+"rating.title" = "Recall Level";
+"rating.blackout" = "Forgot";
+"rating.incorrect" = "Hard";
+"rating.difficult" = "Difficult";
+"rating.hesitation" = "Hesitant";
+"rating.good" = "Good";
+"rating.perfect" = "Perfect";
+"rating.score.0" = "0";
+"rating.score.1" = "1";
+"rating.score.2" = "2";
+"rating.score.3" = "3";
+"rating.score.4" = "4";
+"rating.score.5" = "5";
+
+// MARK: - Word Status
+"status.new" = "New";
+"status.learning" = "Learning";
+"status.mastered" = "Mastered";
+"status.due" = "Due for Review";
+
+// MARK: - Study Statistics Cards
+"stats.newWords" = "New Words";
+"stats.reviewWords" = "Review";
+"stats.correct" = "Correct";
+"stats.accuracy" = "Accuracy";
+"stats.streak" = "Streak";
+"stats.streakDays" = "%d Day Streak";
+"stats.streakKeep" = "Keep it up!";
+"stats.tomorrowPreview" = "Tomorrow's Preview";
+"stats.tomorrow.review" = "Review";
+"stats.tomorrow.new" = "New";
+
+// MARK: - Audio Review (磨耳朵)
+"audio.title" = "Audio Review";
+"audio.mode.sequential" = "Sequential";
+"audio.mode.random" = "Shuffle";
+"audio.mode.spaced" = "Smart Repeat";
+"audio.mode.sequential.desc" = "Play in order";
+"audio.mode.random.desc" = "Random order";
+"audio.mode.spaced.desc" = "Focus on weak words";
+
+"audio.player.preparing" = "Preparing...";
+"audio.player.play" = "Play";
+"audio.player.pause" = "Pause";
+"audio.player.previous" = "Previous";
+"audio.player.next" = "Next";
+"audio.player.showInfo" = "Show Meaning";
+"audio.player.hideInfo" = "Hide Meaning";
+
+"audio.playlist.title" = "Playlist (%d words)";
+"audio.playlist.viewAll" = "View All";
+"audio.playlist.empty" = "No words in playlist";
+"audio.playlist.timesPlayed" = "Played %d times";
+"audio.playlist.priorityHigh" = "High Priority";
+
+"audio.speed.title" = "Playback Speed";
+"audio.speed.slow" = "Slow";
+"audio.speed.fast" = "Fast";
+
+"audio.source.bundle" = "Built-in";
+"audio.source.documents" = "Downloaded";
+"audio.source.online" = "Online";
+"audio.source.tts" = "TTS";
+"audio.source.audioExamples" = "Example Audio";
+
+// MARK: - Statistics View
+"statistics.title" = "Statistics";
+"statistics.range.week" = "7 Days";
+"statistics.range.month" = "30 Days";
+"statistics.today.overview" = "Today's Overview";
+"statistics.today.newWords" = "New Words";
+"statistics.today.reviews" = "Reviews";
+"statistics.today.accuracy" = "Accuracy";
+"statistics.streak.title" = "🔥 Study Streak";
+"statistics.streak.days" = "days";
+"statistics.streak.longest" = "Best: %d days";
+"statistics.trend.title" = "Learning Trend";
+"statistics.trend.new" = "New";
+"statistics.trend.review" = "Review";
+"statistics.trend.noData" = "No Data";
+"statistics.mastery.title" = "Vocabulary Mastery";
+"statistics.mastery.notLearned" = "New";
+"statistics.mastery.learning" = "Learning";
+"statistics.mastery.mastered" = "Mastered";
+"statistics.chapters.title" = "Chapter Progress";
+"statistics.chapters.expand" = "Expand";
+"statistics.chapters.collapse" = "Collapse";
+
+// MARK: - Word List / Vocabulary
+"vocabulary.title" = "Vocabulary";
+"vocabulary.allWords" = "All Words";
+"vocabulary.chapters" = "Chapters (%d)";
+"vocabulary.search.prompt" = "Search words or meanings";
+"vocabulary.search.chapter" = "Search chapters";
+
+"vocabulary.filter.all" = "All";
+"vocabulary.filter.new" = "New";
+"vocabulary.filter.learning" = "Learning";
+"vocabulary.filter.mastered" = "Mastered";
+
+"vocabulary.stats.total" = "Total";
+"vocabulary.stats.mastered" = "Mastered";
+"vocabulary.stats.progress" = "%d%%";
+
+"vocabulary.word.reviewCount" = "Reviews";
+"vocabulary.word.reviewTimes" = "%d times";
+
+// MARK: - Word Detail
+"wordDetail.title" = "Word Details";
+"wordDetail.phonetic" = "Phonetic";
+"wordDetail.meaning" = "Meaning";
+"wordDetail.example" = "Example";
+"wordDetail.example.play" = "Play Example";
+"wordDetail.extra" = "Additional Info";
+"wordDetail.pronunciation" = "Pronunciation";
+
+"wordDetail.learningStats.title" = "Learning Stats";
+"wordDetail.learningStats.reviewCount" = "Reviews";
+"wordDetail.learningStats.easeFactor" = "Ease";
+"wordDetail.learningStats.interval" = "Interval";
+"wordDetail.learningStats.nextReview" = "Next Review";
+"wordDetail.learningStats.studyStatus" = "Status";
+
+"wordDetail.studyStats.title" = "Study Stats";
+"wordDetail.studyStats.correct" = "Correct";
+"wordDetail.studyStats.incorrect" = "Incorrect";
+"wordDetail.studyStats.streak" = "Streak";
+"wordDetail.studyStats.accuracy" = "Accuracy";
+
+// MARK: - Settings View
+"settings.title" = "Settings";
+
+"settings.goals.title" = "Learning Goals";
+"settings.goals.newWords" = "Daily New Words";
+"settings.goals.newWords.value" = "%d words";
+"settings.goals.review" = "Daily Review Limit";
+"settings.goals.review.value" = "%d words";
+"settings.goals.footer" = "Set goals based on your study time";
+
+"settings.audio.title" = "Audio Settings";
+"settings.audio.autoPlay" = "Auto-play Audio";
+"settings.audio.showPhonetic" = "Show Phonetic";
+"settings.audio.showExample" = "Show Examples";
+"settings.audio.speechRate" = "Speech Rate";
+"settings.audio.speechRate.slow" = "Slow";
+"settings.audio.speechRate.fast" = "Fast";
+"settings.audio.speechRate.value" = "%.1fx";
+
+"settings.reminders.title" = "Study Reminders";
+"settings.reminders.enable" = "Enable Reminders";
+"settings.reminders.time" = "Reminder Time";
+"settings.reminders.footer" = "Daily reminder to study at the set time";
+"settings.reminders.permission" = "Enable Notifications";
+"settings.reminders.permission.alert.title" = "Notification Permission";
+"settings.reminders.permission.alert.message" = "Please enable notifications in Settings to receive study reminders.";
+
+"settings.appearance.title" = "Appearance";
+"settings.appearance.theme" = "Theme Color";
+"settings.appearance.followSystem" = "Follow System";
+"settings.appearance.light" = "Light";
+"settings.appearance.dark" = "Dark";
+"settings.appearance.footer" = "Choose your preferred theme and appearance";
+
+"settings.themes.purple" = "Purple";
+"settings.themes.blue" = "Blue";
+"settings.themes.green" = "Green";
+"settings.themes.orange" = "Orange";
+
+"settings.sync.title" = "Data Sync";
+"settings.sync.icloud" = "iCloud Sync";
+"settings.sync.now" = "Sync Now";
+"settings.sync.status.idle" = "Synced";
+"settings.sync.status.syncing" = "Syncing...";
+"settings.sync.status.importing" = "Downloading...";
+"settings.sync.status.exporting" = "Uploading...";
+"settings.sync.status.completed" = "Complete";
+"settings.sync.status.error" = "Failed";
+"settings.sync.status.disabled" = "Disabled";
+"settings.sync.footer" = "Sync study progress across devices";
+"settings.sync.success" = "Sync Triggered";
+
+"settings.data.title" = "Data Management";
+"settings.data.reset" = "Reset Progress";
+"settings.data.reset.alert.title" = "Confirm Reset";
+"settings.data.reset.alert.message" = "This will erase all study progress. This action cannot be undone.";
+"settings.data.export" = "Export Study Data";
+
+"settings.about.title" = "About";
+"settings.about.version" = "Version";
+"settings.about.privacy" = "Privacy Policy";
+"settings.about.terms" = "Terms of Use";
+"settings.about.rate" = "Rate App";
+
+// MARK: - Data Export
+"export.title" = "Export Data";
+"export.studyData.title" = "Study Data Export";
+"export.studyData.desc" = "Includes study records and word mastery status";
+"export.studyData.button" = "Export as JSON";
+"export.studyData.exporting" = "Exporting...";
+"export.report.title" = "Study Report";
+"export.report.desc" = "Generate visual study progress report";
+"export.report.button" = "Generate Report";
+
+// MARK: - Onboarding
+"onboarding.page1.title" = "EarWords";
+"onboarding.page1.subtitle" = "IELTS Vocabulary";
+"onboarding.page1.description" = "Master IELTS core vocabulary through scientific spaced repetition and audio training. Make learning enjoyable!";
+"onboarding.page2.title" = "SM-2 Algorithm";
+"onboarding.page2.subtitle" = "Scientific Memory Curve";
+"onboarding.page2.description" = "Based on SuperMemo-2 spaced repetition algorithm. We fight the forgetting curve for you!";
+"onboarding.page3.title" = "Set Daily Goal";
+"onboarding.page3.subtitle" = "Consistency is Key";
+"onboarding.page3.description" = "Set your own learning pace. New users are recommended to start with 20 words per day.";
+"onboarding.dailyGoal.title" = "Daily Goal";
+"onboarding.dailyGoal.suffix" = "words/day";
+"onboarding.dailyGoal.estimate" = "At this rate, approximately %d months to complete all %d words";
+"onboarding.button.start" = "Start Learning";
+"onboarding.button.next" = "Next";
+"onboarding.button.back" = "Back";
+"onboarding.button.skip" = "Skip";
+
+// MARK: - Launch Screen
+"launch.title" = "EarWords";
+"launch.subtitle" = "Listen";
+"launch.tagline" = "IELTS Vocabulary · Audio Learning";
+
+// MARK: - Study Settings (Sheet)
+"studySettings.title" = "Study Settings";
+"studySettings.goals.new" = "Daily New Words";
+"studySettings.goals.review" = "Daily Review Limit";
+"studySettings.preferences.title" = "Study Preferences";
+"studySettings.preferences.autoPlay" = "Auto-play Audio";
+"studySettings.preferences.showPhonetic" = "Show Phonetic";
+"studySettings.preferences.haptic" = "Haptic Feedback";
+"studySettings.about.sm2" = "SM-2 Algorithm";
+"studySettings.about.enabled" = "Enabled";
+
+// MARK: - Notifications
+"notification.daily.title" = "Time to Study!";
+"notification.daily.body" = "Keep your streak going! Review today's vocabulary words.";
+
+// MARK: - Accessibility Labels
+"accessibility.studyCard" = "Word study card";
+"accessibility.ratingButton" = "Rate recall level %d";
+"accessibility.playButton" = "Play audio";
+"accessibility.settingsButton" = "Settings";
+"accessibility.searchButton" = "Search";
+"accessibility.closeButton" = "Close";
+
+// MARK: - Error Messages
+"error.loadingFailed" = "Failed to load study queue";
+"error.audioLoadFailed" = "Failed to load audio";
+"error.syncFailed" = "iCloud sync failed";
+"error.exportFailed" = "Failed to export data";
+"error.generic" = "An error occurred";
+
+// MARK: - Formats
+"format.date.short" = "MM/dd";
+"format.date.medium" = "MM-dd";
+"format.time.short" = "HH:mm";
+"format.percentage" = "%d%%";
+"format.number.thousand" = "%@K";
+"format.number.million" = "%@M";

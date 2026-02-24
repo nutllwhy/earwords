@@ -45,11 +45,18 @@ public class WordEntity: NSManagedObject, Identifiable {
     @NSManaged public var updatedAt: Date
     
     // MARK: - 计算属性
+    
+    /// 判断单词是否到期需要复习
+    /// - Returns: 如果 `nextReviewDate` 为空或已过当前时间，返回 `true`
+    /// - Note: 新单词（nextReviewDate 为 nil）默认视为到期
     var isDue: Bool {
         guard let nextDate = nextReviewDate else { return true }
         return nextDate <= Date()
     }
     
+    /// 计算单词的记忆准确率
+    /// - Returns: 正确次数占总复习次数的比例，范围 0.0-1.0
+    /// - Note: 从未复习过的单词返回 0.0
     var accuracy: Double {
         let total = correctCount + incorrectCount
         return total > 0 ? Double(correctCount) / Double(total) : 0
@@ -97,7 +104,7 @@ public class WordEntity: NSManagedObject, Identifiable {
 
 // MARK: - 初始化扩展
 extension WordEntity {
-    func populate(from json: WordJSON) {
+    func populate(from json: WordJSON, chapterKey: String? = nil) {
         self.id = Int32(json.id)
         self.word = json.word
         self.phonetic = json.phonetic
@@ -106,7 +113,7 @@ extension WordEntity {
         self.example = json.example
         self.extra = json.extra
         self.chapter = json.chapter
-        self.chapterKey = json.chapterKey
+        self.chapterKey = chapterKey ?? json.chapterKey
         self.difficulty = Int16(json.difficulty)
         self.audioUrl = json.audioUrl
         
