@@ -31,38 +31,80 @@
                 <div class="progress-card">
                     <div class="progress-header">
                         <span class="progress-title">音标数据获取</span>
-                        <span class="progress-percent" id="phonetic-percent">8%</span>
+                        <span class="progress-percent" id="phonetic-percent">98.8%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" id="phonetic-bar" style="width: 8%"></div>
+                        <div class="progress-fill success" id="phonetic-bar" style="width: 98.8%"></div>
                     </div>
                     <div class="progress-detail">
-                        <span id="phonetic-count">291 / 3,674</span>
-                        <span class="status-badge pending">⏸️ 待恢复</span>
+                        <span id="phonetic-count">3,631 / 3,674</span>
+                        <span class="status-badge done">✅ 完成</span>
                     </div>
                 </div>
 
                 <div class="progress-card">
                     <div class="progress-header">
                         <span class="progress-title">例句音频生成</span>
-                        <span class="progress-percent" id="audio-percent">23%</span>
+                        <span class="progress-percent" id="audio-percent">100%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill success" id="audio-bar" style="width: 23%"></div>
+                        <div class="progress-fill success" id="audio-bar" style="width: 100%"></div>
                     </div>
                     <div class="progress-detail">
-                        <span id="audio-count">~850 / 3,674</span>
-                        <span class="status-badge running">▶️ 运行中</span>
+                        <span id="audio-count">3,674 / 3,674</span>
+                        <span class="status-badge done">✅ 完成</span>
                     </div>
                 </div>
 
                 <div class="progress-card">
                     <div class="progress-header">
-                        <span class="progress-title">iOS 代码开发</span>
-                        <span class="progress-percent">15%</span>
+                        <span class="progress-title">Core Data 数据层</span>
+                        <span class="progress-percent">100%</span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill info" style="width: 15%"></div>
+                        <div class="progress-fill success" style="width: 100%"></div>
+                    </div>
+                    <div class="progress-detail">
+                        <span>3,674词导入 · 查询方法</span>
+                        <span class="status-badge done">✅ 完成</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-title">SM-2 算法</span>
+                        <span class="progress-percent">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill success" style="width: 100%"></div>
+                    </div>
+                    <div class="progress-detail">
+                        <span>复习计算 · 学习队列</span>
+                        <span class="status-badge done">✅ 完成</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-title">音频播放器</span>
+                        <span class="progress-percent">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill success" style="width: 100%"></div>
+                    </div>
+                    <div class="progress-detail">
+                        <span>后台播放 · 锁屏控制</span>
+                        <span class="status-badge done">✅ 完成</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-title">UI 视图组件</span>
+                        <span class="progress-percent">100%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill success" style="width: 100%"></div>
                     </div>
                     <div class="progress-detail">
                         <span>5 个视图组件</span>
@@ -85,11 +127,11 @@
                     <div class="stat-label">章节数</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">1.6MB</div>
-                    <div class="stat-label">词库文件</div>
+                    <div class="stat-number">3,631</div>
+                    <div class="stat-label">音标覆盖</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">~600</div>
+                    <div class="stat-number">3,674</div>
                     <div class="stat-label">已生成音频</div>
                 </div>
             </div>
@@ -300,24 +342,31 @@
             <h2>🗓️ 开发时间线</h2>
             <div class="timeline">
                 <div class="timeline-item done">
-                    <div class="timeline-date">2026-02-24</div>
+                    <div class="timeline-date">2026-02-24 上午</div>
                     <div class="timeline-content">
-                        <h4>数据处理启动</h4>
-                        <p>词库转换完成 (3,674词) · Core Data模型 · SM-2算法 · UI组件设计</p>
+                        <h4>✅ 数据处理完成</h4>
+                        <p>词库转换 (3,674词) · 音标获取 (3,631/3,674) · 音频生成 (3,674/3,674)</p>
+                    </div>
+                </div>
+                <div class="timeline-item done">
+                    <div class="timeline-date">2026-02-24 上午</div>
+                    <div class="timeline-content">
+                        <h4>✅ iOS核心功能开发</h4>
+                        <p>Core Data导入 · SM-2算法 · 音频播放器 · 5个UI视图</p>
                     </div>
                 </div>
                 <div class="timeline-item active">
                     <div class="timeline-date">进行中</div>
                     <div class="timeline-content">
-                        <h4>数据完善</h4>
-                        <p>音标获取 (8%) · 音频生成 (23%)</p>
+                        <h4>功能集成与测试</h4>
+                        <p>视图与数据层连接 · 功能联调 · Bug修复</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">待开始</div>
                     <div class="timeline-content">
-                        <h4>iOS开发</h4>
-                        <p>Xcode项目初始化 · 视图实现 · 测试</p>
+                        <h4>发布准备</h4>
+                        <p>App Store截图 · 应用审核 · 正式发布</p>
                     </div>
                 </div>
             </div>
@@ -325,7 +374,7 @@
 
         <!-- 底部 -->
         <footer class="footer">
-            <p>Last updated: <span id="update-time">2026-02-24 01:06:33</span></p>
+            <p>Last updated: <span id="update-time">2026-02-24 09:40:00</span></p>
             <p class="copyright">© 2026 EarWords 听词 · 栗噔噔</p>
         </footer>
     </div>
