@@ -16,6 +16,7 @@ struct StatisticsView: View {
     enum TimeRange: String, CaseIterable {
         case week = "7天"
         case month = "30天"
+        case year = "全年"
     }
     
     var body: some View {
@@ -490,7 +491,12 @@ class StatisticsViewModel: ObservableObject {
         longestStreak = streak.longest
         
         // 学习趋势数据
-        let days = timeRange == .week ? 7 : 30
+        let days: Int
+        switch timeRange {
+        case .week: days = 7
+        case .month: days = 30
+        case .year: days = 365
+        }
         trendData = dataManager.getLearningTrendData(days: days)
         
         // 词汇掌握统计

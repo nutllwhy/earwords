@@ -124,8 +124,21 @@ struct StudyView: View {
                             },
                             onFinish: {
                                 // 返回首页或其他操作
+                            },
+                            onShare: {
+                                viewModel.showShareSheet = true
                             }
                         )
+                        .sheet(isPresented: $viewModel.showShareSheet) {
+                            ShareCardView(data: ShareData(
+                                streakDays: viewModel.todayStats.streakDays,
+                                totalWords: viewModel.todayStats.correctCount + viewModel.todayStats.incorrectCount,
+                                newWords: viewModel.todayStats.newWordsCount,
+                                reviewWords: viewModel.todayStats.reviewWordsCount,
+                                accuracy: viewModel.todayStats.accuracy,
+                                studyDate: Date()
+                            ))
+                        }
                     } else {
                         EmptyStudyView {
                             viewModel.loadStudyQueue()
@@ -137,16 +150,33 @@ struct StudyView: View {
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { viewModel.skipCurrentWord() }) {
-                        Text("跳过")
-                            .font(.subheadline)
+                    HStack(spacing: 12) {
+                        // 暂停按钮
+                        Button(action: { viewModel.togglePause() }) {
+                            Image(systemName: viewModel.isPaused ? "play.circle" : "pause.circle")
+                                .font(.title3)
+                        }
+                        .disabled(viewModel.currentWord == nil && !viewModel.isPaused)
+                        
+                        Button(action: { viewModel.skipCurrentWord() }) {
+                            Text("跳过")
+                                .font(.subheadline)
+                        }
+                        .disabled(viewModel.currentWord == nil)
                     }
-                    .disabled(viewModel.currentWord == nil)
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { viewModel.showSettings = true }) {
-                        Image(systemName: "gearshape")
+                    HStack(spacing: 12) {
+                        // 保存退出按钮
+                        Button(action: { viewModel.saveAndExit() }) {
+                            Image(systemName: "arrow.down.square")
+                        }
+                        .disabled(viewModel.currentWord == nil && viewModel.studyQueue.isEmpty)
+                        
+                        Button(action: { viewModel.showSettings = true }) {
+                            Image(systemName: "gearshape")
+                        }
                     }
                 }
             }
@@ -184,6 +214,17 @@ struct StudyView: View {
             // 恢复成功提示
             .overlay(
                 RecoveryToast(show: $viewModel.showRecoveryToast)
+            )
+            // 暂停覆盖层
+            .overlay(
+                PauseOverlay(
+                    isPaused: $viewModel.isPaused,
+                    showOverlay: $viewModel.showPauseOverlay,
+                    currentProgress: viewModel.currentIndex + 1,
+                    totalCount: viewModel.totalCount,
+                    onResume: { viewModel.togglePause() },
+                    onSaveAndExit: { viewModel.saveAndExit() }
+                )
             )
         }
     }
@@ -320,6 +361,7 @@ struct StudyCompleteView: View {
     let stats: TodayStudyStats
     let onContinue: () -> Void
     let onFinish: () -> Void
+    let onShare: () -> Void
     
     var body: some View {
         ScrollView {
@@ -454,6 +496,20 @@ struct StudyCompleteView: View {
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 14)
                         .background(Color.blue)
+                        .cornerRadius(12)
+                    }
+                    
+                    // 分享按钮
+                    Button(action: onShare) {
+                        HStack {
+                            Image(systemName: "square.and.arrow.up")
+                            Text("分享成绩")
+                        }
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(Color.orange)
                         .cornerRadius(12)
                     }
                     
@@ -683,6 +739,128 @@ struct RecoveryToast: View {
         }
         .padding(.top, 60)
         .animation(.easeInOut(duration: 0.3), value: show)
+    }
+}
+
+// MARK: - 暂停覆盖层
+
+struct PauseOverlay: View {
+    @Binding var isPaused: Bool
+    @Binding var showOverlay: Bool
+    let currentProgress: Int
+    let totalCount: Int
+    let onResume: () -> Void
+    let onSaveAndExit: () -> Void
+    @Environment(\.colorScheme) var colorScheme
+    
+    var body: some View {
+        ZStack {
+            if showOverlay {
+                // 背景遮罩
+                Color.black
+                    .opacity(0.6)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        // 点击背景恢复
+                        withAnimation {
+                            onResume()
+                        }
+                    }
+                
+                // 暂停卡片
+                VStack(spacing: 24) {
+                    // 暂停图标
+                    ZStack {
+                        Circle()
+                            .fill(Color.blue.opacity(0.2))
+                            .frame(width: 100, height: 100)
+                        
+                        Image(systemName: "pause.circle.fill")
+                            .font(.system(size: 60))
+                            .foregroundColor(.blue)
+                    }
+                    
+                    // 标题
+                    Text("学习已暂停")
+                        .font(.title2.weight(.bold))
+                        .foregroundColor(colorScheme == .dark ? .white : .primary)
+                    
+                    // 进度信息
+                    VStack(spacing: 8) {
+                        ProgressView(value: Double(currentProgress), total: Double(max(totalCount, 1)))
+                            .tint(.blue)
+                            .scaleEffect(x: 1, y: 2, anchor: .center)
+                        
+                        HStack {
+                            Text("当前进度: \(currentProgress)/\(totalCount)")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            
+                            Spacer()
+                            
+                            Text("\(Int(Double(currentProgress) / Double(max(totalCount, 1)) * 100))%")
+                                .font(.subheadline.weight(.semibold))
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    // 提示文字
+                    Text("进度已自动保存，可随时退出")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                    
+                    // 操作按钮
+                    VStack(spacing: 12) {
+                        Button(action: {
+                            withAnimation {
+                                onResume()
+                            }
+                        }) {
+                            HStack {
+                                Image(systemName: "play.fill")
+                                Text("继续学习")
+                            }
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                            .background(Color.blue)
+                            .cornerRadius(12)
+                        }
+                        
+                        Button(action: {
+                            withAnimation {
+                                onSaveAndExit()
+                            }
+                        }) {
+                            HStack {
+                                Image(systemName: "arrow.down.square")
+                                Text("保存并退出")
+                            }
+                            .font(.subheadline.weight(.medium))
+                            .foregroundColor(.secondary)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 12)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color.secondary.opacity(0.3), lineWidth: 1)
+                            )
+                        }
+                    }
+                }
+                .padding(24)
+                .background(
+                    RoundedRectangle(cornerRadius: 24)
+                        .fill(colorScheme == .dark ? Color(.tertiarySystemBackground) : Color(.systemBackground))
+                        .shadow(color: .black.opacity(0.3), radius: 30, x: 0, y: 15)
+                )
+                .padding(.horizontal, 32)
+                .transition(.scale.combined(with: .opacity))
+            }
+        }
+        .animation(.easeInOut(duration: 0.3), value: showOverlay)
     }
 }
 

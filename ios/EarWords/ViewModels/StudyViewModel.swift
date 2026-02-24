@@ -48,6 +48,11 @@ class StudyViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage: String?
     
+    // MARK: - 暂停相关属性
+    @Published var isPaused = false
+    @Published var showPauseOverlay = false
+    @Published var showShareSheet = false
+    
     // MARK: - 恢复相关发布属性
     @Published var showRecoveryDialog = false
     @Published var recoveryMessage = ""
@@ -275,6 +280,44 @@ class StudyViewModel: ObservableObject {
                 self.studyQueue = queue.prioritized
             }
         }
+    }
+    
+    // MARK: - 暂停功能
+    
+    /// 切换暂停状态
+    func togglePause() {
+        isPaused.toggle()
+        showPauseOverlay = isPaused
+        
+        if isPaused {
+            // 暂停时保存进度
+            autoSaveProgress()
+            print("[学习暂停] 进度已保存，当前: \(currentIndex + 1)/\(studyQueue.count)")
+        } else {
+            // 恢复学习
+            startTime = Date() // 重置当前单词开始时间
+            print("[学习恢复] 继续学习")
+        }
+    }
+    
+    /// 保存并退出学习
+    func saveAndExit() {
+        // 保存当前进度
+        autoSaveProgress()
+        
+        // 暂停学习状态
+        isPaused = true
+        showPauseOverlay = false
+        
+        // 可以在这里触发返回上一页的操作
+        // 通知视图控制器退出
+        print("[保存退出] 学习进度已保存，准备退出")
+    }
+    
+    /// 退出时清理
+    func cleanupOnExit() {
+        autoSaveProgress()
+        cancellables.removeAll()
     }
     
     // MARK: - 进度保存

@@ -433,10 +433,21 @@ class AudioPlayerManager: NSObject, ObservableObject {
             textToSpeak += ", \(simplifiedMeaning)"
         }
         
+        // 获取TTS设置
+        let ttsSettings = TTSSettingsManager.shared.settings
+        
         let utterance = AVSpeechUtterance(string: textToSpeak)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.4  // 较慢语速
-        utterance.pitchMultiplier = 1.0
+        
+        // 使用设置中的音色
+        if let voice = AVSpeechSynthesisVoice(identifier: ttsSettings.voiceIdentifier) {
+            utterance.voice = voice
+        } else {
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        }
+        
+        // 应用设置中的语速和音调
+        utterance.rate = ttsSettings.speechRate
+        utterance.pitchMultiplier = ttsSettings.pitchMultiplier
         utterance.volume = 1.0
         
         ttsSynthesizer.speak(utterance)
@@ -1026,11 +1037,22 @@ class AudioPlayerManager: NSObject, ObservableObject {
         // 停止之前的TTS
         ttsSynthesizer.stopSpeaking(at: .immediate)
         
+        // 获取TTS设置
+        let ttsSettings = TTSSettingsManager.shared.settings
+        
         // 创建并播放TTS
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.4
-        utterance.pitchMultiplier = 1.0
+        
+        // 使用设置中的音色
+        if let voice = AVSpeechSynthesisVoice(identifier: ttsSettings.voiceIdentifier) {
+            utterance.voice = voice
+        } else {
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        }
+        
+        // 应用设置中的语速和音调
+        utterance.rate = ttsSettings.speechRate
+        utterance.pitchMultiplier = ttsSettings.pitchMultiplier
         utterance.volume = 1.0
         
         ttsSynthesizer.speak(utterance)

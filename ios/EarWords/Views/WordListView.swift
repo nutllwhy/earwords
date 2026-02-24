@@ -45,7 +45,7 @@ struct WordListView: View {
             Section(header: Text("单词列表 (\(viewModel.filteredWords.count))")) {
                 ForEach(viewModel.filteredWords) { word in
                     NavigationLink(destination: WordDetailView(word: word)) {
-                        WordListRow(word: word)
+                        WordListRow(word: word, highlightText: searchText)
                     }
                 }
             }
@@ -135,16 +135,24 @@ struct StatBadge: View {
 
 struct WordListRow: View {
     let word: WordEntity
+    var highlightText: String = ""
     
     var body: some View {
         HStack(spacing: 12) {
             // 状态指示器
             StatusIndicator(status: word.status)
             
+            // 收藏标记
+            if word.isFavorite {
+                Image(systemName: "heart.fill")
+                    .font(.caption)
+                    .foregroundColor(.red)
+            }
+            
             VStack(alignment: .leading, spacing: 4) {
-                // 单词
+                // 单词（带高亮）
                 HStack(spacing: 8) {
-                    Text(word.word)
+                    HighlightedText(text: word.word, highlight: highlightText)
                         .font(.headline)
                     
                     if let phonetic = word.phonetic, !phonetic.isEmpty {
@@ -154,11 +162,15 @@ struct WordListRow: View {
                     }
                 }
                 
-                // 释义（简短）
-                Text(word.meaningPreview)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .lineLimit(1)
+                // 释义（带高亮）
+                HighlightedText(
+                    text: word.meaningPreview,
+                    highlight: highlightText,
+                    highlightColor: .orange
+                )
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .lineLimit(1)
             }
             
             Spacer()
@@ -176,6 +188,56 @@ struct WordListRow: View {
             }
         }
         .padding(.vertical, 4)
+    }
+}
+
+// MARK: - 高亮文本组件
+struct HighlightedText: View {
+    let text: String
+    let highlight: String
+    var highlightColor: Color = .yellow
+    
+    var body: some View {
+        if highlight.isEmpty {
+            Text(text)
+        } else {
+            highlightedText()
+        }
+    }
+    
+    private func highlightedText() -> Text {
+        // 使用本地化大小写不敏感搜索
+        let lowerText = text.lowercased()
+        let lowerHighlight = highlight.lowercased()
+        
+        var result = Text("")
+        var searchRange = lowerText.startIndex..<lowerText.endIndex
+        
+        while let range = lowerText.range(of: lowerHighlight, options: [], range: searchRange) {
+            // 高亮前的文本
+            let beforeRange = searchRange.lowerBound..<range.lowerBound
+            if !beforeRange.isEmpty {
+                let beforeText = String(text[beforeRange])
+                result = result + Text(beforeText)
+            }
+            
+            // 高亮文本
+            let matchedText = String(text[range])
+            result = result + Text(matchedText)
+                .background(highlightColor.opacity(0.5))
+                .fontWeight(.semibold)
+            
+            // 更新搜索范围
+            searchRange = range.upperBound..<lowerText.endIndex
+        }
+        
+        // 剩余文本
+        if searchRange.lowerBound < text.endIndex {
+            let remainingText = String(text[searchRange.lowerBound...])
+            result = result + Text(remainingText)
+        }
+        
+        return result
     }
 }
 

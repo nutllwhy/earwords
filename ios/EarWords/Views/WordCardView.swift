@@ -15,10 +15,12 @@ struct WordCardView: View {
     @State private var showMeaning = false
     @State private var showExample = false
     @State private var isFlipped = false
+    @State private var showFavoriteNoteSheet = false
+    @State private var favoriteNoteText = ""
     
     var body: some View {
         VStack(spacing: 20) {
-            // 顶部：章节标签
+            // 顶部：章节标签 + 收藏按钮
             HStack {
                 Text(word.chapter)
                     .font(.caption)
@@ -29,6 +31,25 @@ struct WordCardView: View {
                     .cornerRadius(8)
                 
                 Spacer()
+                
+                // 收藏按钮
+                FavoriteButton(
+                    isFavorite: word.isFavorite,
+                    colorScheme: colorScheme
+                ) {
+                    if word.isFavorite {
+                        word.removeFromFavorites()
+                    } else {
+                        showFavoriteNoteSheet = true
+                        favoriteNoteText = word.favoriteNote ?? ""
+                    }
+                }
+                .onLongPressGesture {
+                    if word.isFavorite {
+                        showFavoriteNoteSheet = true
+                        favoriteNoteText = word.favoriteNote ?? ""
+                    }
+                }
                 
                 // 难度指示
                 DifficultyBadge(difficulty: Int(word.difficulty), colorScheme: colorScheme)
@@ -153,6 +174,100 @@ struct WordCardView: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     AudioPlayerManager.shared.loadAudio(for: word)
                     AudioPlayerManager.shared.play()
+                }
+            }
+        }
+        .sheet(isPresented: $showFavoriteNoteSheet) {
+            FavoriteNoteSheet(
+                word: word,
+                noteText: $favoriteNoteText
+            )
+        }
+    }
+}
+
+// MARK: - 收藏按钮
+struct FavoriteButton: View {
+    let isFavorite: Bool
+    let colorScheme: ColorScheme
+    let action: () -> Void
+    
+    @State private var isAnimating = false
+    
+    var body: some View {
+        Button(action: {
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                isAnimating = true
+                action()
+            }
+            // 重置动画状态
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                isAnimating = false
+            }
+        }) {
+            Image(systemName: isFavorite ? "heart.fill" : "heart")
+                .font(.title3)
+                .foregroundColor(isFavorite ? .red : .secondary)
+                .scaleEffect(isAnimating ? 1.3 : 1.0)
+        }
+    }
+}
+
+// MARK: - 收藏备注弹窗
+struct FavoriteNoteSheet: View {
+    let word: WordEntity
+    @Binding var noteText: String
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section(header: Text("单词")) {
+                    HStack {
+                        Text(word.word)
+                            .font(.headline)
+                        Spacer()
+                        Text(word.meaning)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                
+                Section(header: Text("备注")) {
+                    TextEditor(text: $noteText)
+                        .frame(minHeight: 100)
+                    
+                    if !noteText.isEmpty {
+                        Button("清除备注") {
+                            noteText = ""
+                        }
+                        .foregroundColor(.red)
+                    }
+                }
+                
+                Section(footer: Text("添加备注帮助你更好地记住这个单词")) {
+                    EmptyView()
+                }
+            }
+            .navigationTitle(word.isFavorite ? "编辑收藏" : "收藏单词")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("取消") {
+                        dismiss()
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("保存") {
+                        if !word.isFavorite {
+                            word.addToFavorites(note: noteText.isEmpty ? nil : noteText)
+                        } else {
+                            word.updateFavoriteNote(noteText.isEmpty ? nil : noteText)
+                        }
+                        try? word.managedObjectContext?.save()
+                        dismiss()
+                    }
                 }
             }
         }

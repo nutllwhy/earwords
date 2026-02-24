@@ -44,6 +44,11 @@ public class WordEntity: NSManagedObject, Identifiable {
     @NSManaged public var createdAt: Date
     @NSManaged public var updatedAt: Date
     
+    // MARK: - 收藏字段
+    @NSManaged public var isFavorite: Bool  // 是否收藏到生词本
+    @NSManaged public var favoriteNote: String?  // 收藏时的备注
+    @NSManaged public var favoritedAt: Date?  // 收藏时间
+    
     // MARK: - 计算属性
     
     /// 判断单词是否到期需要复习
@@ -100,6 +105,32 @@ public class WordEntity: NSManagedObject, Identifiable {
         request.sortDescriptors = [NSSortDescriptor(keyPath: \WordEntity.id, ascending: true)]
         return request
     }
+    
+    /// 获取收藏的单词（生词本）
+    static func favoriteWordsRequest(limit: Int = 500) -> NSFetchRequest<WordEntity> {
+        let request = fetchRequest()
+        request.predicate = NSPredicate(format: "isFavorite == YES")
+        request.sortDescriptors = [
+            NSSortDescriptor(keyPath: \WordEntity.favoritedAt, ascending: false),
+            NSSortDescriptor(keyPath: \WordEntity.id, ascending: true)
+        ]
+        request.fetchLimit = limit
+        return request
+    }
+    
+    /// 获取需要复习的收藏单词
+    static func favoriteWordsDueForReviewRequest() -> NSFetchRequest<WordEntity> {
+        let request = fetchRequest()
+        request.predicate = NSPredicate(
+            format: "isFavorite == YES AND (nextReviewDate <= %@ OR nextReviewDate == nil)",
+            Date() as CVarArg
+        )
+        request.sortDescriptors = [
+            NSSortDescriptor(keyPath: \WordEntity.nextReviewDate, ascending: true),
+            NSSortDescriptor(keyPath: \WordEntity.difficulty, ascending: true)
+        ]
+        return request
+    }
 }
 
 // MARK: - 初始化扩展
@@ -127,6 +158,52 @@ extension WordEntity {
         self.streak = 0
         self.createdAt = Date()
         self.updatedAt = Date()
+        
+        // 初始化收藏状态
+        self.isFavorite = false
+        self.favoriteNote = nil
+        self.favoritedAt = nil
+    }
+}
+
+// MARK: - 收藏功能扩展
+extension WordEntity {
+    /// 切换收藏状态
+    func toggleFavorite(note: String? = nil) {
+        isFavorite = !isFavorite
+        if isFavorite {
+            favoritedAt = Date()
+            favoriteNote = note
+        } else {
+            favoritedAt = nil
+            favoriteNote = nil
+        }
+        updatedAt = Date()
+    }
+    
+    /// 收藏单词（指定方法）
+    func addToFavorites(note: String? = nil) {
+        guard !isFavorite else { return }
+        isFavorite = true
+        favoritedAt = Date()
+        favoriteNote = note
+        updatedAt = Date()
+    }
+    
+    /// 取消收藏
+    func removeFromFavorites() {
+        guard isFavorite else { return }
+        isFavorite = false
+        favoritedAt = nil
+        favoriteNote = nil
+        updatedAt = Date()
+    }
+    
+    /// 更新收藏备注
+    func updateFavoriteNote(_ note: String?) {
+        guard isFavorite else { return }
+        favoriteNote = note
+        updatedAt = Date()
     }
 }
 

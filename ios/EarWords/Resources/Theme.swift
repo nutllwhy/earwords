@@ -75,12 +75,14 @@ class ThemeManager: ObservableObject {
     @Published var useSystemAppearance: Bool {
         didSet {
             UserDefaults.standard.set(useSystemAppearance, forKey: Keys.useSystemAppearance)
+            applyAppearanceTransition()
         }
     }
     
     @Published var forceDarkMode: Bool {
         didSet {
             UserDefaults.standard.set(forceDarkMode, forKey: Keys.forceDarkMode)
+            applyAppearanceTransition()
         }
     }
     
@@ -103,6 +105,9 @@ class ThemeManager: ObservableObject {
             self.useSystemAppearance = true // 默认跟随系统
         }
         self.forceDarkMode = UserDefaults.standard.bool(forKey: Keys.forceDarkMode)
+        
+        // 设置动画过渡
+        setupAppearanceTransition()
     }
     
     // MARK: - 保存主题
@@ -117,6 +122,24 @@ class ThemeManager: ObservableObject {
         
         // 刷新小组件
         WidgetDataProvider.shared.reloadWidgetData()
+    }
+    
+    // MARK: - 深色模式过渡动画
+    private func setupAppearanceTransition() {
+        // 配置UIView动画以实现平滑过渡
+        UIView.appearance().layer.speed = 1.0
+    }
+    
+    private func applyAppearanceTransition() {
+        // 使用CATransaction实现平滑过渡
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(0.35)
+        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
+        
+        // 通知外观变化
+        NotificationCenter.default.post(name: .appearanceTransition, object: nil)
+        
+        CATransaction.commit()
     }
     
     // MARK: - 获取当前颜色方案
@@ -137,6 +160,13 @@ class ThemeManager: ObservableObject {
         useSystemAppearance = useSystem
         if !useSystem {
             forceDarkMode = darkMode
+        }
+    }
+    
+    // MARK: - 平滑过渡动画
+    func animateAppearanceChange(action: @escaping () -> Void) {
+        withAnimation(.easeInOut(duration: 0.35)) {
+            action()
         }
     }
 }
@@ -449,4 +479,40 @@ struct ThemePreviewCard: View {
 
 extension Notification.Name {
     static let themeChanged = Notification.Name("themeChanged")
+    static let appearanceTransition = Notification.Name("appearanceTransition")
+}
+
+// MARK: - 深色模式过渡动画修饰符
+struct AppearanceTransitionModifier: ViewModifier {
+    @State private var animationId = UUID()
+    
+    func body(content: Content) -> some View {
+        content
+            .animation(.easeInOut(duration: 0.35), value: animationId)
+            .onReceive(NotificationCenter.default.publisher(for: .appearanceTransition)) { _ in
+                animationId = UUID()
+            }
+    }
+}
+
+// MARK: - 平滑颜色过渡
+struct SmoothColorModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
+    func body(content: Content) -> some View {
+        content
+            .animation(.easeInOut(duration: 0.35), value: colorScheme)
+    }
+}
+
+// MARK: - View 扩展
+
+extension View {
+    func appearanceTransition() -> some View {
+        modifier(AppearanceTransitionModifier())
+    }
+    
+    func smoothColorTransition() -> some View {
+        modifier(SmoothColorModifier())
+    }
 }
