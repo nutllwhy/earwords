@@ -345,10 +345,10 @@ class StudyViewModel: ObservableObject {
         )
     }
     
-    // MARK: - 评分与学习记录
+    // MARK: - 评分与学习记录 (简化评分版本)
     
-    /// 对当前单词评分
-    func rateCurrentWord(quality: ReviewQuality) {
+    /// 对当前单词评分 (使用简化的3档评分)
+    func rateCurrentWord(rating: SimpleRating) {
         guard let word = currentWord else { return }
         
         // 计算学习耗时
@@ -360,16 +360,16 @@ class StudyViewModel: ObservableObject {
         }
         
         // 1. 记录评分统计
-        if quality.isCorrect {
+        if rating.isCorrect {
             correctCount += 1
         } else {
             incorrectCount += 1
         }
         
-        // 2. 应用 SM-2 算法并保存到 Core Data
+        // 2. 应用简化评分算法并保存到 Core Data
         let result = dataManager.logReview(
             word: word,
-            quality: quality,
+            simpleRating: rating,
             timeSpent: timeSpent,
             mode: "normal"
         )
@@ -377,7 +377,7 @@ class StudyViewModel: ObservableObject {
         // 3. 记录到 StudyManager
         studyManager.submitReview(
             word: word,
-            quality: quality,
+            simpleRating: rating,
             timeSpent: timeSpent,
             mode: .normal
         )
@@ -385,8 +385,8 @@ class StudyViewModel: ObservableObject {
         // 4. 打印日志（调试用）
         print("""
         [学习记录] \(word.word)
-        - 评分: \(quality.rawValue) (\(quality.description))
-        - 结果: \(quality.isCorrect ? "正确" : "错误")
+        - 评分: \(rating.title) \(rating.emoji)
+        - 结果: \(rating.isCorrect ? "正确" : "错误")
         - 旧间隔: \(result.previousInterval) 天
         - 新间隔: \(result.newInterval) 天
         - 旧简易度: \(String(format: "%.2f", result.previousEaseFactor))
@@ -408,6 +408,12 @@ class StudyViewModel: ObservableObject {
                 completeStudySession()
             }
         }
+    }
+    
+    /// 对当前单词评分 (旧版兼容，将 ReviewQuality 转换为 SimpleRating)
+    func rateCurrentWord(quality: ReviewQuality) {
+        guard let rating = SimpleRating(from: quality) else { return }
+        rateCurrentWord(rating: rating)
     }
     
     /// 跳过当前单词

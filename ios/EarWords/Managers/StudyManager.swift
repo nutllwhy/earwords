@@ -290,6 +290,46 @@ class StudyManager: ObservableObject {
         todayStats.totalTimeSpent += timeSpent
     }
     
+    /// 提交简化评分并记录学习
+    func submitReview(
+        word: WordEntity,
+        simpleRating: SimpleRating,
+        timeSpent: TimeInterval = 0,
+        mode: StudyMode = .normal
+    ) {
+        // 1. 记录复习日志（使用简化评分）
+        let result = dataManager.logReview(
+            word: word,
+            simpleRating: simpleRating,
+            timeSpent: timeSpent,
+            mode: mode.rawValue
+        )
+        
+        // 2. 更新本地统计（映射回 ReviewQuality 用于统计计算）
+        let quality = simpleRating.reviewQuality
+        updateStatsAfterReview(word: word, quality: quality, timeSpent: timeSpent)
+        
+        // 3. 添加到复习记录
+        let logEntry = ReviewLogEntry(
+            wordId: word.id,
+            word: word.word,
+            quality: quality,
+            timestamp: Date(),
+            timeSpent: timeSpent,
+            mode: mode
+        )
+        reviewLogs.append(logEntry)
+        
+        // 4. 更新今日统计
+        if result.previousInterval == 0 {
+            // 新词第一次复习
+            todayStats.newWordsCompleted += 1
+        } else {
+            todayStats.reviewWordsCompleted += 1
+        }
+        todayStats.totalTimeSpent += timeSpent
+    }
+    
     /// 快速评分 (使用0-5的整数)
     func rateWord(
         word: WordEntity,

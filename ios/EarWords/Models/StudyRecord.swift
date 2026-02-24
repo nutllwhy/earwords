@@ -133,7 +133,7 @@ struct StudyRecord: Codable, Identifiable {
     
     // MARK: - 方法
     
-    /// 应用复习评分
+    /// 应用复习评分 (旧版)
     mutating func applyReview(quality: ReviewQuality, timeSpent: Double = 0) -> ReviewResult {
         let result = SM2Algorithm.calculateNextReview(
             quality: quality,
@@ -173,6 +173,53 @@ struct StudyRecord: Codable, Identifiable {
             shouldRepeat: result.shouldRepeat,
             nextReviewDate: nextReviewDate!,
             timeSpent: timeSpent
+        )
+    }
+    
+    /// 应用简化评分
+    mutating func applyReview(rating: SimpleRating, timeSpent: Double = 0) -> SimpleReviewResult {
+        let result = SM2Algorithm.calculateNextReview(
+            from: rating,
+            currentEaseFactor: easeFactor,
+            currentInterval: interval,
+            reviewCount: reviewCount
+        )
+        
+        // 更新记录
+        easeFactor = result.easeFactor
+        interval = result.interval
+        
+        if !result.shouldRepeat {
+            reviewCount += 1
+        }
+        
+        lastReviewDate = Date()
+        nextReviewDate = SM2Algorithm.nextReviewDate(interval: result.interval)
+        
+        // 根据评分更新状态
+        switch rating {
+        case .forgot:
+            status = .learning
+            incorrectCount += 1
+            streak = 0
+        case .vague:
+            status = .learning
+            correctCount += 1
+            streak += 1
+        case .remembered:
+            status = (reviewCount >= 3) ? .mastered : .learning
+            correctCount += 1
+            streak += 1
+        }
+        
+        return SimpleReviewResult(
+            rating: rating,
+            previousEaseFactor: easeFactor,
+            newEaseFactor: result.easeFactor,
+            previousInterval: interval,
+            newInterval: result.interval,
+            shouldRepeat: result.shouldRepeat,
+            nextReviewDate: nextReviewDate!
         )
     }
     

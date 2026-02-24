@@ -101,7 +101,7 @@ struct StudyView: View {
                             .foregroundColor(.secondary)
                             
                             HStack(spacing: 4) {
-                                Text("右滑认识")
+                                Text("右滑记住")
                                 Image(systemName: "arrow.right")
                             }
                             .font(.caption)
@@ -109,9 +109,9 @@ struct StudyView: View {
                         }
                         .padding(.top, 8)
                         
-                        // 评分按钮区 - 使用改进版防误触设计
-                        ImprovedRatingButtons { quality in
-                            viewModel.rateCurrentWord(quality: quality)
+                        // 评分按钮区 - 使用简化的3档评分
+                        RatingButtons { rating in
+                            viewModel.rateCurrentWord(rating: rating)
                         }
                         .padding(.horizontal, 20)
                         .padding(.bottom, 20)
@@ -235,13 +235,13 @@ struct StudyView: View {
         
         withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
             if value.translation.width > threshold {
-                // 右滑 - 标记为认识（4分）
-                viewModel.rateCurrentWord(quality: .good)
-                triggerHaptic(for: .good)
+                // 右滑 - 标记为记住
+                viewModel.rateCurrentWord(rating: .remembered)
+                SimpleRating.remembered.triggerHaptic()
             } else if value.translation.width < -threshold {
-                // 左滑 - 标记为模糊（2分）
-                viewModel.rateCurrentWord(quality: .difficult)
-                triggerHaptic(for: .difficult)
+                // 左滑 - 标记为模糊
+                viewModel.rateCurrentWord(rating: .vague)
+                SimpleRating.vague.triggerHaptic()
             }
             dragOffset = .zero
             isDragging = false

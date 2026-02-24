@@ -514,6 +514,40 @@ class DataManager: ObservableObject {
         return log
     }
     
+    /// 记录复习（简化评分版本）
+    func logReview(
+        word: WordEntity,
+        simpleRating: SimpleRating,
+        timeSpent: Double = 0,
+        mode: String = "normal"
+    ) -> SimpleReviewResult {
+        // 应用简化评分算法
+        let result = word.applyReview(simpleRating: simpleRating, timeSpent: timeSpent)
+        
+        // 记录复习日志（映射回旧的quality值用于数据兼容）
+        let log = ReviewLogEntity(context: context)
+        log.id = UUID()
+        log.wordId = word.id
+        log.word = word.word
+        log.reviewDate = Date()
+        log.quality = simpleRating.reviewQuality.rawValue
+        log.result = simpleRating.isCorrect ? "correct" : "incorrect"
+        
+        // 记录 SM-2 算法变化
+        log.previousEaseFactor = result.previousEaseFactor
+        log.newEaseFactor = result.newEaseFactor
+        log.previousInterval = Int32(result.previousInterval)
+        log.newInterval = Int32(result.newInterval)
+        
+        log.timeSpent = timeSpent
+        log.studyMode = mode
+        
+        save()
+        updateStatistics()
+        
+        return result
+    }
+    
     // MARK: - 统计
     
     func updateStatistics() {

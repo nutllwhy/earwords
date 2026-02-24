@@ -202,6 +202,73 @@ struct SM2Algorithm {
         return calendar.date(byAdding: .day, value: interval, to: date) ?? date
     }
     
+    // MARK: - 简化评分版本 (SimpleRating)
+    
+    /// 计算下次复习数据 (使用简化的3档评分)
+    /// - Parameters:
+    ///   - simpleRating: 简化评分 (忘记/模糊/记住)
+    ///   - currentEaseFactor: 当前简易度
+    ///   - currentInterval: 当前间隔天数
+    ///   - reviewCount: 已复习次数
+    /// - Returns: 新的复习参数
+    static func calculateNextReview(
+        from simpleRating: SimpleRating,
+        currentEaseFactor: Double,
+        currentInterval: Int,
+        reviewCount: Int
+    ) -> (interval: Int, easeFactor: Double, shouldRepeat: Bool) {
+        
+        var newEaseFactor = currentEaseFactor
+        var newInterval: Int
+        let shouldRepeat = simpleRating.needsSameDayRepeat
+        
+        switch simpleRating {
+        case .forgot:
+            // 忘记：当天重复，降低简易度
+            newInterval = 0
+            newEaseFactor = max(minEaseFactor, currentEaseFactor - 0.2)
+            
+        case .vague:
+            // 模糊：1天后复习，略微降低简易度
+            newInterval = 1
+            newEaseFactor = max(minEaseFactor, currentEaseFactor - 0.1)
+            
+        case .remembered:
+            // 记住：根据复习次数递增间隔
+            // 递增序列：1→3→7→14→30→60→90→180→365天
+            let intervals = [1, 3, 7, 14, 30, 60, 90, 180, 365]
+            let index = min(reviewCount, intervals.count - 1)
+            newInterval = intervals[index]
+            
+            // 增加简易度（但不超过上限）
+            newEaseFactor = min(3.0, currentEaseFactor + 0.05)
+        }
+        
+        // 限制最大间隔
+        newInterval = min(newInterval, maxInterval)
+        
+        return (newInterval, newEaseFactor, shouldRepeat)
+    }
+    
+    /// 计算下次复习日期（简化评分版本）
+    /// - Parameters:
+    ///   - simpleRating: 简化评分
+    ///   - currentRecord: 当前学习记录
+    /// - Returns: 下次复习日期
+    static func calculateNextReviewDate(
+        from simpleRating: SimpleRating,
+        currentRecord: StudyRecord
+    ) -> Date {
+        let result = calculateNextReview(
+            from: simpleRating,
+            currentEaseFactor: currentRecord.easeFactor,
+            currentInterval: currentRecord.interval,
+            reviewCount: currentRecord.reviewCount
+        )
+        
+        return nextReviewDate(interval: result.interval)
+    }
+    
     /// 获取单词状态
     static func wordStatus(
         reviewCount: Int,
@@ -333,6 +400,74 @@ extension WordEntity {
         return applyReview(quality: quality, timeSpent: timeSpent)
     }
     
+    // MARK: - 简化评分支持
+    
+    /// 应用简化评分结果
+    /// - Parameters:
+    ///   - simpleRating: 简化评分 (忘记/模糊/记住)
+    ///   - timeSpent: 花费时间（秒）
+    /// - Returns: 复习结果信息
+    @discardableResult
+    func applyReview(simpleRating: SimpleRating, timeSpent: Double = 0) -> SimpleReviewResult {
+        // 保存旧值
+        let previousEaseFactor = self.easeFactor
+        let previousInterval = Int(self.interval)
+        let previousReviewCount = Int(self.reviewCount)
+        
+        // 使用新的简化评分算法
+        let result = SM2Algorithm.calculateNextReview(
+            from: simpleRating,
+            currentEaseFactor: previousEaseFactor,
+            currentInterval: previousInterval,
+            reviewCount: previousReviewCount
+        )
+        
+        // 更新字段
+        self.interval = Int32(result.interval)
+        self.easeFactor = result.easeFactor
+        
+        // 只有在非当天重复的情况下才增加复习计数
+        if !result.shouldRepeat {
+            self.reviewCount += 1
+        }
+        
+        self.lastReviewDate = Date()
+        self.nextReviewDate = SM2Algorithm.nextReviewDate(interval: result.interval)
+        
+        // 根据评分更新状态
+        switch simpleRating {
+        case .forgot:
+            self.status = WordStatus.learning.rawValue
+            self.incorrectCount += 1
+            self.streak = 0
+        case .vague:
+            self.status = WordStatus.learning.rawValue
+            self.correctCount += 1
+            self.streak += 1
+        case .remembered:
+            self.status = (previousReviewCount >= 2) ? WordStatus.mastered.rawValue : WordStatus.learning.rawValue
+            self.correctCount += 1
+            self.streak += 1
+        }
+        
+        self.updatedAt = Date()
+        
+        return SimpleReviewResult(
+            rating: simpleRating,
+            previousEaseFactor: previousEaseFactor,
+            newEaseFactor: result.easeFactor,
+            previousInterval: previousInterval,
+            newInterval: result.interval,
+            shouldRepeat: result.shouldRepeat,
+            nextReviewDate: self.nextReviewDate!
+        )
+    }
+    
+    /// 使用简化评分快速评分
+    func rate(simpleRating: SimpleRating, timeSpent: Double = 0) -> SimpleReviewResult {
+        return applyReview(simpleRating: simpleRating, timeSpent: timeSpent)
+    }
+    
     /// 重置单词学习状态
     func reset() {
         self.status = WordStatus.new.rawValue
@@ -379,5 +514,47 @@ struct ReviewResult {
     
     var easeFactorChange: Double {
         newEaseFactor - previousEaseFactor
+    }
+}
+
+// MARK: - 简化评分结果
+
+struct SimpleReviewResult {
+    let rating: SimpleRating
+    let previousEaseFactor: Double
+    let newEaseFactor: Double
+    let previousInterval: Int
+    let newInterval: Int
+    let shouldRepeat: Bool
+    let nextReviewDate: Date
+    
+    var isCorrect: Bool {
+        rating.isCorrect
+    }
+    
+    var isMastered: Bool {
+        rating.isMastered
+    }
+    
+    var intervalChange: Int {
+        newInterval - previousInterval
+    }
+    
+    var easeFactorChange: Double {
+        newEaseFactor - previousEaseFactor
+    }
+    
+    /// 转换为旧版 ReviewResult（用于兼容）
+    var reviewResult: ReviewResult {
+        ReviewResult(
+            quality: rating.reviewQuality,
+            previousEaseFactor: previousEaseFactor,
+            newEaseFactor: newEaseFactor,
+            previousInterval: previousInterval,
+            newInterval: newInterval,
+            shouldRepeat: shouldRepeat,
+            nextReviewDate: nextReviewDate,
+            timeSpent: 0
+        )
     }
 }
