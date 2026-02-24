@@ -908,6 +908,136 @@ class AudioPlayerManager: NSObject, ObservableObject {
         }
         return breakdown
     }
+    
+    // MARK: - 详情页单音频播放支持
+    
+    /// 从URL字符串播放音频（用于详情页）
+    func playAudio(from urlString: String) {
+        guard let url = URL(string: urlString) else {
+            currentState = .error("无效的音频URL")
+            return
+        }
+        
+        // 如果是在线URL，下载后播放
+        if url.scheme?.hasPrefix("http") == true {
+            downloadAndPlayOnlineAudio(from: url)
+        } else {
+            // 本地文件
+            loadLocalAudio(from: url)
+        }
+    }
+    
+    /// 加载并播放本地音频文件
+    func loadLocalAudio(from url: URL) {
+        let source: AudioSource
+        if url.path.contains(Bundle.main.bundlePath) {
+            source = .bundle
+        } else {
+            source = .documents
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.delegate = self
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.enableRate = true
+            audioPlayer?.rate = playbackSpeed
+            
+            totalDuration = audioPlayer?.duration ?? 0
+            currentState = .paused
+            currentAudioSource = source
+            
+            // 创建临时播放项
+            currentItem = nil
+            
+            play()
+            print("✅ 本地音频加载成功: \(url.lastPathComponent)")
+        } catch {
+            print("❌ 加载音频失败: \(error)")
+            currentState = .error("无法加载音频: \(error.localizedDescription)")
+        }
+    }
+    
+    /// 下载并播放在线音频
+    private func downloadAndPlayOnlineAudio(from url: URL) {
+        currentState = .loading
+        
+        let task = URLSession.shared.downloadTask(with: url) { [weak self] location, response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("❌ 下载在线音频失败: \(error)")
+                    self?.currentState = .error("下载失败: \(error.localizedDescription)")
+                    return
+                }
+                
+                guard let location = location else {
+                    print("❌ 在线音频下载位置为空")
+                    self?.currentState = .error("下载内容为空")
+                    return
+                }
+                
+                // 移动到临时目录
+                let tempDir = FileManager.default.temporaryDirectory
+                let tempFile = tempDir.appendingPathComponent("temp_audio_\(UUID().uuidString).mp3")
+                
+                do {
+                    if FileManager.default.fileExists(atPath: tempFile.path) {
+                        try FileManager.default.removeItem(at: tempFile)
+                    }
+                    try FileManager.default.moveItem(at: location, to: tempFile)
+                    
+                    self?.audioPlayer = try AVAudioPlayer(contentsOf: tempFile)
+                    self?.audioPlayer?.delegate = self
+                    self?.audioPlayer?.prepareToPlay()
+                    self?.audioPlayer?.enableRate = true
+                    self?.audioPlayer?.rate = self?.playbackSpeed ?? 1.0
+                    
+                    self?.totalDuration = self?.audioPlayer?.duration ?? 0
+                    self?.currentState = .paused
+                    self?.currentAudioSource = .online
+                    self?.currentItem = nil
+                    
+                    self?.play()
+                    print("✅ 在线音频加载成功")
+                } catch {
+                    print("❌ 处理下载音频失败: \(error)")
+                    self?.currentState = .error("处理音频失败")
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    /// 播放TTS（公开方法，用于详情页）
+    func playTTS(text: String, word: WordEntity? = nil) {
+        currentAudioSource = .tts
+        currentState = .playing
+        
+        // 预估TTS时长
+        totalDuration = Double(text.count) * 0.15 + 0.5
+        
+        // 如果有单词实体，创建临时播放项
+        if let word = word {
+            currentItem = PlaybackQueueItem(word: word, audioSource: .tts)
+        } else {
+            currentItem = nil
+        }
+        
+        // 停止之前的TTS
+        ttsSynthesizer.stopSpeaking(at: .immediate)
+        
+        // 创建并播放TTS
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = 0.4
+        utterance.pitchMultiplier = 1.0
+        utterance.volume = 1.0
+        
+        ttsSynthesizer.speak(utterance)
+        startProgressTimer()
+        
+        print("🔊 TTS 播放: \(text)")
+    }
 }
 
 // MARK: - AVAudioPlayerDelegate

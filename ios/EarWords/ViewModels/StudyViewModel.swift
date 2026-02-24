@@ -2,7 +2,7 @@
 //  StudyViewModel.swift
 //  EarWords
 //
-//  学习视图模型 - 完整版
+//  学习视图模型 - 完整版（含进度自动保存/恢复）
 //
 
 import SwiftUI
@@ -29,6 +29,12 @@ enum StudySessionState {
     case error
 }
 
+/// 恢复会话的选择结果
+enum RecoveryChoice {
+    case restore   // 恢复上次进度
+    case restart   // 重新开始
+}
+
 @MainActor
 class StudyViewModel: ObservableObject {
     
@@ -41,6 +47,11 @@ class StudyViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var showError = false
     @Published var errorMessage: String?
+    
+    // MARK: - 恢复相关发布属性
+    @Published var showRecoveryDialog = false
+    @Published var recoveryMessage = ""
+    @Published var showRecoveryToast = false
     
     // MARK: - 学习统计
     @Published var todayStats: TodayStudyStats = TodayStudyStats(
@@ -57,9 +68,11 @@ class StudyViewModel: ObservableObject {
     // MARK: - 私有属性
     private let dataManager = DataManager.shared
     private let studyManager = StudyManager.shared
+    private let progressManager = StudyProgressManager.shared
     private var startTime: Date?
     private var newWordsInQueue: [WordEntity] = []
     private var reviewWordsInQueue: [WordEntity] = []
+    private var cancellables = Set<AnyCancellable>()
     
     // MARK: - 计算属性
     
@@ -88,10 +101,115 @@ class StudyViewModel: ObservableObject {
         reviewWordsInQueue.count
     }
     
+    var isRestoredSession: Bool {
+        progressManager.hasRecoveredProgress
+    }
+    
     // MARK: - 初始化
     
     init() {
         loadTodayStats()
+        setupNotifications()
+    }
+    
+    // MARK: - 通知监听
+    
+    private func setupNotifications() {
+        // 监听App进入后台，自动保存进度
+        NotificationCenter.default
+            .publisher(for: UIApplication.didEnterBackgroundNotification)
+            .sink { [weak self] _ in
+                Task { @MainActor in
+                    self?.autoSaveProgress()
+                }
+            }
+            .store(in: &cancellables)
+        
+        // 监听App即将终止
+        NotificationCenter.default
+            .publisher(for: UIApplication.willTerminateNotification)
+            .sink { [weak self] _ in
+                Task { @MainActor in
+                    self?.autoSaveProgress()
+                }
+            }
+            .store(in: &cancellables)
+        
+        // 监听App内存警告
+        NotificationCenter.default
+            .publisher(for: UIApplication.didReceiveMemoryWarningNotification)
+            .sink { [weak self] _ in
+                Task { @MainActor in
+                    self?.autoSaveProgress()
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
+    // MARK: - 进度恢复
+    
+    /// 检查是否需要显示恢复对话框
+    func checkForRecovery() -> Bool {
+        let state = progressManager.checkRecoveryState()
+        
+        switch state {
+        case .noProgress:
+            return false
+        case .expiredProgress:
+            // 过期进度已自动清除
+            return false
+        case .validProgress:
+            recoveryMessage = progressManager.getRecoveryMessage()
+            showRecoveryDialog = true
+            return true
+        }
+    }
+    
+    /// 恢复上次学习进度
+    func restoreProgress() {
+        guard let progress = progressManager.restoreProgress() else {
+            loadStudyQueue()
+            return
+        }
+        
+        isLoading = true
+        
+        // 恢复状态
+        self.currentIndex = progress.currentIndex
+        self.correctCount = progress.correctCount
+        self.incorrectCount = progress.incorrectCount
+        self.startTime = progress.sessionStartTime
+        
+        // 从DataManager获取单词实体
+        Task {
+            do {
+                let allWords = try? dataManager.context.fetch(WordEntity.fetchRequest())
+                let wordMap = Dictionary(uniqueKeysWithValues: (allWords ?? []).map { ($0.id, $0) })
+                
+                // 按保存的顺序恢复单词队列
+                let restoredQueue = progress.wordIds.compactMap { wordMap[$0] }
+                
+                // 区分新词和复习词
+                let newWords = restoredQueue.filter { $0.status == "new" }
+                let reviewWords = restoredQueue.filter { $0.status != "new" }
+                
+                await MainActor.run {
+                    self.studyQueue = restoredQueue
+                    self.newWordsInQueue = newWords
+                    self.reviewWordsInQueue = reviewWords
+                    self.isLoading = false
+                    self.showRecoveryToast = true
+                    
+                    print("[学习恢复] 成功恢复到第 \(progress.currentIndex + 1)/\(restoredQueue.count) 个单词")
+                }
+            }
+        }
+    }
+    
+    /// 开始新的学习会话（放弃旧进度）
+    func startNewSession() {
+        progressManager.clearProgress()
+        loadStudyQueue()
     }
     
     // MARK: - 数据加载
@@ -132,6 +250,9 @@ class StudyViewModel: ObservableObject {
                     
                     // 更新今日统计
                     self.updateTodayStats()
+                    
+                    // 保存初始进度
+                    self.saveProgress()
                 }
                 
             } catch {
@@ -154,6 +275,31 @@ class StudyViewModel: ObservableObject {
                 self.studyQueue = queue.prioritized
             }
         }
+    }
+    
+    // MARK: - 进度保存
+    
+    /// 自动保存当前进度
+    private func autoSaveProgress() {
+        guard !studyQueue.isEmpty && currentIndex < studyQueue.count else { return }
+        
+        saveProgress()
+        print("[自动保存] 进度已保存 - 当前索引: \(currentIndex)")
+    }
+    
+    /// 保存当前进度
+    private func saveProgress() {
+        guard !studyQueue.isEmpty else { return }
+        
+        let wordIds = studyQueue.map { $0.id }
+        
+        progressManager.quickSave(
+            studyQueue: studyQueue,
+            currentIndex: currentIndex,
+            correctCount: correctCount,
+            incorrectCount: incorrectCount,
+            startTime: startTime
+        )
     }
     
     // MARK: - 评分与学习记录
@@ -211,6 +357,9 @@ class StudyViewModel: ObservableObject {
             if currentIndex < studyQueue.count - 1 {
                 currentIndex += 1
                 startTime = Date() // 重置计时
+                
+                // 保存进度
+                saveProgress()
             } else {
                 // 学习完成
                 completeStudySession()
@@ -226,6 +375,9 @@ class StudyViewModel: ObservableObject {
             if currentIndex < studyQueue.count - 1 {
                 currentIndex += 1
                 startTime = Date()
+                
+                // 保存进度
+                saveProgress()
             } else {
                 completeStudySession()
             }
@@ -237,6 +389,9 @@ class StudyViewModel: ObservableObject {
     /// 完成学习会话
     private func completeStudySession() {
         currentIndex = studyQueue.count // 标记为完成
+        
+        // 清除保存的进度
+        progressManager.markSessionComplete()
         
         // 生成今日统计
         generateTodayStats()
@@ -356,5 +511,13 @@ class StudyViewModel: ObservableObject {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd HH:mm"
         return formatter.string(from: date)
+    }
+}
+
+// MARK: - 数组安全访问扩展
+
+extension Array {
+    subscript(safe index: Int) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }

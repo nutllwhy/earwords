@@ -109,12 +109,11 @@ struct StudyView: View {
                         }
                         .padding(.top, 8)
                         
-                        // 评分按钮区
-                        RatingButtons { quality in
+                        // 评分按钮区 - 使用改进版防误触设计
+                        ImprovedRatingButtons { quality in
                             viewModel.rateCurrentWord(quality: quality)
-                            triggerHaptic(for: quality)
                         }
-                        .padding(.horizontal)
+                        .padding(.horizontal, 20)
                         .padding(.bottom, 20)
                     } else if viewModel.isStudyComplete {
                         // 学习完成页面
@@ -160,13 +159,32 @@ struct StudyView: View {
                 }
             }
             .onAppear {
-                viewModel.loadStudyQueue()
+                // 先检查是否需要恢复进度
+                let hasRecovery = viewModel.checkForRecovery()
+                if !hasRecovery {
+                    viewModel.loadStudyQueue()
+                }
             }
             .alert("提示", isPresented: $viewModel.showError) {
                 Button("确定") { }
             } message: {
                 Text(viewModel.errorMessage ?? "发生错误")
             }
+            // 恢复进度对话框
+            .alert("恢复学习进度", isPresented: $viewModel.showRecoveryDialog) {
+                Button("继续上次学习", role: .none) {
+                    viewModel.restoreProgress()
+                }
+                Button("重新开始", role: .cancel) {
+                    viewModel.startNewSession()
+                }
+            } message: {
+                Text(viewModel.recoveryMessage)
+            }
+            // 恢复成功提示
+            .overlay(
+                RecoveryToast(show: $viewModel.showRecoveryToast)
+            )
         }
     }
     
@@ -189,83 +207,6 @@ struct StudyView: View {
         }
     }
     
-    private func triggerHaptic(for quality: ReviewQuality) {
-        let generator: UIImpactFeedbackGenerator
-        switch quality {
-        case .blackOut, .incorrect:
-            generator = UIImpactFeedbackGenerator(style: .heavy)
-        case .difficult:
-            generator = UIImpactFeedbackGenerator(style: .medium)
-        case .hesitation:
-            generator = UIImpactFeedbackGenerator(style: .light)
-        case .good, .perfect:
-            generator = UIImpactFeedbackGenerator(style: .soft)
-        }
-        generator.impactOccurred()
-    }
-}
-
-// MARK: - 评分按钮
-
-struct RatingButtons: View {
-    let onRate: (ReviewQuality) -> Void
-    
-    var body: some View {
-        VStack(spacing: 12) {
-            Text("回忆程度")
-                .font(.caption)
-                .foregroundColor(.secondary)
-            
-            HStack(spacing: 6) {
-                ForEach(ReviewQuality.allCases, id: \.self) { quality in
-                    RatingButton(quality: quality) {
-                        onRate(quality)
-                    }
-                }
-            }
-        }
-        .padding(.vertical, 16)
-        .padding(.horizontal, 12)
-        .background(
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color(.systemBackground))
-                .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
-        )
-    }
-}
-
-struct RatingButton: View {
-    let quality: ReviewQuality
-    let action: () -> Void
-    
-    var color: Color {
-        switch quality {
-        case .blackOut: return .red
-        case .incorrect: return .orange
-        case .difficult: return .yellow
-        case .hesitation: return .blue
-        case .good: return .green
-        case .perfect: return .purple
-        }
-    }
-    
-    var body: some View {
-        Button(action: action) {
-            VStack(spacing: 4) {
-                Text("\(quality.rawValue)")
-                    .font(.headline)
-                Text(quality.description)
-                    .font(.caption2)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 10)
-            .background(color.opacity(0.15))
-            .foregroundColor(color)
-            .cornerRadius(10)
-        }
-    }
 }
 
 // MARK: - 学习进度条
@@ -705,6 +646,43 @@ struct StudySettingsView: View {
                 }
             }
         }
+    }
+}
+
+// MARK: - 恢复提示视图
+
+struct RecoveryToast: View {
+    @Binding var show: Bool
+    
+    var body: some View {
+        VStack {
+            if show {
+                HStack(spacing: 8) {
+                    Image(systemName: "arrow.counterclockwise.circle.fill")
+                        .font(.title3)
+                    Text("已恢复上次学习进度")
+                        .font(.subheadline.weight(.medium))
+                }
+                .foregroundColor(.white)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 12)
+                .background(Color.green.opacity(0.9))
+                .cornerRadius(25)
+                .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 5)
+                .transition(.move(edge: .top).combined(with: .opacity))
+                .onAppear {
+                    // 2秒后自动消失
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                        withAnimation {
+                            show = false
+                        }
+                    }
+                }
+            }
+            Spacer()
+        }
+        .padding(.top, 60)
+        .animation(.easeInOut(duration: 0.3), value: show)
     }
 }
 
