@@ -32,8 +32,41 @@ class DataManager: ObservableObject {
     private let importQueue = DispatchQueue(label: "com.earwords.import", qos: .background)
     
     private init() {
-        persistentContainer = NSPersistentCloudKitContainer(name: "EarWords")
+        // 从模型文件URL加载
+        guard let modelURL = Bundle.main.url(forResource: "EarWords", withExtension: "momd") ?? Bundle.main.url(forResource: "EarWords", withExtension: "xcdatamodeld") else {
+            // 尝试从文件路径加载
+            let possiblePaths = [
+                "/Users/nutllwhy/.openclaw/workspace/plans/earwords/ios/EarWords/Models/EarWords.xcdatamodeld",
+                Bundle.main.bundleURL.appendingPathComponent("EarWords.xcdatamodeld").path
+            ]
+            
+            var foundModel: NSManagedObjectModel?
+            for path in possiblePaths {
+                let url = URL(fileURLWithPath: path)
+                if let model = NSManagedObjectModel(contentsOf: url) {
+                    foundModel = model
+                    break
+                }
+            }
+            
+            guard let model = foundModel else {
+                fatalError("Failed to find CoreData model: EarWords")
+            }
+            
+            persistentContainer = NSPersistentCloudKitContainer(name: "EarWords", managedObjectModel: model)
+            setupStoreDescription()
+            return
+        }
         
+        guard let model = NSManagedObjectModel(contentsOf: modelURL) else {
+            fatalError("Failed to load CoreData model from \(modelURL)")
+        }
+        
+        persistentContainer = NSPersistentCloudKitContainer(name: "EarWords", managedObjectModel: model)
+        setupStoreDescription()
+    }
+    
+    private func setupStoreDescription() {
         // 配置 CloudKit 同步
         guard let description = persistentContainer.persistentStoreDescriptions.first else {
             fatalError("Failed to get store description")
@@ -43,17 +76,40 @@ class DataManager: ObservableObject {
         description.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
         description.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.lidengdeng.earwords")
         
-        persistentContainer.loadPersistentStores { description, error in
+        persistentContainer.loadPersistentStores { [weak self] description, error in
             if let error = error {
-                fatalError("Core Data failed to load: \(error.localizedDescription)")
+                print("Core Data load error: \(error)")
+                // 尝试删除旧存储并重新加载
+                self?.resetPersistentStore()
+                return
             }
+            
+            self?.persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+            self?.persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+            
+            // 更新统计
+            self?.updateStatistics()
+        }
+    }
+    
+    private func resetPersistentStore() {
+        // 如果加载失败，尝试清除存储并重新创建
+        let storeURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first?
+            .appendingPathComponent("EarWords.sqlite")
+        
+        if let url = storeURL {
+            try? FileManager.default.removeItem(at: url)
         }
         
-        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
-        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-        
-        // 更新统计
-        updateStatistics()
+        persistentContainer.loadPersistentStores { [weak self] description, error in
+            if let error = error {
+                print("Failed to reload persistent store: \(error)")
+                return
+            }
+            self?.persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+            self?.persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+            self?.updateStatistics()
+        }
     }
     
     // MARK: - 上下文访问

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="WordEntity" representedClassName="WordEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="word" attributeType="String"/>
+        <attribute name="phonetic" optional="YES" attributeType="String"/>
+        <attribute name="pos" optional="YES" attributeType="String"/>
+        <attribute name="meaning" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <attribute name="extra" optional="YES" attributeType="String"/>
+        <attribute name="chapter" attributeType="String"/>
+        <attribute name="chapterKey" attributeType="String"/>
+        <attribute name="difficulty" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="status" attributeType="String" defaultValueString="new"/>
+        <attribute name="reviewCount" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nextReviewDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastReviewDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="easeFactor" attributeType="Double" defaultValueString="2.5" usesScalarValueType="YES"/>
+        <attribute name="interval" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="audioUrl" optional="YES" attributeType="String"/>
+        <attribute name="exampleAudioPath" optional="YES" attributeType="String"/>
+        <attribute name="correctCount" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="incorrectCount" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="streak" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isFavorite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="favoriteNote" optional="YES" attributeType="String"/>
+        <attribute name="favoritedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="ReviewLogEntity" representedClassName="ReviewLogEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="wordId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="word" attributeType="String"/>
+        <attribute name="reviewDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="quality" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="result" attributeType="String"/>
+        <attribute name="previousEaseFactor" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="newEaseFactor" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="previousInterval" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="newInterval" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeSpent" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deviceType" optional="YES" attributeType="String"/>
+        <attribute name="studyMode" attributeType="String" defaultValueString="normal"/>
+    </entity>
+    <entity name="UserSettingsEntity" representedClassName="UserSettingsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="dailyNewWordsGoal" attributeType="Integer 16" defaultValueString="20" usesScalarValueType="YES"/>
+        <attribute name="dailyReviewGoal" attributeType="Integer 16" defaultValueString="50" usesScalarValueType="YES"/>
+        <attribute name="audioAutoPlay" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="showPhonetic" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="showExample" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="darkMode" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="reminderEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="reminderTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="speechRate" attributeType="Double" defaultValueString="0.8" usesScalarValueType="YES"/>
+        <attribute name="preferredVoice" optional="YES" attributeType="String"/>
+        <attribute name="totalStudyDays" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="currentStreak" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="longestStreak" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastStudyDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastSyncDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="iCloudEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="WordEntity" positionX="-63" positionY="-18" width="128" height="450"/>
+        <element name="ReviewLogEntity" positionX="198" positionY="36" width="128" height="240"/>
+        <element name="UserSettingsEntity" positionX="-63" positionY="450" width="128" height="270"/>
+    </elements>
+</model>
