@@ -32,38 +32,325 @@ class DataManager: ObservableObject {
     private let importQueue = DispatchQueue(label: "com.earwords.import", qos: .background)
     
     private init() {
-        // 从模型文件URL加载
-        guard let modelURL = Bundle.main.url(forResource: "EarWords", withExtension: "momd") ?? Bundle.main.url(forResource: "EarWords", withExtension: "xcdatamodeld") else {
-            // 尝试从文件路径加载
-            let possiblePaths = [
-                "/Users/nutllwhy/.openclaw/workspace/plans/earwords/ios/EarWords/Models/EarWords.xcdatamodeld",
-                Bundle.main.bundleURL.appendingPathComponent("EarWords.xcdatamodeld").path
-            ]
-            
-            var foundModel: NSManagedObjectModel?
-            for path in possiblePaths {
-                let url = URL(fileURLWithPath: path)
-                if let model = NSManagedObjectModel(contentsOf: url) {
-                    foundModel = model
-                    break
-                }
-            }
-            
-            guard let model = foundModel else {
-                fatalError("Failed to find CoreData model: EarWords")
-            }
-            
-            persistentContainer = NSPersistentCloudKitContainer(name: "EarWords", managedObjectModel: model)
-            setupStoreDescription()
-            return
-        }
-        
-        guard let model = NSManagedObjectModel(contentsOf: modelURL) else {
-            fatalError("Failed to load CoreData model from \(modelURL)")
-        }
-        
+        // 使用代码定义的模型（不依赖.xcdatamodeld文件）
+        let model = DataManager.createManagedObjectModel()
         persistentContainer = NSPersistentCloudKitContainer(name: "EarWords", managedObjectModel: model)
         setupStoreDescription()
+    }
+    
+    /// 程序化创建CoreData模型
+    private static func createManagedObjectModel() -> NSManagedObjectModel {
+        let model = NSManagedObjectModel()
+        
+        // MARK: - WordEntity
+        let wordEntity = NSEntityDescription()
+        wordEntity.name = "WordEntity"
+        wordEntity.managedObjectClassName = "WordEntity"
+        
+        let wordIdAttr = NSAttributeDescription()
+        wordIdAttr.name = "id"
+        wordIdAttr.attributeType = .integer32AttributeType
+        wordIdAttr.defaultValue = 0
+        
+        let wordAttr = NSAttributeDescription()
+        wordAttr.name = "word"
+        wordAttr.attributeType = .stringAttributeType
+        
+        let phoneticAttr = NSAttributeDescription()
+        phoneticAttr.name = "phonetic"
+        phoneticAttr.attributeType = .stringAttributeType
+        phoneticAttr.isOptional = true
+        
+        let posAttr = NSAttributeDescription()
+        posAttr.name = "pos"
+        posAttr.attributeType = .stringAttributeType
+        posAttr.isOptional = true
+        
+        let meaningAttr = NSAttributeDescription()
+        meaningAttr.name = "meaning"
+        meaningAttr.attributeType = .stringAttributeType
+        
+        let exampleAttr = NSAttributeDescription()
+        exampleAttr.name = "example"
+        exampleAttr.attributeType = .stringAttributeType
+        exampleAttr.isOptional = true
+        
+        let extraAttr = NSAttributeDescription()
+        extraAttr.name = "extra"
+        extraAttr.attributeType = .stringAttributeType
+        extraAttr.isOptional = true
+        
+        let chapterAttr = NSAttributeDescription()
+        chapterAttr.name = "chapter"
+        chapterAttr.attributeType = .stringAttributeType
+        
+        let chapterKeyAttr = NSAttributeDescription()
+        chapterKeyAttr.name = "chapterKey"
+        chapterKeyAttr.attributeType = .stringAttributeType
+        
+        let difficultyAttr = NSAttributeDescription()
+        difficultyAttr.name = "difficulty"
+        difficultyAttr.attributeType = .integer16AttributeType
+        difficultyAttr.defaultValue = 1
+        
+        let statusAttr = NSAttributeDescription()
+        statusAttr.name = "status"
+        statusAttr.attributeType = .stringAttributeType
+        statusAttr.defaultValue = "new"
+        
+        let reviewCountAttr = NSAttributeDescription()
+        reviewCountAttr.name = "reviewCount"
+        reviewCountAttr.attributeType = .integer16AttributeType
+        reviewCountAttr.defaultValue = 0
+        
+        let nextReviewDateAttr = NSAttributeDescription()
+        nextReviewDateAttr.name = "nextReviewDate"
+        nextReviewDateAttr.attributeType = .dateAttributeType
+        nextReviewDateAttr.isOptional = true
+        
+        let lastReviewDateAttr = NSAttributeDescription()
+        lastReviewDateAttr.name = "lastReviewDate"
+        lastReviewDateAttr.attributeType = .dateAttributeType
+        lastReviewDateAttr.isOptional = true
+        
+        let easeFactorAttr = NSAttributeDescription()
+        easeFactorAttr.name = "easeFactor"
+        easeFactorAttr.attributeType = .doubleAttributeType
+        easeFactorAttr.defaultValue = 2.5
+        
+        let intervalAttr = NSAttributeDescription()
+        intervalAttr.name = "interval"
+        intervalAttr.attributeType = .integer32AttributeType
+        intervalAttr.defaultValue = 0
+        
+        let audioUrlAttr = NSAttributeDescription()
+        audioUrlAttr.name = "audioUrl"
+        audioUrlAttr.attributeType = .stringAttributeType
+        audioUrlAttr.isOptional = true
+        
+        let exampleAudioPathAttr = NSAttributeDescription()
+        exampleAudioPathAttr.name = "exampleAudioPath"
+        exampleAudioPathAttr.attributeType = .stringAttributeType
+        exampleAudioPathAttr.isOptional = true
+        
+        let correctCountAttr = NSAttributeDescription()
+        correctCountAttr.name = "correctCount"
+        correctCountAttr.attributeType = .integer16AttributeType
+        correctCountAttr.defaultValue = 0
+        
+        let incorrectCountAttr = NSAttributeDescription()
+        incorrectCountAttr.name = "incorrectCount"
+        incorrectCountAttr.attributeType = .integer16AttributeType
+        incorrectCountAttr.defaultValue = 0
+        
+        let streakAttr = NSAttributeDescription()
+        streakAttr.name = "streak"
+        streakAttr.attributeType = .integer16AttributeType
+        streakAttr.defaultValue = 0
+        
+        let createdAtAttr = NSAttributeDescription()
+        createdAtAttr.name = "createdAt"
+        createdAtAttr.attributeType = .dateAttributeType
+        
+        let updatedAtAttr = NSAttributeDescription()
+        updatedAtAttr.name = "updatedAt"
+        updatedAtAttr.attributeType = .dateAttributeType
+        
+        let isFavoriteAttr = NSAttributeDescription()
+        isFavoriteAttr.name = "isFavorite"
+        isFavoriteAttr.attributeType = .booleanAttributeType
+        isFavoriteAttr.defaultValue = false
+        
+        let favoriteNoteAttr = NSAttributeDescription()
+        favoriteNoteAttr.name = "favoriteNote"
+        favoriteNoteAttr.attributeType = .stringAttributeType
+        favoriteNoteAttr.isOptional = true
+        
+        let favoritedAtAttr = NSAttributeDescription()
+        favoritedAtAttr.name = "favoritedAt"
+        favoritedAtAttr.attributeType = .dateAttributeType
+        favoritedAtAttr.isOptional = true
+        
+        wordEntity.properties = [
+            wordIdAttr, wordAttr, phoneticAttr, posAttr, meaningAttr,
+            exampleAttr, extraAttr, chapterAttr, chapterKeyAttr, difficultyAttr,
+            statusAttr, reviewCountAttr, nextReviewDateAttr, lastReviewDateAttr,
+            easeFactorAttr, intervalAttr, audioUrlAttr, exampleAudioPathAttr,
+            correctCountAttr, incorrectCountAttr, streakAttr, createdAtAttr,
+            updatedAtAttr, isFavoriteAttr, favoriteNoteAttr, favoritedAtAttr
+        ]
+        
+        // MARK: - ReviewLogEntity
+        let reviewLogEntity = NSEntityDescription()
+        reviewLogEntity.name = "ReviewLogEntity"
+        reviewLogEntity.managedObjectClassName = "ReviewLogEntity"
+        
+        let logIdAttr = NSAttributeDescription()
+        logIdAttr.name = "id"
+        logIdAttr.attributeType = .UUIDAttributeType
+        
+        let logWordIdAttr = NSAttributeDescription()
+        logWordIdAttr.name = "wordId"
+        logWordIdAttr.attributeType = .integer32AttributeType
+        logWordIdAttr.defaultValue = 0
+        
+        let logWordAttr = NSAttributeDescription()
+        logWordAttr.name = "word"
+        logWordAttr.attributeType = .stringAttributeType
+        
+        let reviewDateAttr = NSAttributeDescription()
+        reviewDateAttr.name = "reviewDate"
+        reviewDateAttr.attributeType = .dateAttributeType
+        
+        let qualityAttr = NSAttributeDescription()
+        qualityAttr.name = "quality"
+        qualityAttr.attributeType = .integer16AttributeType
+        qualityAttr.defaultValue = 0
+        
+        let resultAttr = NSAttributeDescription()
+        resultAttr.name = "result"
+        resultAttr.attributeType = .stringAttributeType
+        
+        let prevEaseFactorAttr = NSAttributeDescription()
+        prevEaseFactorAttr.name = "previousEaseFactor"
+        prevEaseFactorAttr.attributeType = .doubleAttributeType
+        prevEaseFactorAttr.defaultValue = 0
+        
+        let newEaseFactorAttr = NSAttributeDescription()
+        newEaseFactorAttr.name = "newEaseFactor"
+        newEaseFactorAttr.attributeType = .doubleAttributeType
+        newEaseFactorAttr.defaultValue = 0
+        
+        let prevIntervalAttr = NSAttributeDescription()
+        prevIntervalAttr.name = "previousInterval"
+        prevIntervalAttr.attributeType = .integer32AttributeType
+        prevIntervalAttr.defaultValue = 0
+        
+        let newIntervalAttr = NSAttributeDescription()
+        newIntervalAttr.name = "newInterval"
+        newIntervalAttr.attributeType = .integer32AttributeType
+        newIntervalAttr.defaultValue = 0
+        
+        let timeSpentAttr = NSAttributeDescription()
+        timeSpentAttr.name = "timeSpent"
+        timeSpentAttr.attributeType = .doubleAttributeType
+        timeSpentAttr.defaultValue = 0
+        
+        let deviceTypeAttr = NSAttributeDescription()
+        deviceTypeAttr.name = "deviceType"
+        deviceTypeAttr.attributeType = .stringAttributeType
+        deviceTypeAttr.isOptional = true
+        
+        let studyModeAttr = NSAttributeDescription()
+        studyModeAttr.name = "studyMode"
+        studyModeAttr.attributeType = .stringAttributeType
+        studyModeAttr.defaultValue = "normal"
+        
+        reviewLogEntity.properties = [
+            logIdAttr, logWordIdAttr, logWordAttr, reviewDateAttr,
+            qualityAttr, resultAttr, prevEaseFactorAttr, newEaseFactorAttr,
+            prevIntervalAttr, newIntervalAttr, timeSpentAttr,
+            deviceTypeAttr, studyModeAttr
+        ]
+        
+        // MARK: - UserSettingsEntity
+        let settingsEntity = NSEntityDescription()
+        settingsEntity.name = "UserSettingsEntity"
+        settingsEntity.managedObjectClassName = "UserSettingsEntity"
+        
+        let dailyNewGoalAttr = NSAttributeDescription()
+        dailyNewGoalAttr.name = "dailyNewWordsGoal"
+        dailyNewGoalAttr.attributeType = .integer16AttributeType
+        dailyNewGoalAttr.defaultValue = 20
+        
+        let dailyReviewGoalAttr = NSAttributeDescription()
+        dailyReviewGoalAttr.name = "dailyReviewGoal"
+        dailyReviewGoalAttr.attributeType = .integer16AttributeType
+        dailyReviewGoalAttr.defaultValue = 50
+        
+        let audioAutoPlayAttr = NSAttributeDescription()
+        audioAutoPlayAttr.name = "audioAutoPlay"
+        audioAutoPlayAttr.attributeType = .booleanAttributeType
+        audioAutoPlayAttr.defaultValue = true
+        
+        let showPhoneticAttr = NSAttributeDescription()
+        showPhoneticAttr.name = "showPhonetic"
+        showPhoneticAttr.attributeType = .booleanAttributeType
+        showPhoneticAttr.defaultValue = true
+        
+        let showExampleAttr = NSAttributeDescription()
+        showExampleAttr.name = "showExample"
+        showExampleAttr.attributeType = .booleanAttributeType
+        showExampleAttr.defaultValue = true
+        
+        let darkModeAttr = NSAttributeDescription()
+        darkModeAttr.name = "darkMode"
+        darkModeAttr.attributeType = .booleanAttributeType
+        darkModeAttr.defaultValue = false
+        
+        let reminderEnabledAttr = NSAttributeDescription()
+        reminderEnabledAttr.name = "reminderEnabled"
+        reminderEnabledAttr.attributeType = .booleanAttributeType
+        reminderEnabledAttr.defaultValue = true
+        
+        let reminderTimeAttr = NSAttributeDescription()
+        reminderTimeAttr.name = "reminderTime"
+        reminderTimeAttr.attributeType = .dateAttributeType
+        reminderTimeAttr.isOptional = true
+        
+        let speechRateAttr = NSAttributeDescription()
+        speechRateAttr.name = "speechRate"
+        speechRateAttr.attributeType = .doubleAttributeType
+        speechRateAttr.defaultValue = 0.8
+        
+        let preferredVoiceAttr = NSAttributeDescription()
+        preferredVoiceAttr.name = "preferredVoice"
+        preferredVoiceAttr.attributeType = .stringAttributeType
+        preferredVoiceAttr.isOptional = true
+        
+        let totalStudyDaysAttr = NSAttributeDescription()
+        totalStudyDaysAttr.name = "totalStudyDays"
+        totalStudyDaysAttr.attributeType = .integer32AttributeType
+        totalStudyDaysAttr.defaultValue = 0
+        
+        let currentStreakAttr = NSAttributeDescription()
+        currentStreakAttr.name = "currentStreak"
+        currentStreakAttr.attributeType = .integer32AttributeType
+        currentStreakAttr.defaultValue = 0
+        
+        let longestStreakAttr = NSAttributeDescription()
+        longestStreakAttr.name = "longestStreak"
+        longestStreakAttr.attributeType = .integer32AttributeType
+        longestStreakAttr.defaultValue = 0
+        
+        let lastStudyDateAttr = NSAttributeDescription()
+        lastStudyDateAttr.name = "lastStudyDate"
+        lastStudyDateAttr.attributeType = .dateAttributeType
+        lastStudyDateAttr.isOptional = true
+        
+        let lastSyncDateAttr = NSAttributeDescription()
+        lastSyncDateAttr.name = "lastSyncDate"
+        lastSyncDateAttr.attributeType = .dateAttributeType
+        lastSyncDateAttr.isOptional = true
+        
+        let iCloudEnabledAttr = NSAttributeDescription()
+        iCloudEnabledAttr.name = "iCloudEnabled"
+        iCloudEnabledAttr.attributeType = .booleanAttributeType
+        iCloudEnabledAttr.defaultValue = true
+        
+        settingsEntity.properties = [
+            dailyNewGoalAttr, dailyReviewGoalAttr, audioAutoPlayAttr,
+            showPhoneticAttr, showExampleAttr, darkModeAttr,
+            reminderEnabledAttr, reminderTimeAttr, speechRateAttr,
+            preferredVoiceAttr, totalStudyDaysAttr, currentStreakAttr,
+            longestStreakAttr, lastStudyDateAttr, lastSyncDateAttr,
+            iCloudEnabledAttr
+        ]
+        
+        // 设置模型的实体
+        model.entities = [wordEntity, reviewLogEntity, settingsEntity]
+        
+        return model
     }
     
     private func setupStoreDescription() {
