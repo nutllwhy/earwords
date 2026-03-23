@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小红书图文编辑器 - 栗噔噔</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -276,6 +277,10 @@ body {
   position: relative;
   overflow: hidden;
 }
+.preview-canvas.has-bg .canvas-content {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+}
 .preview-canvas img {
   width: 100%;
   height: 100%;
@@ -315,8 +320,8 @@ body {
   background: #f5f5f5;
 }
 
-/* 画布内容 */
-.canvas-content {
+/* 画布内容 - 封面样式 */
+.canvas-content.cover-style {
   width: 100%;
   height: 100%;
   padding: 40px;
@@ -324,25 +329,25 @@ body {
   flex-direction: column;
   position: relative;
 }
-.canvas-title {
+.canvas-content.cover-style .canvas-title {
   font-size: 32px;
   font-weight: 900;
   color: #1a1a1a;
   line-height: 1.2;
   margin-bottom: 16px;
 }
-.canvas-subtitle {
+.canvas-content.cover-style .canvas-subtitle {
   font-size: 15px;
   color: #666;
   margin-bottom: 24px;
 }
-.canvas-accent {
+.canvas-content.cover-style .canvas-accent {
   width: 60px;
   height: 3px;
   background: #E8915F;
   margin-bottom: 24px;
 }
-.canvas-highlight {
+.canvas-content.cover-style .canvas-highlight {
   font-size: 14px;
   color: #1a1a1a;
   font-weight: 600;
@@ -350,15 +355,71 @@ body {
   border-bottom: 2px solid #E8915F;
   display: inline-block;
 }
-.canvas-body {
+
+/* 画布内容 - 内容页样式 */
+.canvas-content.content-style {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.canvas-content.content-style .canvas-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+.canvas-content.content-style .canvas-body {
   font-size: 13px;
   color: #333;
   line-height: 1.8;
   flex: 1;
+  overflow-y: auto;
 }
-.canvas-body p {
+.canvas-content.content-style .canvas-body p {
   margin-bottom: 12px;
 }
+
+/* 画布内容 - 结尾页样式 */
+.canvas-content.ending-style {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.canvas-content.ending-style .canvas-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+.canvas-content.ending-style .canvas-accent {
+  width: 60px;
+  height: 3px;
+  background: #E8915F;
+  margin-bottom: 20px;
+}
+.canvas-content.ending-style .canvas-highlight {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.canvas-content.ending-style .canvas-tags {
+  font-size: 12px;
+  color: #E8915F;
+  font-weight: 600;
+}
+
+/* 通用元素 */
 .canvas-avatar {
   position: absolute;
   bottom: 40px;
@@ -413,15 +474,11 @@ body {
     
     <!-- 幻灯片列表 -->
     <div class="slide-list">
-      <h3>幻灯片 (1/9)</h3>
+      <h3>幻灯片 (<span id="slideCount">1</span>/9)</h3>
       <div class="slides" id="slideList">
         <div class="slide-thumb active" data-index="0">
           <span class="num">1</span>
           封面
-        </div>
-        <div class="slide-thumb" data-index="1">
-          <span class="num">2</span>
-          +
         </div>
         <div class="add-slide" onclick="addSlide()">+</div>
       </div>
@@ -431,29 +488,29 @@ body {
     <div class="edit-form">
       <div class="form-group">
         <label>页面类型</label>
-        <select id="slideType" onchange="updatePreview()">
+        <select id="slideType" onchange="changeSlideType()">
           <option value="cover">封面页</option>
           <option value="content">内容页</option>
           <option value="ending">结尾页</option>
         </select>
       </div>
       
-      <div class="form-group">
+      <div class="form-group" id="titleGroup">
         <label>标题</label>
         <input type="text" id="slideTitle" value="为什么AI读完资料还是记不住？" placeholder="输入标题..." oninput="updatePreview()">
       </div>
       
-      <div class="form-group">
+      <div class="form-group" id="subtitleGroup">
         <label>副标题</label>
         <input type="text" id="slideSubtitle" value="90%的人都忽略了这一点" placeholder="输入副标题..." oninput="updatePreview()">
       </div>
       
-      <div class="form-group">
+      <div class="form-group" id="highlightGroup">
         <label>高亮文字</label>
         <input type="text" id="slideHighlight" value="亲测有效的方法分享" placeholder="输入高亮文字..." oninput="updatePreview()">
       </div>
       
-      <div class="form-group">
+      <div class="form-group" id="contentGroup" style="display:none;">
         <label>正文内容</label>
         <textarea id="slideContent" placeholder="输入正文内容..." oninput="updatePreview()"></textarea>
       </div>
@@ -474,16 +531,16 @@ body {
       <div class="form-group">
         <label>页面样式</label>
         <div class="style-options">
-          <div class="style-option active" data-style="default">默认</div>
-          <div class="style-option" data-style="center">居中</div>
-          <div class="style-option" data-style="minimal">极简</div>
+          <div class="style-option active" data-style="default" onclick="selectStyle(this)">默认</div>
+          <div class="style-option" data-style="center" onclick="selectStyle(this)">居中</div>
+          <div class="style-option" data-style="minimal" onclick="selectStyle(this)">极简</div>
         </div>
       </div>
     </div>
     
     <!-- 操作按钮 -->
     <div class="actions">
-      <button class="btn btn-secondary" onclick="downloadCurrent()">💾 保存</button>
+      <button class="btn btn-secondary" onclick="downloadCurrent()">💾 下载本页</button>
       <button class="btn btn-primary" onclick="downloadAll()">📥 下载全部</button>
     </div>
   </div>
@@ -496,7 +553,7 @@ body {
     
     <div class="preview-container">
       <div class="preview-canvas" id="previewCanvas">
-        <div class="canvas-content" id="canvasContent">
+        <div class="canvas-content cover-style" id="canvasContent">
           <div class="canvas-title" id="canvasTitle">为什么AI读完资料还是记不住？</div>
           <div class="canvas-subtitle" id="canvasSubtitle">90%的人都忽略了这一点</div>
           <div class="canvas-accent"></div>
@@ -505,7 +562,7 @@ body {
             <img src="avatar.jpg" alt="avatar">
             <span>@栗噔噔</span>
           </div>
-          <div class="canvas-page">1/9</div>
+          <div class="canvas-page" id="canvasPage">1/9</div>
         </div>
       </div>
       <div class="preview-info">1080 × 1440 px · 点击下载</div>
@@ -521,10 +578,105 @@ let slides = [{
   subtitle: '90%的人都忽略了这一点',
   highlight: '亲测有效的方法分享',
   content: '',
-  bgImage: null
+  bgImage: null,
+  style: 'default'
 }];
 let currentSlide = 0;
 let bgImageData = null;
+
+// 切换页面类型
+function changeSlideType() {
+  const type = document.getElementById('slideType').value;
+  slides[currentSlide].type = type;
+  
+  // 更新表单显示
+  updateFormVisibility(type);
+  
+  // 更新画布样式
+  renderCanvasByType(type);
+  
+  // 更新幻灯片列表显示
+  renderSlideList();
+}
+
+// 更新表单字段显示
+function updateFormVisibility(type) {
+  const titleGroup = document.getElementById('titleGroup');
+  const subtitleGroup = document.getElementById('subtitleGroup');
+  const highlightGroup = document.getElementById('highlightGroup');
+  const contentGroup = document.getElementById('contentGroup');
+  
+  if (type === 'cover') {
+    titleGroup.style.display = 'block';
+    subtitleGroup.style.display = 'block';
+    highlightGroup.style.display = 'block';
+    contentGroup.style.display = 'none';
+  } else if (type === 'content') {
+    titleGroup.style.display = 'block';
+    subtitleGroup.style.display = 'none';
+    highlightGroup.style.display = 'none';
+    contentGroup.style.display = 'block';
+  } else if (type === 'ending') {
+    titleGroup.style.display = 'block';
+    subtitleGroup.style.display = 'none';
+    highlightGroup.style.display = 'block';
+    contentGroup.style.display = 'none';
+  }
+}
+
+// 根据类型渲染画布
+function renderCanvasByType(type) {
+  const canvas = document.getElementById('previewCanvas');
+  const content = document.getElementById('canvasContent');
+  const slide = slides[currentSlide];
+  
+  // 清除现有内容
+  content.className = 'canvas-content';
+  content.innerHTML = '';
+  
+  if (type === 'cover') {
+    content.classList.add('cover-style');
+    content.innerHTML = `
+      <div class="canvas-title" id="canvasTitle">${slide.title}</div>
+      <div class="canvas-subtitle" id="canvasSubtitle">${slide.subtitle}</div>
+      <div class="canvas-accent"></div>
+      <div class="canvas-highlight" id="canvasHighlight">${slide.highlight}</div>
+      <div class="canvas-avatar">
+        <img src="avatar.jpg" alt="avatar">
+        <span>@栗噔噔</span>
+      </div>
+      <div class="canvas-page" id="canvasPage">${currentSlide + 1}/${slides.length}</div>
+    `;
+  } else if (type === 'content') {
+    content.classList.add('content-style');
+    const contentHtml = slide.content ? slide.content.split('\n').map(p => `<p>${p}</p>`).join('') : '<p>输入正文内容...</p>';
+    content.innerHTML = `
+      <div class="canvas-title" id="canvasTitle">${slide.title}</div>
+      <div class="canvas-body" id="canvasBody">${contentHtml}</div>
+      <div class="canvas-avatar">
+        <img src="avatar.jpg" alt="avatar">
+        <span>@栗噔噔</span>
+      </div>
+      <div class="canvas-page" id="canvasPage">${currentSlide + 1}/${slides.length}</div>
+    `;
+  } else if (type === 'ending') {
+    content.classList.add('ending-style');
+    content.innerHTML = `
+      <div class="canvas-title" id="canvasTitle">${slide.title}</div>
+      <div class="canvas-accent"></div>
+      <div class="canvas-highlight" id="canvasHighlight">${slide.highlight}</div>
+      <div class="canvas-tags">#AI工具 #效率提升 #栗噔噔</div>
+      <div class="canvas-avatar">
+        <img src="avatar.jpg" alt="avatar">
+        <span>@栗噔噔</span>
+      </div>
+      <div class="canvas-page" id="canvasPage">${currentSlide + 1}/${slides.length}</div>
+    `;
+  }
+  
+  // 更新背景
+  updateBackground();
+}
 
 // 更新预览
 function updatePreview() {
@@ -534,24 +686,39 @@ function updatePreview() {
   const content = document.getElementById('slideContent').value;
   const type = document.getElementById('slideType').value;
   
-  // 更新画布
-  document.getElementById('canvasTitle').textContent = title;
-  document.getElementById('canvasSubtitle').textContent = subtitle;
-  document.getElementById('canvasHighlight').textContent = highlight;
+  // 更新数据
+  slides[currentSlide].title = title;
+  slides[currentSlide].subtitle = subtitle;
+  slides[currentSlide].highlight = highlight;
+  slides[currentSlide].content = content;
   
-  // 更新背景图
+  // 更新画布
+  const canvasTitle = document.getElementById('canvasTitle');
+  const canvasSubtitle = document.getElementById('canvasSubtitle');
+  const canvasHighlight = document.getElementById('canvasHighlight');
+  const canvasBody = document.getElementById('canvasBody');
+  
+  if (canvasTitle) canvasTitle.textContent = title;
+  if (canvasSubtitle) canvasSubtitle.textContent = subtitle;
+  if (canvasHighlight) canvasHighlight.textContent = highlight;
+  if (canvasBody) {
+    canvasBody.innerHTML = content.split('\n').map(p => `<p>${p}</p>`).join('');
+  }
+}
+
+// 更新背景
+function updateBackground() {
   const canvas = document.getElementById('previewCanvas');
   if (bgImageData) {
     canvas.style.backgroundImage = `url(${bgImageData})`;
     canvas.style.backgroundSize = 'cover';
     canvas.style.backgroundPosition = 'center';
+    canvas.classList.add('has-bg');
   } else {
     canvas.style.backgroundImage = 'none';
     canvas.style.backgroundColor = 'white';
+    canvas.classList.remove('has-bg');
   }
-  
-  // 保存到当前幻灯片
-  slides[currentSlide] = { type, title, subtitle, highlight, content, bgImage: bgImageData };
 }
 
 // 处理图片上传
@@ -561,9 +728,10 @@ function handleImageUpload(event) {
     const reader = new FileReader();
     reader.onload = function(e) {
       bgImageData = e.target.result;
+      slides[currentSlide].bgImage = bgImageData;
       document.getElementById('previewImg').src = bgImageData;
       document.getElementById('imagePreview').style.display = 'block';
-      updatePreview();
+      updateBackground();
     };
     reader.readAsDataURL(file);
   }
@@ -572,9 +740,10 @@ function handleImageUpload(event) {
 // 移除图片
 function removeImage() {
   bgImageData = null;
+  slides[currentSlide].bgImage = null;
   document.getElementById('bgImage').value = '';
   document.getElementById('imagePreview').style.display = 'none';
-  updatePreview();
+  updateBackground();
 }
 
 // 添加幻灯片
@@ -589,7 +758,8 @@ function addSlide() {
     subtitle: '',
     highlight: '',
     content: '',
-    bgImage: null
+    bgImage: null,
+    style: 'default'
   });
   renderSlideList();
   selectSlide(slides.length - 1);
@@ -598,6 +768,7 @@ function addSlide() {
 // 渲染幻灯片列表
 function renderSlideList() {
   const list = document.getElementById('slideList');
+  document.getElementById('slideCount').textContent = slides.length;
   list.innerHTML = slides.map((slide, i) => `
     <div class="slide-thumb ${i === currentSlide ? 'active' : ''}" data-index="${i}" onclick="selectSlide(${i})">
       <span class="num">${i + 1}</span>
@@ -625,34 +796,60 @@ function selectSlide(index) {
     document.getElementById('imagePreview').style.display = 'none';
   }
   
+  updateFormVisibility(slide.type);
   renderSlideList();
-  updatePreview();
+  renderCanvasByType(slide.type);
+}
+
+// 选择样式
+function selectStyle(element) {
+  document.querySelectorAll('.style-option').forEach(o => o.classList.remove('active'));
+  element.classList.add('active');
+  slides[currentSlide].style = element.dataset.style;
 }
 
 // 下载当前页面
-function downloadCurrent() {
+async function downloadCurrent() {
   const canvas = document.getElementById('previewCanvas');
   
-  // 使用 html2canvas 或类似库来渲染
-  // 这里简化处理，提示用户使用浏览器截图
-  alert('请使用浏览器截图功能保存图片，或使用右键"图片另存为"');
+  try {
+    const result = await html2canvas(canvas, {
+      scale: 3, // 高清输出
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: null
+    });
+    
+    const link = document.createElement('a');
+    link.download = `小红书图文_${currentSlide + 1}.png`;
+    link.href = result.toDataURL('image/png');
+    link.click();
+  } catch (err) {
+    console.error('下载失败:', err);
+    alert('下载失败，请重试');
+  }
 }
 
 // 下载全部
-function downloadAll() {
-  alert(`准备下载 ${slides.length} 张图片...\n（实际实现需要后端支持或批量截图工具）`);
+async function downloadAll() {
+  const originalSlide = currentSlide;
+  
+  for (let i = 0; i < slides.length; i++) {
+    selectSlide(i);
+    // 等待渲染完成
+    await new Promise(resolve => setTimeout(resolve, 500));
+    await downloadCurrent();
+    // 等待下载完成
+    await new Promise(resolve => setTimeout(resolve, 300));
+  }
+  
+  selectSlide(originalSlide);
+  alert(`已下载 ${slides.length} 张图片`);
 }
 
-// 样式选择
-document.querySelectorAll('.style-option').forEach(option => {
-  option.addEventListener('click', function() {
-    document.querySelectorAll('.style-option').forEach(o => o.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-
 // 初始化
-updatePreview();
+updateFormVisibility('cover');
+renderSlideList();
 </script>
 </body>
 </html>
