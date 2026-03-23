@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1080px;
+  height: 1440px;
+  background: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  position: relative;
+}
+.content-title {
+  font-size: 64px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+.content-body {
+  font-size: 40px;
+  color: #333;
+  line-height: 1.8;
+  flex: 1;
+}
+.content-body p {
+  margin-bottom: 36px;
+}
+.emphasis {
+  background: linear-gradient(transparent 60%, #E8915F40 60%);
+  padding: 0 8px;
+  font-weight: 600;
+}
+.number-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: #E8915F;
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.avatar-watermark {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #E8915F;
+  margin-bottom: 12px;
+}
+.avatar-name {
+  font-size: 24px;
+  color: #666;
+  font-weight: 500;
+}
+.page-number {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  font-size: 32px;
+  color: #999;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+  <div class="content-title"><span class="number-badge">01</span>认知升级</div>
+  <div class="content-body">
+    <p>首先要改变的是<span class="emphasis">认知</span>。</p>
+    <p>AI不是简单的工具，<br>而是<span class="emphasis">思维方式的转变</span>。</p>
+    <p>当你理解了底层逻辑，<br>一切都会变得清晰。</p>
+  </div>
+  
+  <div class="avatar-watermark">
+    <img class="avatar-circle" src="avatar.jpg" alt="avatar">
+    <div class="avatar-name">@栗噔噔</div>
+  </div>
+  
+  <div class="page-number">3/9</div>
+</body>
+</html>
