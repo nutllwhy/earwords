@@ -215,6 +215,7 @@
       font-weight: 700;
     }
     .signature.hidden { display: none; }
+    .footer.hidden { display: none; }
     .image-wrap {
       position: absolute;
       z-index: 1;
@@ -362,6 +363,7 @@
           <label class="check"><input id="showImage" type="checkbox" checked /> 显示插图</label>
           <label class="check"><input id="showAvatar" type="checkbox" checked /> 显示头像</label>
           <label class="check"><input id="showSignature" type="checkbox" checked /> 显示署名</label>
+          <label class="check"><input id="showFooter" type="checkbox" checked /> 显示底部文案</label>
         </div>
 
         <label for="signature">署名</label>
@@ -413,7 +415,7 @@
               <div class="footer" id="previewFooter">你缺的不是努力，而是方法。</div>
             </div>
             <div class="author" id="authorBlock">
-              <div class="avatar" id="avatarPreview" style="background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22192%22 height=%22192%22 viewBox=%220 0 192 192%22%3E%3Crect width=%22192%22 height=%22192%22 fill=%22%23F4E6DA%22/%3E%3Ccircle cx=%2296%22 cy=%2272%22 r=%2232%22 fill=%22%23E0B28F%22/%3E%3Cpath d=%22M42 162c10-34 35-52 54-52s44 18 54 52%22 fill=%22%23D99A6C%22/%3E%3C/svg%3E');"></div>
+              <div class="avatar" id="avatarPreview" style="background-image:url('avatar.jpg');"></div>
               <div class="signature" id="signaturePreview">@栗噔噔</div>
             </div>
           </div>
@@ -439,7 +441,8 @@
       background: '#FFFDF8',
       showImage: true,
       showAvatar: true,
-      showSignature: true
+      showSignature: true,
+      showFooter: true
     };
 
     const els = {
@@ -455,6 +458,7 @@
       showImage: document.getElementById('showImage'),
       showAvatar: document.getElementById('showAvatar'),
       showSignature: document.getElementById('showSignature'),
+      showFooter: document.getElementById('showFooter'),
       imageUpload: document.getElementById('imageUpload'),
       cover: document.getElementById('cover'),
       previewEyebrow: document.getElementById('previewEyebrow'),
@@ -491,9 +495,10 @@
       els.cover.style.setProperty('--body', '#4a4038');
       applyTemplate(els.template.value);
       els.imageWrap.classList.toggle('hidden', !els.showImage.checked);
+      els.previewFooter.classList.toggle('hidden', !els.showFooter.checked);
       els.authorBlock.classList.toggle('hidden', !els.showAvatar.checked && !els.showSignature.checked);
-      document.getElementById('avatarPreview').style.display = els.showAvatar.checked ? 'block' : 'none';
       els.signaturePreview.classList.toggle('hidden', !els.showSignature.checked);
+      document.getElementById('avatarPreview').style.visibility = els.showAvatar.checked ? 'visible' : 'hidden';
     }
 
     Object.values(els).forEach(el => {
@@ -516,11 +521,32 @@
     });
 
     els.exportBtn.addEventListener('click', async () => {
-      const canvas = await html2canvas(els.cover, { useCORS: true, backgroundColor: null, scale: 2 });
-      const link = document.createElement('a');
-      link.download = `xiaohongshu-cover-${Date.now()}.png`;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
+      const clone = els.cover.cloneNode(true);
+      clone.style.transform = 'none';
+      clone.style.borderRadius = '0';
+      clone.style.position = 'fixed';
+      clone.style.left = '-99999px';
+      clone.style.top = '0';
+      clone.style.zIndex = '-1';
+      document.body.appendChild(clone);
+
+      try {
+        const canvas = await html2canvas(clone, {
+          useCORS: true,
+          backgroundColor: null,
+          scale: 2,
+          logging: false
+        });
+        const link = document.createElement('a');
+        link.download = `xiaohongshu-cover-${Date.now()}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      } catch (err) {
+        console.error('PNG 导出失败', err);
+        alert('PNG 导出失败，请再试一次；如果还不行我继续修。');
+      } finally {
+        clone.remove();
+      }
     });
 
     els.resetBtn.addEventListener('click', () => {
