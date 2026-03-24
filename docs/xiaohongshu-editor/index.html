@@ -222,6 +222,7 @@
       font-weight: 700;
     }
     .signature.hidden { display: none; }
+    .eyebrow.hidden { display: none; }
     .subtitle.hidden { display: none; }
     .footer.hidden { display: none; }
     .image-wrap {
@@ -407,6 +408,7 @@
         <input id="imageScale" type="range" min="60" max="140" step="5" value="100" />
 
         <div class="check-row">
+          <label class="check"><input id="showEyebrow" type="checkbox" checked /> 显示顶部小标签</label>
           <label class="check"><input id="showImage" type="checkbox" checked /> 显示插图</label>
           <label class="check"><input id="showAvatar" type="checkbox" checked /> 显示头像</label>
           <label class="check"><input id="showSignature" type="checkbox" checked /> 显示署名</label>
@@ -487,6 +489,7 @@
       signature: '@栗噔噔',
       primary: '#E8915F',
       background: '#FFFDF8',
+      showEyebrow: true,
       showImage: true,
       showAvatar: true,
       showSignature: true,
@@ -505,6 +508,7 @@
       signature: document.getElementById('signature'),
       primary: document.getElementById('primary'),
       background: document.getElementById('background'),
+      showEyebrow: document.getElementById('showEyebrow'),
       showImage: document.getElementById('showImage'),
       showAvatar: document.getElementById('showAvatar'),
       showSignature: document.getElementById('showSignature'),
@@ -583,6 +587,7 @@
         els.imageWrap.style.height = '0px';
       }
       els.imageWrap.classList.toggle('hidden', !els.showImage.checked);
+      els.previewEyebrow.classList.toggle('hidden', !els.showEyebrow.checked);
       els.previewSubtitle.classList.toggle('hidden', !els.showSubtitle.checked);
       els.previewFooter.classList.toggle('hidden', !els.showFooter.checked);
       els.authorBlock.classList.toggle('hidden', !els.showAvatar.checked && !els.showSignature.checked);
