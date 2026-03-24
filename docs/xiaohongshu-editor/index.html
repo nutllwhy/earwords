@@ -650,6 +650,16 @@
 
     els.exportBtn.addEventListener('click', async () => {
       const clone = els.cover.cloneNode(true);
+      const sourceWrap = els.imageWrap;
+      const sourceImg = els.mainImage;
+      const cloneWrap = clone.querySelector('#imageWrap');
+      const cloneImg = clone.querySelector('#mainImage');
+      const cloneEyebrow = clone.querySelector('#previewEyebrow');
+      const cloneSubtitle = clone.querySelector('#previewSubtitle');
+      const cloneFooter = clone.querySelector('#previewFooter');
+      const cloneAvatar = clone.querySelector('#avatarPreview');
+      const cloneSignature = clone.querySelector('#signaturePreview');
+
       clone.style.transform = 'none';
       clone.style.borderRadius = '0';
       clone.style.position = 'fixed';
@@ -658,6 +668,21 @@
       clone.style.zIndex = '-1';
       clone.style.pointerEvents = 'none';
       clone.style.opacity = '1';
+
+      if (cloneWrap && sourceWrap) {
+        cloneWrap.className = sourceWrap.className;
+        cloneWrap.style.cssText = sourceWrap.style.cssText;
+      }
+      if (cloneImg && sourceImg) {
+        cloneImg.src = sourceImg.src;
+        cloneImg.style.cssText = sourceImg.style.cssText;
+      }
+      if (cloneEyebrow) cloneEyebrow.className = els.previewEyebrow.className;
+      if (cloneSubtitle) cloneSubtitle.className = els.previewSubtitle.className;
+      if (cloneFooter) cloneFooter.className = els.previewFooter.className;
+      if (cloneAvatar) cloneAvatar.style.cssText = document.getElementById('avatarPreview').style.cssText;
+      if (cloneSignature) cloneSignature.className = els.signaturePreview.className;
+
       document.body.appendChild(clone);
 
       try {
