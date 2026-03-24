@@ -180,6 +180,10 @@
       color: var(--body);
       max-width: 860px;
     }
+    .body .hl {
+      color: var(--primary);
+      font-weight: 800;
+    }
     .footer {
       margin-top: auto;
       font-size: 34px;
@@ -215,6 +219,7 @@
       font-weight: 700;
     }
     .signature.hidden { display: none; }
+    .subtitle.hidden { display: none; }
     .footer.hidden { display: none; }
     .image-wrap {
       position: absolute;
@@ -231,16 +236,34 @@
     }
     .image-wrap.hidden { display: none; }
 
+    .template-a .cover-inner {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+    .template-a .title,
+    .template-a .subtitle,
+    .template-a .body,
+    .template-a .footer {
+      max-width: 840px;
+    }
     .template-a .image-wrap {
-      right: 92px;
-      bottom: 230px;
-      width: 300px;
-      height: 360px;
+      left: 50%;
+      right: auto;
+      bottom: 250px;
+      transform: translateX(-50%);
+      width: 420px;
+      height: 290px;
       border-radius: 30px;
       box-shadow: 0 18px 60px rgba(0,0,0,.10);
     }
-    .template-a .body { max-width: 620px; }
-    .template-a .footer { max-width: 620px; }
+    .template-a .body {
+      max-width: 840px;
+      padding-right: 0;
+    }
+    .template-a .footer {
+      max-width: 840px;
+      margin-bottom: 380px;
+    }
 
     .template-b .cover-inner { padding-bottom: 70px; }
     .template-b .title { max-width: 760px; margin-bottom: 20px; }
@@ -348,7 +371,8 @@
         <textarea id="subtitle">90%的人都忽略了这一点</textarea>
 
         <label for="body">正文</label>
-        <textarea id="body">很多人以为问题出在记忆力，其实问题常常出在输入结构和复述方式。先把知识整理成可吸收的页面，才更容易被记住。</textarea>
+        <textarea id="body">很多人以为问题出在记忆力，其实问题常常出在[[输入结构]]和[[复述方式]]。先把知识整理成可吸收的页面，才更容易被记住。</textarea>
+        <div style="font-size:12px;color:#8a7b70;line-height:1.5;margin-top:6px;">正文里用 <code>[[高亮文案]]</code> 标记想高亮的部分。</div>
 
         <label for="footer">底部文案</label>
         <textarea id="footer">你缺的不是努力，而是方法。</textarea>
@@ -363,6 +387,7 @@
           <label class="check"><input id="showImage" type="checkbox" checked /> 显示插图</label>
           <label class="check"><input id="showAvatar" type="checkbox" checked /> 显示头像</label>
           <label class="check"><input id="showSignature" type="checkbox" checked /> 显示署名</label>
+          <label class="check"><input id="showSubtitle" type="checkbox" checked /> 显示副标题</label>
           <label class="check"><input id="showFooter" type="checkbox" checked /> 显示底部文案</label>
         </div>
 
@@ -442,6 +467,7 @@
       showImage: true,
       showAvatar: true,
       showSignature: true,
+      showSubtitle: true,
       showFooter: true
     };
 
@@ -458,6 +484,7 @@
       showImage: document.getElementById('showImage'),
       showAvatar: document.getElementById('showAvatar'),
       showSignature: document.getElementById('showSignature'),
+      showSubtitle: document.getElementById('showSubtitle'),
       showFooter: document.getElementById('showFooter'),
       imageUpload: document.getElementById('imageUpload'),
       cover: document.getElementById('cover'),
@@ -479,13 +506,23 @@
       els.cover.classList.add(`template-${template}`);
     }
 
+    function formatBodyText(text) {
+      const escaped = (text || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+      return escaped
+        .replace(/\[\[(.+?)\]\]/g, '<span class="hl">$1</span>')
+        .replace(/\n/g, '<br>');
+    }
+
     function update() {
       const primary = els.primary.value;
       const bg = els.background.value;
       els.previewEyebrow.textContent = els.eyebrow.value.trim() || ' ';
       els.previewTitle.textContent = els.title.value.trim() || ' ';
       els.previewSubtitle.textContent = els.subtitle.value.trim() || ' ';
-      els.previewBody.textContent = els.body.value.trim() || ' ';
+      els.previewBody.innerHTML = formatBodyText(els.body.value.trim() || ' ');
       els.previewFooter.textContent = els.footer.value.trim() || ' ';
       els.signaturePreview.textContent = els.signature.value.trim() || ' ';
       els.cover.style.setProperty('--primary', primary);
@@ -495,6 +532,7 @@
       els.cover.style.setProperty('--body', '#4a4038');
       applyTemplate(els.template.value);
       els.imageWrap.classList.toggle('hidden', !els.showImage.checked);
+      els.previewSubtitle.classList.toggle('hidden', !els.showSubtitle.checked);
       els.previewFooter.classList.toggle('hidden', !els.showFooter.checked);
       els.authorBlock.classList.toggle('hidden', !els.showAvatar.checked && !els.showSignature.checked);
       els.signaturePreview.classList.toggle('hidden', !els.showSignature.checked);
