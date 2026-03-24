@@ -576,7 +576,12 @@
       els.cover.style.setProperty('--muted', '#71655b');
       els.cover.style.setProperty('--body', '#4a4038');
       applyTemplate(els.template.value);
-      fitTemplateAImage();
+      if (els.showImage.checked) {
+        fitTemplateAImage();
+      } else {
+        els.imageWrap.style.width = '0px';
+        els.imageWrap.style.height = '0px';
+      }
       els.imageWrap.classList.toggle('hidden', !els.showImage.checked);
       els.previewSubtitle.classList.toggle('hidden', !els.showSubtitle.checked);
       els.previewFooter.classList.toggle('hidden', !els.showFooter.checked);
