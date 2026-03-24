@@ -407,6 +407,20 @@
         <label for="imageUpload">插图上传</label>
         <input id="imageUpload" type="file" accept="image/*" />
 
+        <label for="imageSizeMode">图片尺寸</label>
+        <select id="imageSizeMode">
+          <option value="standard">标准</option>
+          <option value="large">放大</option>
+          <option value="custom">自定义</option>
+        </select>
+
+        <div id="customImageControls" style="display:none; margin-top:12px; padding:12px; background:#fff; border:1px solid #eadfce; border-radius:12px;">
+          <label for="imageMaxWidth" style="margin-top:0;">最大宽度：<span id="imageMaxWidthValue">840</span> px</label>
+          <input id="imageMaxWidth" type="range" min="320" max="920" step="10" value="840" />
+          <label for="imageMaxHeight">最大高度：<span id="imageMaxHeightValue">360</span> px</label>
+          <input id="imageMaxHeight" type="range" min="180" max="520" step="10" value="360" />
+        </div>
+
         <div class="check-row">
           <label class="check"><input id="showImage" type="checkbox" checked /> 显示插图</label>
           <label class="check"><input id="showAvatar" type="checkbox" checked /> 显示头像</label>
@@ -492,7 +506,10 @@
       showAvatar: true,
       showSignature: true,
       showSubtitle: true,
-      showFooter: true
+      showFooter: true,
+      imageSizeMode: 'standard',
+      imageMaxWidth: 840,
+      imageMaxHeight: 360
     };
 
     const els = {
@@ -511,6 +528,12 @@
       showSubtitle: document.getElementById('showSubtitle'),
       showFooter: document.getElementById('showFooter'),
       imageUpload: document.getElementById('imageUpload'),
+      imageSizeMode: document.getElementById('imageSizeMode'),
+      imageMaxWidth: document.getElementById('imageMaxWidth'),
+      imageMaxHeight: document.getElementById('imageMaxHeight'),
+      imageMaxWidthValue: document.getElementById('imageMaxWidthValue'),
+      imageMaxHeightValue: document.getElementById('imageMaxHeightValue'),
+      customImageControls: document.getElementById('customImageControls'),
       cover: document.getElementById('cover'),
       previewEyebrow: document.getElementById('previewEyebrow'),
       previewTitle: document.getElementById('previewTitle'),
@@ -530,15 +553,23 @@
       els.cover.classList.add(`template-${template}`);
     }
 
+    function getImageBounds() {
+      const mode = els.imageSizeMode.value;
+      if (mode === 'large') return { maxW: 900, maxH: 420 };
+      if (mode === 'custom') return { maxW: Number(els.imageMaxWidth.value), maxH: Number(els.imageMaxHeight.value) };
+      return { maxW: 840, maxH: 360 };
+    }
+
     function fitTemplateAImage() {
       const wrap = els.imageWrap;
       const img = els.mainImage;
       if (!wrap || !img || !img.naturalWidth || !img.naturalHeight || els.template.value !== 'a') return;
-      const maxW = 840;
-      const maxH = 360;
+      const { maxW, maxH } = getImageBounds();
       const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
       wrap.style.width = `${Math.round(img.naturalWidth * ratio) + 24}px`;
       wrap.style.height = `${Math.round(img.naturalHeight * ratio) + 24}px`;
+      img.style.maxWidth = `${Math.round(img.naturalWidth * ratio)}px`;
+      img.style.maxHeight = `${Math.round(img.naturalHeight * ratio)}px`;
     }
 
     function formatBodyText(text) {
@@ -554,6 +585,9 @@
     function update() {
       const primary = els.primary.value;
       const bg = els.background.value;
+      els.imageMaxWidthValue.textContent = els.imageMaxWidth.value;
+      els.imageMaxHeightValue.textContent = els.imageMaxHeight.value;
+      els.customImageControls.style.display = els.imageSizeMode.value === 'custom' ? 'block' : 'none';
       els.previewEyebrow.textContent = els.eyebrow.value.trim() || ' ';
       els.previewTitle.textContent = els.title.value.trim() || ' ';
       els.previewSubtitle.textContent = els.subtitle.value.trim() || ' ';
