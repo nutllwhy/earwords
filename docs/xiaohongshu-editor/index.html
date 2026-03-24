@@ -649,46 +649,36 @@
     }
 
     els.exportBtn.addEventListener('click', async () => {
-      const clone = els.cover.cloneNode(true);
-      const sourceWrap = els.imageWrap;
-      const sourceImg = els.mainImage;
-      const cloneWrap = clone.querySelector('#imageWrap');
-      const cloneImg = clone.querySelector('#mainImage');
-      const cloneEyebrow = clone.querySelector('#previewEyebrow');
-      const cloneSubtitle = clone.querySelector('#previewSubtitle');
-      const cloneFooter = clone.querySelector('#previewFooter');
-      const cloneAvatar = clone.querySelector('#avatarPreview');
-      const cloneSignature = clone.querySelector('#signaturePreview');
-
-      clone.style.transform = 'none';
-      clone.style.borderRadius = '0';
-      clone.style.position = 'fixed';
-      clone.style.left = '0';
-      clone.style.top = '0';
-      clone.style.zIndex = '-1';
-      clone.style.pointerEvents = 'none';
-      clone.style.opacity = '1';
-
-      if (cloneWrap && sourceWrap) {
-        cloneWrap.className = sourceWrap.className;
-        cloneWrap.style.cssText = sourceWrap.style.cssText;
-      }
-      if (cloneImg && sourceImg) {
-        cloneImg.src = sourceImg.src;
-        cloneImg.style.cssText = sourceImg.style.cssText;
-      }
-      if (cloneEyebrow) cloneEyebrow.className = els.previewEyebrow.className;
-      if (cloneSubtitle) cloneSubtitle.className = els.previewSubtitle.className;
-      if (cloneFooter) cloneFooter.className = els.previewFooter.className;
-      if (cloneAvatar) cloneAvatar.style.cssText = document.getElementById('avatarPreview').style.cssText;
-      if (cloneSignature) cloneSignature.className = els.signaturePreview.className;
-
-      document.body.appendChild(clone);
+      const cover = els.cover;
+      const prev = {
+        transform: cover.style.transform,
+        transformOrigin: cover.style.transformOrigin,
+        borderRadius: cover.style.borderRadius,
+        boxShadow: cover.style.boxShadow,
+        margin: cover.style.margin,
+        position: cover.style.position,
+        left: cover.style.left,
+        top: cover.style.top,
+        zIndex: cover.style.zIndex
+      };
 
       try {
         const h2c = await ensureHtml2Canvas();
-        await waitForImages(clone);
-        const canvas = await h2c(clone, {
+        await waitForImages(cover);
+
+        cover.style.transform = 'none';
+        cover.style.transformOrigin = 'top left';
+        cover.style.borderRadius = '0';
+        cover.style.boxShadow = 'none';
+        cover.style.margin = '0';
+        cover.style.position = 'relative';
+        cover.style.left = '0';
+        cover.style.top = '0';
+        cover.style.zIndex = '1';
+
+        await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+        const canvas = await h2c(cover, {
           useCORS: true,
           allowTaint: true,
           backgroundColor: '#FFFDF8',
@@ -708,7 +698,15 @@
         console.error('PNG 导出失败', err);
         alert(`PNG 导出失败：${err?.message || err}`);
       } finally {
-        clone.remove();
+        cover.style.transform = prev.transform;
+        cover.style.transformOrigin = prev.transformOrigin;
+        cover.style.borderRadius = prev.borderRadius;
+        cover.style.boxShadow = prev.boxShadow;
+        cover.style.margin = prev.margin;
+        cover.style.position = prev.position;
+        cover.style.left = prev.left;
+        cover.style.top = prev.top;
+        cover.style.zIndex = prev.zIndex;
       }
     });
 
