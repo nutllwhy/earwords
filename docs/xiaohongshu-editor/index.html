@@ -252,28 +252,24 @@
     .template-a .image-wrap {
       left: 50%;
       right: auto;
-      bottom: 230px;
+      bottom: 170px;
       transform: translateX(-50%);
-      width: 700px;
-      max-width: 840px;
-      max-height: 360px;
+      width: auto;
       height: auto;
-      aspect-ratio: auto;
       border-radius: 30px;
       box-shadow: 0 18px 60px rgba(0,0,0,.10);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px;
+      padding: 0;
       background: transparent;
       border: none;
     }
     .template-a .image-wrap img {
       width: auto;
       height: auto;
-      max-width: 100%;
-      max-height: 336px;
       object-fit: contain;
+      display: block;
     }
     .template-a .body {
       max-width: 840px;
@@ -407,19 +403,8 @@
         <label for="imageUpload">插图上传</label>
         <input id="imageUpload" type="file" accept="image/*" />
 
-        <label for="imageSizeMode">图片尺寸</label>
-        <select id="imageSizeMode">
-          <option value="standard">标准</option>
-          <option value="large">放大</option>
-          <option value="custom">自定义</option>
-        </select>
-
-        <div id="customImageControls" style="display:none; margin-top:12px; padding:12px; background:#fff; border:1px solid #eadfce; border-radius:12px;">
-          <label for="imageMaxWidth" style="margin-top:0;">最大宽度：<span id="imageMaxWidthValue">840</span> px</label>
-          <input id="imageMaxWidth" type="range" min="320" max="920" step="10" value="840" />
-          <label for="imageMaxHeight">最大高度：<span id="imageMaxHeightValue">360</span> px</label>
-          <input id="imageMaxHeight" type="range" min="180" max="520" step="10" value="360" />
-        </div>
+        <label for="imageScale">图片缩放：<span id="imageScaleValue">100</span>%</label>
+        <input id="imageScale" type="range" min="60" max="140" step="5" value="100" />
 
         <div class="check-row">
           <label class="check"><input id="showImage" type="checkbox" checked /> 显示插图</label>
@@ -507,9 +492,7 @@
       showSignature: true,
       showSubtitle: true,
       showFooter: true,
-      imageSizeMode: 'standard',
-      imageMaxWidth: 840,
-      imageMaxHeight: 360
+      imageScale: 100
     };
 
     const els = {
@@ -528,12 +511,8 @@
       showSubtitle: document.getElementById('showSubtitle'),
       showFooter: document.getElementById('showFooter'),
       imageUpload: document.getElementById('imageUpload'),
-      imageSizeMode: document.getElementById('imageSizeMode'),
-      imageMaxWidth: document.getElementById('imageMaxWidth'),
-      imageMaxHeight: document.getElementById('imageMaxHeight'),
-      imageMaxWidthValue: document.getElementById('imageMaxWidthValue'),
-      imageMaxHeightValue: document.getElementById('imageMaxHeightValue'),
-      customImageControls: document.getElementById('customImageControls'),
+      imageScale: document.getElementById('imageScale'),
+      imageScaleValue: document.getElementById('imageScaleValue'),
       cover: document.getElementById('cover'),
       previewEyebrow: document.getElementById('previewEyebrow'),
       previewTitle: document.getElementById('previewTitle'),
@@ -553,23 +532,22 @@
       els.cover.classList.add(`template-${template}`);
     }
 
-    function getImageBounds() {
-      const mode = els.imageSizeMode.value;
-      if (mode === 'large') return { maxW: 900, maxH: 420 };
-      if (mode === 'custom') return { maxW: Number(els.imageMaxWidth.value), maxH: Number(els.imageMaxHeight.value) };
-      return { maxW: 840, maxH: 360 };
-    }
-
     function fitTemplateAImage() {
       const wrap = els.imageWrap;
       const img = els.mainImage;
       if (!wrap || !img || !img.naturalWidth || !img.naturalHeight || els.template.value !== 'a') return;
-      const { maxW, maxH } = getImageBounds();
-      const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
-      wrap.style.width = `${Math.round(img.naturalWidth * ratio) + 24}px`;
-      wrap.style.height = `${Math.round(img.naturalHeight * ratio) + 24}px`;
-      img.style.maxWidth = `${Math.round(img.naturalWidth * ratio)}px`;
-      img.style.maxHeight = `${Math.round(img.naturalHeight * ratio)}px`;
+      const pageMaxW = 840;
+      const pageMaxH = 760;
+      const scale = Number(els.imageScale.value || 100) / 100;
+      const ratio = Math.min(pageMaxW / img.naturalWidth, pageMaxH / img.naturalHeight, 1) * scale;
+      const finalW = Math.round(img.naturalWidth * ratio);
+      const finalH = Math.round(img.naturalHeight * ratio);
+      wrap.style.width = `${finalW}px`;
+      wrap.style.height = `${finalH}px`;
+      img.style.width = `${finalW}px`;
+      img.style.height = `${finalH}px`;
+      img.style.maxWidth = 'none';
+      img.style.maxHeight = 'none';
     }
 
     function formatBodyText(text) {
@@ -585,9 +563,7 @@
     function update() {
       const primary = els.primary.value;
       const bg = els.background.value;
-      els.imageMaxWidthValue.textContent = els.imageMaxWidth.value;
-      els.imageMaxHeightValue.textContent = els.imageMaxHeight.value;
-      els.customImageControls.style.display = els.imageSizeMode.value === 'custom' ? 'block' : 'none';
+      els.imageScaleValue.textContent = els.imageScale.value;
       els.previewEyebrow.textContent = els.eyebrow.value.trim() || ' ';
       els.previewTitle.textContent = els.title.value.trim() || ' ';
       els.previewSubtitle.textContent = els.subtitle.value.trim() || ' ';
