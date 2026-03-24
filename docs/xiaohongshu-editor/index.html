@@ -251,10 +251,10 @@
       max-width: 840px;
     }
     .template-a .image-wrap {
-      left: 50%;
+      left: 120px;
       right: auto;
       bottom: 170px;
-      transform: translateX(-50%);
+      transform: none;
       width: auto;
       height: auto;
       border-radius: 30px;
@@ -546,8 +546,11 @@
       const ratio = Math.min(pageMaxW / img.naturalWidth, pageMaxH / img.naturalHeight, 1) * scale;
       const finalW = Math.round(img.naturalWidth * ratio);
       const finalH = Math.round(img.naturalHeight * ratio);
+      const left = Math.round((1080 - finalW) / 2);
       wrap.style.width = `${finalW}px`;
       wrap.style.height = `${finalH}px`;
+      wrap.style.left = `${left}px`;
+      wrap.style.transform = 'none';
       img.style.width = `${finalW}px`;
       img.style.height = `${finalH}px`;
       img.style.maxWidth = 'none';
